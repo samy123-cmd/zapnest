@@ -38,7 +38,7 @@
         app: {
             name: 'ZapNest',
             tagline: 'Tech That Earns Its Place',
-            supportEmail: 'support@zapnest.com',
+            supportEmail: 'hello@zapneststore.in',
             foundersLimit: 500,
         },
 
@@ -78,7 +78,7 @@
         // ============================================
         isDevelopment: window.location.hostname === 'localhost' ||
             window.location.hostname === '127.0.0.1',
-        isProduction: window.location.hostname.includes('zapnest.com'),
+        isProduction: window.location.hostname.includes('zapneststore.in'),
     };
 
     // Freeze config to prevent modifications

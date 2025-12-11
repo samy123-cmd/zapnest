@@ -182,7 +182,7 @@ const TEMPLATES = {
           <tr>
             <td style="text-align: center; padding: 24px 0;">
               <p style="color: #666666; font-size: 12px; margin: 0;">
-                Questions? Reply to this email or contact support@zapnest.in
+                Questions? Reply to this email or contact hello@zapneststore.in
               </p>
             </td>
           </tr>
