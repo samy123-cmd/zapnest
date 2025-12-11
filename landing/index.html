@@ -4,19 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZapNest Black Box — Curated Tech, Monthly | Founders Waitlist</title>
+  <title>ZapNest Black Box — Curated Tech Subscription | Founder Access</title>
   <meta name="description"
-    content="Join 500 founders getting first access to curated tech. One hero product, ruthlessly tested. Ships January 2025. India only.">
+    content="Join 500 founders. Monthly curated tech drops. Premium products. Surprise unboxing. Ships Feb 2025. Cancel anytime.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://zapnest.com/">
+  <link rel="canonical" href="https://zapneststore.in/">
+
+  <!-- LCP Optimization: Preload hero image -->
+  <link rel="preload" as="image" href="assets/hero-black-box.png" fetchpriority="high">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="ZapNest Black Box — Tech That Earns Its Place">
+  <meta property="og:title" content="ZapNest Black Box — Curated Tech Subscription">
   <meta property="og:description"
-    content="Join the Founders list. 500 slots. Curated tech subscription launching January 2025.">
+    content="Join 500 founders. Monthly curated tech drops. Premium products. Ships Feb 2025.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://zapnest.com/">
-  <meta property="og:image" content="/assets/og-zapnest-founders.jpg">
+  <meta property="og:url" content="https://zapneststore.in/">
+  <meta property="og:site_name" content="ZapNest">
+  <meta property="og:image" content="https://zapneststore.in/landing/assets/og-zapnest-founders.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
@@ -44,27 +48,43 @@
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://zapnest.com/#organization",
+        "@id": "https://zapneststore.in/#organization",
         "name": "ZapNest",
-        "url": "https://zapnest.com",
+        "url": "https://zapneststore.in",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://zapnest.com/assets/logo-zapnest.png",
+          "url": "https://zapneststore.in/landing/assets/logo-zapnest.png",
           "width": 512,
           "height": 512
         },
         "contactPoint": {
           "@type": "ContactPoint",
-          "email": "support@zapnest.com",
-          "contactType": "customer support"
+          "email": "hello@zapneststore.in",
+          "contactType": "customer service"
         }
       },
       {
         "@type": "WebSite",
-        "@id": "https://zapnest.com/#website",
-        "url": "https://zapnest.com",
+        "@id": "https://zapneststore.in/#website",
+        "url": "https://zapneststore.in",
         "name": "ZapNest",
-        "publisher": {"@id": "https://zapnest.com/#organization"}
+        "description": "Curated tech subscription box. Premium products, monthly surprise.",
+        "publisher": {"@id": "https://zapneststore.in/#organization"}
+      },
+      {
+        "@type": "Product",
+        "name": "ZapNest Black Box — Core",
+        "description": "Monthly curated tech subscription with hero product and accessories",
+        "brand": {"@type": "Brand", "name": "ZapNest"},
+        "offers": {
+          "@type": "Offer",
+          "price": "2999",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/PreOrder",
+          "priceValidUntil": "2025-02-28",
+          "url": "https://zapneststore.in/",
+          "seller": {"@id": "https://zapneststore.in/#organization"}
+        }
       },
       {
         "@type": "FAQPage",
@@ -74,7 +94,15 @@
             "name": "When does the first box ship?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Founders batch ships mid-January 2025. You will receive tracking via email once dispatched."
+              "text": "Founders batch ships end of February 2025. You will receive tracking via email once dispatched."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's in the box?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "That's the surprise! Each month features a different curated tech category. Core and Elite tiers include hero products; Lite includes accessories."
             }
           },
           {
@@ -82,7 +110,7 @@
             "name": "Where do you deliver?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "We ship across India. Free shipping on all tiers. Delivery typically 3–7 business days depending on location."
+              "text": "We ship across India. Free shipping on all tiers. Delivery typically 3-7 business days."
             }
           },
           {
@@ -90,7 +118,7 @@
             "name": "Can I cancel my subscription?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Cancel anytime before your next billing date. No lock-in, no questions asked."
+              "text": "Yes. Cancel anytime before the 5th of the month. No lock-in, no questions asked."
             }
           }
         ]
