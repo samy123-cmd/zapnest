@@ -134,7 +134,21 @@ body {
 }
 
 .zn-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--zn-space-3);
   text-decoration: none;
+}
+
+.zn-logo__mark {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  transition: transform var(--zn-transition-fast);
+}
+
+.zn-logo:hover .zn-logo__mark {
+  transform: scale(1.1);
 }
 
 .zn-logo__text {
