@@ -1,0 +1,18 @@
+# ZapNest robots.txt
+# https://zapneststore.in
+
+User-agent: *
+Allow: /
+Allow: /landing/
+Allow: /legal/
+
+# Disallow private areas
+Disallow: /admin/
+Disallow: /member/
+Disallow: /payment/
+Disallow: /emails/
+Disallow: /scripts/
+Disallow: /config.generated.js
+
+# Sitemap
+Sitemap: https://zapneststore.in/sitemap.xml
