@@ -14,16 +14,16 @@
 // ============================================
 
 const EMAIL_CONFIG = {
-  from: 'ZapNest <hello@zapnest.in>',
-  replyTo: 'support@zapnest.in',
+  from: 'ZapNest <hello@zapneststore.in>',
+  replyTo: 'hello@zapneststore.in',
 
-  // Resend API (set via environment)
-  apiKey: null, // Set via init()
+  // Resend API (set via environment - SERVER-SIDE ONLY)
+  apiKey: null, // Set via init() - NEVER expose in client-side code
 
   // Brand
   brandColor: '#00FF88',
-  logoUrl: 'https://zapnest.in/logo.png',
-  websiteUrl: 'https://zapnest.in'
+  logoUrl: 'https://zapneststore.in/logo.png',
+  websiteUrl: 'https://zapneststore.in'
 };
 
 // ============================================
