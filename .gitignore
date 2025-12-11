@@ -2,6 +2,7 @@
 .env
 .env.local
 *.log
+config.generated.js
 
 # Dependencies
 node_modules/

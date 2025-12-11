@@ -1,0 +1,10 @@
+{
+    "name": "zapnest",
+    "version": "1.0.0",
+    "description": "ZapNest Black Box - Curated Tech Subscription",
+    "scripts": {
+        "build": "node scripts/build-config.js",
+        "dev": "npx serve . -p 8081"
+    },
+    "private": true
+}
