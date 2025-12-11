@@ -63,7 +63,7 @@
         "url": "https://zapneststore.in",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://zapneststore.in/landing/assets/logo-zapnest.png",
+          "url": "https://zapneststore.in/assets/logo-zapnest.png",
           "width": 512,
           "height": 512
         },
@@ -85,6 +85,7 @@
         "@type": "Product",
         "name": "ZapNest Black Box — Core",
         "description": "Monthly curated tech subscription with hero product and accessories",
+        "image": "https://zapneststore.in/assets/hero-black-box.png",
         "brand": {"@type": "Brand", "name": "ZapNest"},
         "offers": {
           "@type": "Offer",
@@ -93,7 +94,42 @@
           "availability": "https://schema.org/PreOrder",
           "priceValidUntil": "2025-02-28",
           "url": "https://zapneststore.in/",
-          "seller": {"@id": "https://zapneststore.in/#organization"}
+          "seller": {"@id": "https://zapneststore.in/#organization"},
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "IN"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 1,
+                "maxValue": 3,
+                "unitCode": "d"
+              },
+              "transitTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 3,
+                "maxValue": 7,
+                "unitCode": "d"
+              }
+            },
+            "shippingRate": {
+              "@type": "MonetaryAmount",
+              "value": "0",
+              "currency": "INR"
+            }
+          },
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "IN",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 30,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn"
+          }
         }
       },
       {
