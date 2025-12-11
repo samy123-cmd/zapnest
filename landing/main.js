@@ -476,8 +476,8 @@
   // ============================================
 
   function initCountdown() {
-    // Target date: Feb 28, 2025 23:59:59 IST (First box ships)
-    const targetDate = new Date('2025-02-28T23:59:59+05:30').getTime();
+    // Target date: Feb 28, 2026 23:59:59 IST (First box ships)
+    const targetDate = new Date('2026-02-28T23:59:59+05:30').getTime();
 
     const daysEl = document.getElementById('countdown-days');
     const hoursEl = document.getElementById('countdown-hours');
