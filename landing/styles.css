@@ -316,6 +316,12 @@ body {
   margin-bottom: var(--zn-space-6);
 }
 
+.zn-hero__reward-hint {
+  opacity: 0.7;
+  font-weight: 500;
+  margin-left: var(--zn-space-2);
+}
+
 .zn-hero__heading {
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 700;
@@ -955,6 +961,187 @@ body {
   font-size: var(--zn-font-size-xs);
   color: var(--zn-text-muted);
   white-space: nowrap;
+}
+
+/* ============================================
+   Founders 500 Rewards Section
+   ============================================ */
+.zn-rewards {
+  padding: var(--zn-space-24) 0;
+  background: linear-gradient(180deg, var(--zn-bg-primary) 0%, #050505 100%);
+  border-top: 1px solid var(--zn-border);
+  border-bottom: 1px solid var(--zn-border);
+}
+
+.zn-rewards__header {
+  text-align: center;
+  margin-bottom: var(--zn-space-16);
+}
+
+.zn-rewards__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--zn-space-2);
+  padding: var(--zn-space-2) var(--zn-space-4);
+  background: rgba(0, 255, 136, 0.1);
+  border: 1px solid var(--zn-accent);
+  border-radius: var(--zn-radius-sm);
+  font-size: var(--zn-font-size-xs);
+  font-weight: 600;
+  color: var(--zn-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: var(--zn-space-6);
+}
+
+.zn-rewards__title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--zn-space-4);
+}
+
+.zn-rewards__subtitle {
+  font-size: var(--zn-font-size-lg);
+  color: var(--zn-text-secondary);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.zn-rewards__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--zn-space-12);
+}
+
+@media (min-width: 768px) {
+  .zn-rewards__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.zn-rewards__item {
+  background: var(--zn-bg-secondary);
+  border: 1px solid var(--zn-border);
+  border-radius: var(--zn-radius-lg);
+  overflow: hidden;
+  transition: transform var(--zn-transition-slow), border-color var(--zn-transition-fast);
+}
+
+.zn-rewards__item:hover {
+  transform: translateY(-4px);
+  border-color: var(--zn-accent);
+}
+
+.zn-rewards__visual {
+  position: relative;
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, #0A0A0A 0%, #1a1a1a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.zn-rewards__image {
+  width: 75%;
+  height: auto;
+  object-fit: contain;
+  transition: transform var(--zn-transition-slow);
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
+}
+
+.zn-rewards__item:hover .zn-rewards__image {
+  transform: scale(1.03);
+}
+
+.zn-rewards__serial-badge {
+  position: absolute;
+  bottom: var(--zn-space-4);
+  right: var(--zn-space-4);
+  padding: var(--zn-space-2) var(--zn-space-3);
+  background: rgba(0, 0, 0, 0.85);
+  border: 1px solid var(--zn-border);
+  border-radius: var(--zn-radius-sm);
+  font-size: var(--zn-font-size-xs);
+  font-weight: 600;
+  color: var(--zn-accent);
+  letter-spacing: 0.05em;
+}
+
+.zn-rewards__content {
+  padding: var(--zn-space-8);
+}
+
+.zn-rewards__item-title {
+  font-size: var(--zn-font-size-2xl);
+  font-weight: 700;
+  margin-bottom: var(--zn-space-1);
+}
+
+.zn-rewards__item-subtitle {
+  font-size: var(--zn-font-size-sm);
+  font-weight: 500;
+  color: var(--zn-accent);
+  margin-bottom: var(--zn-space-4);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.zn-rewards__item-body {
+  color: var(--zn-text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--zn-space-6);
+}
+
+.zn-rewards__features {
+  list-style: none;
+}
+
+.zn-rewards__features li {
+  position: relative;
+  padding-left: var(--zn-space-5);
+  margin-bottom: var(--zn-space-2);
+  font-size: var(--zn-font-size-sm);
+  color: var(--zn-text-muted);
+}
+
+.zn-rewards__features li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--zn-accent);
+}
+
+.zn-rewards__footer {
+  text-align: center;
+  margin-top: var(--zn-space-12);
+  padding-top: var(--zn-space-8);
+  border-top: 1px solid var(--zn-border);
+}
+
+.zn-rewards__philosophy {
+  font-style: italic;
+  color: var(--zn-text-secondary);
+  max-width: 600px;
+  margin: 0 auto var(--zn-space-6);
+  line-height: 1.8;
+}
+
+.zn-rewards__scarcity {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--zn-space-3);
+  font-size: var(--zn-font-size-sm);
+  color: var(--zn-text-secondary);
+}
+
+.zn-rewards__scarcity-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--zn-accent);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
 }
 
 /* ============================================
