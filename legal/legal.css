@@ -1,0 +1,203 @@
+/* ============================================
+   ZapNest Legal Pages
+   Privacy Policy & Terms of Service
+   ============================================ */
+
+:root {
+    --zn-bg: #050505;
+    --zn-bg-secondary: #0a0a0a;
+    --zn-text: #ffffff;
+    --zn-text-secondary: #9ca3af;
+    --zn-text-muted: #6b7280;
+    --zn-accent: #00FF88;
+    --zn-border: rgba(255, 255, 255, 0.08);
+    --zn-font: 'Inter', system-ui, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--zn-font);
+    background: var(--zn-bg);
+    color: var(--zn-text);
+    line-height: 1.7;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Header */
+.legal-header {
+    position: sticky;
+    top: 0;
+    background: rgba(5, 5, 5, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--zn-border);
+    z-index: 100;
+}
+
+.legal-header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.legal-header__logo {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--zn-accent);
+    text-decoration: none;
+}
+
+.legal-header__nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.legal-header__nav a {
+    color: var(--zn-text-secondary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s;
+}
+
+.legal-header__nav a:hover {
+    color: var(--zn-accent);
+}
+
+/* Main Content */
+.legal-main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 2rem 5rem;
+}
+
+.legal-content h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--zn-accent), #00cc6a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.legal-updated {
+    color: var(--zn-text-muted);
+    font-size: 0.875rem;
+    margin-bottom: 3rem;
+}
+
+.legal-content section {
+    margin-bottom: 2.5rem;
+}
+
+.legal-content h2 {
+    font-size: 1.375rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--zn-text);
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--zn-border);
+}
+
+.legal-content h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--zn-text);
+}
+
+.legal-content p {
+    color: var(--zn-text-secondary);
+    margin-bottom: 1rem;
+}
+
+.legal-content ul,
+.legal-content ol {
+    color: var(--zn-text-secondary);
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.legal-content li {
+    margin-bottom: 0.5rem;
+}
+
+.legal-content li strong {
+    color: var(--zn-text);
+}
+
+.legal-content a {
+    color: var(--zn-accent);
+    text-decoration: none;
+}
+
+.legal-content a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.legal-footer {
+    background: var(--zn-bg-secondary);
+    border-top: 1px solid var(--zn-border);
+    padding: 2rem;
+}
+
+.legal-footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.legal-footer p {
+    color: var(--zn-text-muted);
+    font-size: 0.875rem;
+}
+
+.legal-footer__nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.legal-footer__nav a {
+    color: var(--zn-text-secondary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s;
+}
+
+.legal-footer__nav a:hover {
+    color: var(--zn-accent);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+
+    .legal-header__container,
+    .legal-footer__container {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .legal-main {
+        padding: 2rem 1.5rem 4rem;
+    }
+
+    .legal-content h1 {
+        font-size: 2rem;
+    }
+
+    .legal-content h2 {
+        font-size: 1.25rem;
+    }
+}

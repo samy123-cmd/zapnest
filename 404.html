@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found — ZapNest</title>
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --zn-bg: #050505;
+            --zn-text: #ffffff;
+            --zn-text-muted: #6b7280;
+            --zn-accent: #00FF88;
+            --zn-accent-hover: #00cc6a;
+            --zn-border: rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--zn-bg);
+            color: var(--zn-text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            text-align: center;
+            background-image:
+                radial-gradient(ellipse at 30% 20%, rgba(0, 255, 136, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(139, 92, 246, 0.06) 0%, transparent 50%);
+        }
+
+        .error-container {
+            max-width: 500px;
+            animation: fadeIn 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .error-code {
+            font-size: 8rem;
+            font-weight: 800;
+            line-height: 1;
+            background: linear-gradient(135deg, var(--zn-accent), #00cc6a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .error-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .error-message {
+            color: var(--zn-text-muted);
+            font-size: 1.125rem;
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
+        }
+
+        .error-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .error-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.5rem;
+            font-size: 0.9375rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+
+        .error-link--primary {
+            background: var(--zn-accent);
+            color: var(--zn-bg);
+        }
+
+        .error-link--primary:hover {
+            background: var(--zn-accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .error-link--secondary {
+            background: transparent;
+            color: var(--zn-text);
+            border: 1px solid var(--zn-border);
+        }
+
+        .error-link--secondary:hover {
+            border-color: var(--zn-text-muted);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .error-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .logo {
+            position: fixed;
+            top: 1.5rem;
+            left: 1.5rem;
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--zn-accent);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="/landing/" class="logo">ZapNest</a>
+
+    <div class="error-container">
+        <div class="error-icon">📦</div>
+        <div class="error-code">404</div>
+        <h1 class="error-title">Box Not Found</h1>
+        <p class="error-message">
+            Looks like this page got lost in shipping. Let's get you back on track.
+        </p>
+        <div class="error-links">
+            <a href="/landing/" class="error-link error-link--primary">
+                ← Back to Home
+            </a>
+            <a href="/member/" class="error-link error-link--secondary">
+                Member Dashboard
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

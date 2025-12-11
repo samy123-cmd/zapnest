@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account — ZapNest Black Box</title>
+    <meta name="description" content="Manage your ZapNest subscription, track orders, and update your preferences.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="member.css">
+
+    <!-- Supabase Configuration -->
+    <script>
+        window.SUPABASE_URL = 'https://vqxviqsvmlevabqihwir.supabase.co';
+        window.SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZxeHZpcXN2bWxldmFicWlod2lyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjUzODk2MDEsImV4cCI6MjA4MDk2NTYwMX0.er-NquFxi5__5ZxqEu6M0pwY9xHWxcCMu9cteL_V6HY';
+    </script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="member-header">
+        <div class="member-header__container">
+            <a href="/landing/" class="member-header__logo">ZapNest</a>
+            <div class="member-header__user" id="user-info">
+                <span class="member-header__email" id="user-email">Loading...</span>
+                <button class="member-header__logout" id="logout-btn">Sign Out</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="member-layout">
+        <!-- Sidebar -->
+        <aside class="member-sidebar">
+            <nav class="member-nav">
+                <a href="#dashboard" class="member-nav__item member-nav__item--active" data-section="dashboard">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#orders" class="member-nav__item" data-section="orders">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                        </path>
+                    </svg>
+                    <span>My Orders</span>
+                </a>
+                <a href="#subscription" class="member-nav__item" data-section="subscription">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 6v6l4 2"></path>
+                    </svg>
+                    <span>Subscription</span>
+                </a>
+                <a href="#referrals" class="member-nav__item" data-section="referrals">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <span>Referrals</span>
+                </a>
+                <a href="#settings" class="member-nav__item" data-section="settings">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path
+                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                        </path>
+                    </svg>
+                    <span>Settings</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="member-main">
+            <!-- Login View (shown when not authenticated) -->
+            <section id="login-view" class="member-section member-login">
+                <div class="member-login__card">
+                    <h1 class="member-login__title">Welcome Back</h1>
+                    <p class="member-login__subtitle">Enter your email to receive a magic link</p>
+
+                    <form id="login-form" class="member-login__form">
+                        <div class="member-form-group">
+                            <label for="login-email">Email Address</label>
+                            <input type="email" id="login-email" placeholder="you@example.com" required>
+                        </div>
+                        <button type="submit" class="member-btn member-btn--primary member-btn--full">
+                            <span class="member-btn__text">Send Magic Link</span>
+                            <span class="member-btn__loading">Sending...</span>
+                        </button>
+                    </form>
+
+                    <div id="login-success" class="member-login__success" hidden>
+                        <div class="member-login__success-icon">✉️</div>
+                        <h2>Check your inbox</h2>
+                        <p>We've sent a magic link to <strong id="sent-email"></strong></p>
+                        <p class="member-login__hint">Click the link in the email to sign in. It expires in 15 minutes.
+                        </p>
+                    </div>
+
+                    <p class="member-login__footer">
+                        Don't have an account? <a href="/landing/">Join the waitlist</a>
+                    </p>
+                </div>
+            </section>
+
+            <!-- Dashboard View -->
+            <section id="dashboard" class="member-section" hidden>
+                <div class="member-section__header">
+                    <h1 class="member-section__title">Welcome back! 👋</h1>
+                    <p class="member-section__subtitle">Here's what's happening with your subscription</p>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="member-stats">
+                    <div class="member-stat-card">
+                        <div class="member-stat-card__icon member-stat-card__icon--tier">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                        </div>
+                        <div class="member-stat-card__content">
+                            <span class="member-stat-card__label">Current Tier</span>
+                            <span class="member-stat-card__value" id="stat-tier">—</span>
+                        </div>
+                    </div>
+                    <div class="member-stat-card">
+                        <div class="member-stat-card__icon member-stat-card__icon--status">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <div class="member-stat-card__content">
+                            <span class="member-stat-card__label">Status</span>
+                            <span class="member-stat-card__value" id="stat-status">—</span>
+                        </div>
+                    </div>
+                    <div class="member-stat-card">
+                        <div class="member-stat-card__icon member-stat-card__icon--billing">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                                <line x1="1" y1="10" x2="23" y2="10"></line>
+                            </svg>
+                        </div>
+                        <div class="member-stat-card__content">
+                            <span class="member-stat-card__label">Next Billing</span>
+                            <span class="member-stat-card__value" id="stat-billing">—</span>
+                        </div>
+                    </div>
+                    <div class="member-stat-card">
+                        <div class="member-stat-card__icon member-stat-card__icon--boxes">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="member-stat-card__content">
+                            <span class="member-stat-card__label">Boxes Received</span>
+                            <span class="member-stat-card__value" id="stat-boxes">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Next Box Card -->
+                <div class="member-next-box">
+                    <div class="member-next-box__visual">
+                        <div class="member-next-box__icon">📦</div>
+                    </div>
+                    <div class="member-next-box__content">
+                        <h3 class="member-next-box__title">January 2025 Box</h3>
+                        <p class="member-next-box__subtitle">Your first box is being curated</p>
+                        <div class="member-next-box__status">
+                            <span class="member-next-box__status-dot"></span>
+                            <span id="next-box-status">Processing</span>
+                        </div>
+                    </div>
+                    <div class="member-next-box__action">
+                        <a href="#orders" class="member-btn member-btn--outline" data-section="orders">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Founder Badge -->
+                <div class="member-founder-badge" id="founder-badge" hidden>
+                    <div class="member-founder-badge__icon">🚀</div>
+                    <div class="member-founder-badge__content">
+                        <h3>Founding Member</h3>
+                        <p>Your pricing is locked forever. Thank you for believing in us early.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Orders View -->
+            <section id="orders" class="member-section" hidden>
+                <div class="member-section__header">
+                    <h1 class="member-section__title">My Orders</h1>
+                    <p class="member-section__subtitle">Track your monthly boxes</p>
+                </div>
+
+                <div class="member-orders" id="orders-list">
+                    <!-- Orders will be populated by JavaScript -->
+                    <div class="member-orders__empty">
+                        <div class="member-orders__empty-icon">📭</div>
+                        <h3>No orders yet</h3>
+                        <p>Your first box ships in January 2025</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Subscription View -->
+            <section id="subscription" class="member-section" hidden>
+                <div class="member-section__header">
+                    <h1 class="member-section__title">Subscription</h1>
+                    <p class="member-section__subtitle">Manage your plan and billing</p>
+                </div>
+
+                <div class="member-subscription-card">
+                    <div class="member-subscription-card__header">
+                        <div class="member-subscription-card__tier">
+                            <span class="member-subscription-card__tier-name" id="sub-tier-name">Core</span>
+                            <span class="member-subscription-card__tier-badge" id="sub-tier-badge">Current Plan</span>
+                        </div>
+                        <div class="member-subscription-card__price">
+                            <span class="member-subscription-card__amount" id="sub-price">₹2,999</span>
+                            <span class="member-subscription-card__period">/month</span>
+                        </div>
+                    </div>
+
+                    <div class="member-subscription-card__features" id="sub-features">
+                        <div class="member-subscription-card__feature">✓ 1 hero product monthly</div>
+                        <div class="member-subscription-card__feature">✓ 1-2 complementary accessories</div>
+                        <div class="member-subscription-card__feature">✓ Premium magnetic packaging</div>
+                        <div class="member-subscription-card__feature">✓ Free shipping</div>
+                    </div>
+
+                    <div class="member-subscription-card__actions">
+                        <button class="member-btn member-btn--outline" id="change-tier-btn">Change Tier</button>
+                        <button class="member-btn member-btn--ghost" id="pause-btn">Pause Subscription</button>
+                    </div>
+                </div>
+
+                <!-- Billing History -->
+                <div class="member-billing">
+                    <h3 class="member-billing__title">Billing History</h3>
+                    <div class="member-billing__list" id="billing-list">
+                        <div class="member-billing__empty">No payments yet</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Referrals View -->
+            <section id="referrals" class="member-section" hidden>
+                <div class="member-section__header">
+                    <h1 class="member-section__title">Refer Friends</h1>
+                    <p class="member-section__subtitle">Share the love, earn rewards</p>
+                </div>
+
+                <div class="member-referral-card">
+                    <div class="member-referral-card__code">
+                        <span class="member-referral-card__label">Your Referral Code</span>
+                        <div class="member-referral-card__value-group">
+                            <span class="member-referral-card__value" id="referral-code">—</span>
+                            <button class="member-btn member-btn--sm member-btn--outline"
+                                id="copy-code-btn">Copy</button>
+                        </div>
+                    </div>
+                    <div class="member-referral-card__stats">
+                        <div class="member-referral-card__stat">
+                            <span class="member-referral-card__stat-value" id="referral-count">0</span>
+                            <span class="member-referral-card__stat-label">Friends Referred</span>
+                        </div>
+                        <div class="member-referral-card__stat">
+                            <span class="member-referral-card__stat-value" id="referral-credit">₹0</span>
+                            <span class="member-referral-card__stat-label">Credit Earned</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="member-referral-info">
+                    <h3>How it works</h3>
+                    <ol>
+                        <li>Share your unique code with friends</li>
+                        <li>They get ₹200 off their first box</li>
+                        <li>You get ₹200 credit when they subscribe</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Settings View -->
+            <section id="settings" class="member-section" hidden>
+                <div class="member-section__header">
+                    <h1 class="member-section__title">Settings</h1>
+                    <p class="member-section__subtitle">Update your preferences</p>
+                </div>
+
+                <div class="member-settings-group">
+                    <h3 class="member-settings-group__title">Shipping Address</h3>
+                    <form id="address-form" class="member-settings-form">
+                        <div class="member-form-row">
+                            <div class="member-form-group">
+                                <label for="address-name">Full Name</label>
+                                <input type="text" id="address-name" placeholder="Your name">
+                            </div>
+                            <div class="member-form-group">
+                                <label for="address-phone">Phone</label>
+                                <input type="tel" id="address-phone" placeholder="+91 XXXXX XXXXX">
+                            </div>
+                        </div>
+                        <div class="member-form-group">
+                            <label for="address-line1">Address Line 1</label>
+                            <input type="text" id="address-line1" placeholder="House/flat number, building name">
+                        </div>
+                        <div class="member-form-group">
+                            <label for="address-line2">Address Line 2</label>
+                            <input type="text" id="address-line2" placeholder="Street, locality">
+                        </div>
+                        <div class="member-form-row">
+                            <div class="member-form-group">
+                                <label for="address-city">City</label>
+                                <input type="text" id="address-city" placeholder="City">
+                            </div>
+                            <div class="member-form-group">
+                                <label for="address-state">State</label>
+                                <input type="text" id="address-state" placeholder="State">
+                            </div>
+                            <div class="member-form-group">
+                                <label for="address-pincode">Pincode</label>
+                                <input type="text" id="address-pincode" placeholder="XXXXXX">
+                            </div>
+                        </div>
+                        <button type="submit" class="member-btn member-btn--primary">Save Address</button>
+                    </form>
+                </div>
+
+                <div class="member-settings-group member-settings-group--danger">
+                    <h3 class="member-settings-group__title">Danger Zone</h3>
+                    <button class="member-btn member-btn--danger" id="cancel-sub-btn">Cancel Subscription</button>
+                    <p class="member-settings-group__hint">You can cancel anytime. No questions asked.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="member.js"></script>
+</body>
+
+</html>

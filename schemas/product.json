@@ -1,0 +1,101 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://zapnest.com/schemas/product.json",
+  "title": "Product Record",
+  "description": "Canonical schema for ZapNest product records",
+  "type": "object",
+  "required": [
+    "product_id",
+    "name",
+    "role",
+    "supplier_id",
+    "price_fob_usd",
+    "status"
+  ],
+  "properties": {
+    "product_id": {
+      "type": "string",
+      "pattern": "^prod-[a-z0-9]+$",
+      "description": "Unique product identifier"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200,
+      "description": "Product display name"
+    },
+    "role": {
+      "type": "string",
+      "enum": ["hero", "accessory"],
+      "description": "Product role in box"
+    },
+    "claimed_specs": {
+      "type": "object",
+      "description": "Manufacturer-claimed specifications",
+      "additionalProperties": true
+    },
+    "measured_specs": {
+      "type": "object",
+      "description": "Internally measured/verified specifications",
+      "additionalProperties": true
+    },
+    "supplier_id": {
+      "type": "string",
+      "pattern": "^sup-[a-z0-9]+$",
+      "description": "Reference to supplier record"
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "description": "Product image URLs (S3/CDN)"
+    },
+    "safety_certificates": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["ce", "fc", "rohs", "bis", "ul", "fda"]
+      },
+      "description": "Safety certifications held"
+    },
+    "sample_test_summary_id": {
+      "type": "string",
+      "pattern": "^test-[a-z0-9]+$",
+      "description": "Reference to sample test summary"
+    },
+    "price_fob_usd": {
+      "type": "number",
+      "minimum": 0,
+      "description": "FOB price in USD"
+    },
+    "estimated_landed_inr": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Estimated landed cost in INR (Mumbai)"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["candidate", "sample_ordered", "sample_received", "approved", "rejected", "blocked"],
+      "description": "Current product status in pipeline"
+    },
+    "compliance_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Compliance requirements pending"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Record creation timestamp"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last update timestamp"
+    }
+  }
+}

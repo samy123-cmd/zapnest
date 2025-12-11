@@ -1,0 +1,323 @@
+{
+    "status": "ok",
+    "run_date": "2025-12-11T02:00:00+05:30",
+    "run_id": "scan-20251211-001",
+    "queries_executed": [
+        "portable mini projector",
+        "3-in-1 wireless charger",
+        "compact bluetooth speaker",
+        "travel power bank",
+        "magnetic phone mount",
+        "USB-C hub travel",
+        "wireless earbuds case",
+        "mini desk lamp",
+        "portable mechanical keyboard",
+        "compact air purifier"
+    ],
+    "sources_scanned": [
+        "reddit_r/gadgets",
+        "reddit_r/BuyItForLife",
+        "tiktok_trending",
+        "x_search",
+        "aliexpress_bestsellers",
+        "kickstarter_tech",
+        "amazon_movers_shakers"
+    ],
+    "candidates": [
+        {
+            "id": "trend-20251211-001",
+            "name": "Mini LED Projector 720p - portable pocket cinema",
+            "signal_score": 0.82,
+            "signals": {
+                "reddit_mentions": 127,
+                "reddit_sentiment_positive_pct": 84,
+                "tiktok_views": 2450000,
+                "tiktok_hashtag_posts": 1840,
+                "x_mentions": 89,
+                "aliexpress_monthly_orders": 12500,
+                "aliexpress_rating": 4.6
+            },
+            "rationale": "Exceptional cross-platform signal. TikTok virality (#miniprojector 2.4M views) indicates mass-market appeal. Reddit sentiment 84% positive with travel/camping use cases dominating. AliExpress velocity of 12.5K orders/month suggests sustained demand, not flash trend.",
+            "confidence": "high",
+            "evidence": [
+                {
+                    "source": "reddit",
+                    "url": "https://reddit.com/r/gadgets/comments/1h5xk2m",
+                    "snippet": "Game changer for hotel rooms and camping. Way better than expected for ₹3K range."
+                },
+                {
+                    "source": "tiktok",
+                    "url": "https://tiktok.com/@traveltech/video/7441234567",
+                    "snippet": "POV: hotel room movie night (2.1M views, 180K likes)"
+                },
+                {
+                    "source": "aliexpress",
+                    "url": "https://aliexpress.com/item/1005006789012.html",
+                    "snippet": "12,500+ orders this month, 4.6★ (8,200 reviews)"
+                }
+            ],
+            "recommended_action": "shortlist",
+            "category": "visual_tech",
+            "estimated_fob_usd": "15-22",
+            "notes": "Multiple SKUs available. Focus on 720p native models with USB-C input. Avoid 'claimed 1080p' models with poor reviews."
+        },
+        {
+            "id": "trend-20251211-002",
+            "name": "3-in-1 Magnetic Wireless Charger - iPhone/Watch/AirPods",
+            "signal_score": 0.74,
+            "signals": {
+                "reddit_mentions": 68,
+                "reddit_sentiment_positive_pct": 71,
+                "tiktok_views": 890000,
+                "x_mentions": 45,
+                "aliexpress_monthly_orders": 8200,
+                "aliexpress_rating": 4.4
+            },
+            "rationale": "Strong Apple ecosystem appeal. Reddit shows demand but quality variance concerns (alignment issues). TikTok presence growing. Good desk accessory pairing potential.",
+            "confidence": "medium",
+            "evidence": [
+                {
+                    "source": "reddit",
+                    "url": "https://reddit.com/r/apple/comments/1h4abc123",
+                    "snippet": "These 3-in-1 chargers are hit or miss. The ones with good magnets are worth it."
+                },
+                {
+                    "source": "aliexpress",
+                    "url": "https://aliexpress.com/item/1005007890123.html",
+                    "snippet": "8,200+ orders, 4.4★ - note: mixed reviews on MagSafe alignment"
+                }
+            ],
+            "recommended_action": "shortlist",
+            "category": "charging",
+            "estimated_fob_usd": "8-14",
+            "notes": "Quality variance flagged. Recommend sampling from 3+ suppliers. MagSafe alignment is key differentiator."
+        },
+        {
+            "id": "trend-20251211-003",
+            "name": "Compact Bluetooth Speaker - IPX7 waterproof",
+            "signal_score": 0.71,
+            "signals": {
+                "reddit_mentions": 52,
+                "reddit_sentiment_positive_pct": 78,
+                "tiktok_views": 650000,
+                "x_mentions": 31,
+                "aliexpress_monthly_orders": 6800,
+                "aliexpress_rating": 4.5
+            },
+            "rationale": "Steady demand for travel/outdoor speakers. IPX7 waterproofing is key selling point. Reddit favors compact size + decent bass. Lower signal than projector but consistent interest.",
+            "confidence": "medium",
+            "evidence": [
+                {
+                    "source": "reddit",
+                    "url": "https://reddit.com/r/BuyItForLife/comments/1h3xyz789",
+                    "snippet": "These little waterproof speakers are surprisingly good. Take mine everywhere."
+                }
+            ],
+            "recommended_action": "shortlist",
+            "category": "audio",
+            "estimated_fob_usd": "6-12",
+            "notes": "Good Core accessory candidate. Pair with projector for complete entertainment package."
+        },
+        {
+            "id": "trend-20251211-004",
+            "name": "65W GaN USB-C Travel Charger - 3-port compact",
+            "signal_score": 0.68,
+            "signals": {
+                "reddit_mentions": 89,
+                "reddit_sentiment_positive_pct": 88,
+                "tiktok_views": 420000,
+                "x_mentions": 67,
+                "aliexpress_monthly_orders": 5400,
+                "aliexpress_rating": 4.7
+            },
+            "rationale": "High Reddit sentiment (88% positive) driven by laptop charging capability. GaN tech enables compact form. Strong X/Twitter tech community engagement. Premium positioning possible.",
+            "confidence": "high",
+            "evidence": [
+                {
+                    "source": "reddit",
+                    "url": "https://reddit.com/r/UsbCHardware/comments/1h2ghi456",
+                    "snippet": "Finally replaced my laptop brick with this. 65W GaN at this size is insane."
+                }
+            ],
+            "recommended_action": "shortlist",
+            "category": "charging",
+            "estimated_fob_usd": "10-18",
+            "notes": "Premium accessory. BIS certification required for India. Verify actual wattage output."
+        },
+        {
+            "id": "trend-20251211-005",
+            "name": "Magnetic Phone Car Mount - MagSafe compatible",
+            "signal_score": 0.64,
+            "signals": {
+                "reddit_mentions": 41,
+                "reddit_sentiment_positive_pct": 75,
+                "tiktok_views": 380000,
+                "aliexpress_monthly_orders": 9200,
+                "aliexpress_rating": 4.3
+            },
+            "rationale": "High AliExpress volume but lower social signal. Commodity product with many alternatives. Could work as Lite tier accessory.",
+            "confidence": "medium",
+            "evidence": [
+                {
+                    "source": "aliexpress",
+                    "url": "https://aliexpress.com/item/1005005678901.html",
+                    "snippet": "9,200+ orders, high volume but competitive market"
+                }
+            ],
+            "recommended_action": "monitor",
+            "category": "accessories",
+            "estimated_fob_usd": "3-6",
+            "notes": "Commodity risk. Consider only as box filler, not hero."
+        },
+        {
+            "id": "trend-20251211-006",
+            "name": "USB-C Hub 7-in-1 - HDMI/SD/USB-A ports",
+            "signal_score": 0.63,
+            "signals": {
+                "reddit_mentions": 78,
+                "reddit_sentiment_positive_pct": 72,
+                "tiktok_views": 220000,
+                "aliexpress_monthly_orders": 4200,
+                "aliexpress_rating": 4.4
+            },
+            "rationale": "Functional necessity but low excitement factor. Reddit discussions focused on reliability and port quality. Not a 'wow' product but useful.",
+            "confidence": "medium",
+            "evidence": [
+                {
+                    "source": "reddit",
+                    "url": "https://reddit.com/r/macsetups/comments/1h1jkl012",
+                    "snippet": "Get one with good thermals. The cheap ones throttle during video output."
+                }
+            ],
+            "recommended_action": "monitor",
+            "category": "productivity",
+            "estimated_fob_usd": "8-15",
+            "notes": "Quality variance high. Thermal throttling common in cheap units. Core accessory at best."
+        },
+        {
+            "id": "trend-20251211-007",
+            "name": "TWS Earbuds Case with LED Display - battery indicator",
+            "signal_score": 0.58,
+            "signals": {
+                "reddit_mentions": 23,
+                "tiktok_views": 520000,
+                "aliexpress_monthly_orders": 3800,
+                "aliexpress_rating": 4.2
+            },
+            "rationale": "TikTok-driven trend with limited Reddit validation. LED display is gimmick. Product may lack staying power.",
+            "confidence": "low",
+            "evidence": [
+                {
+                    "source": "tiktok",
+                    "url": "https://tiktok.com/@gadgetfinds/video/7439876543",
+                    "snippet": "Wait for the LED reveal (520K views)"
+                }
+            ],
+            "recommended_action": "monitor",
+            "category": "audio",
+            "estimated_fob_usd": "4-8",
+            "notes": "Gimmick risk. LED display adds cost without function. Skip unless audio quality exceptional."
+        },
+        {
+            "id": "trend-20251211-008",
+            "name": "Smart Desk Lamp - wireless charging base",
+            "signal_score": 0.56,
+            "signals": {
+                "reddit_mentions": 34,
+                "reddit_sentiment_positive_pct": 80,
+                "tiktok_views": 180000,
+                "aliexpress_monthly_orders": 2100,
+                "aliexpress_rating": 4.5
+            },
+            "rationale": "Niche but high satisfaction among owners. Combines lighting + charging. Desk setup appeal. Lower volume but good reviews.",
+            "confidence": "medium",
+            "evidence": [
+                {
+                    "source": "reddit",
+                    "url": "https://reddit.com/r/malelivingspace/comments/1h0mno345",
+                    "snippet": "These combo lamps are underrated. Cleans up desk clutter."
+                }
+            ],
+            "recommended_action": "monitor",
+            "category": "desk_accessories",
+            "estimated_fob_usd": "12-22",
+            "notes": "Desk/productivity variant potential. Not travel-focused. Consider for future theme box."
+        },
+        {
+            "id": "trend-20251211-009",
+            "name": "Compact Mechanical Keyboard 60% - wireless travel",
+            "signal_score": 0.52,
+            "signals": {
+                "reddit_mentions": 156,
+                "reddit_sentiment_positive_pct": 65,
+                "tiktok_views": 95000,
+                "aliexpress_monthly_orders": 1800,
+                "aliexpress_rating": 4.3
+            },
+            "rationale": "High Reddit engagement but polarized sentiment. Mechanical keyboard enthusiasts are vocal. Niche audience, high standards. Complex product category.",
+            "confidence": "low",
+            "evidence": [
+                {
+                    "source": "reddit",
+                    "url": "https://reddit.com/r/MechanicalKeyboards/comments/1gzmno678",
+                    "snippet": "For the price these are okay but don't expect premium switches."
+                }
+            ],
+            "recommended_action": "discard",
+            "category": "productivity",
+            "estimated_fob_usd": "25-45",
+            "notes": "Too niche. MechKeyboard community has high standards. Quality risk. Pass."
+        },
+        {
+            "id": "trend-20251211-010",
+            "name": "Mini Air Purifier USB - desktop personal",
+            "signal_score": 0.48,
+            "signals": {
+                "reddit_mentions": 18,
+                "reddit_sentiment_positive_pct": 55,
+                "tiktok_views": 140000,
+                "aliexpress_monthly_orders": 3200,
+                "aliexpress_rating": 4.1
+            },
+            "rationale": "Skeptical sentiment on Reddit. Efficacy questioned for small units. AliExpress volume doesn't translate to proven value. Health claims risky.",
+            "confidence": "low",
+            "evidence": [
+                {
+                    "source": "reddit",
+                    "url": "https://reddit.com/r/CleaningTips/comments/1gypqr901",
+                    "snippet": "These mini purifiers don't really do anything measurable. Get a real HEPA."
+                }
+            ],
+            "recommended_action": "discard",
+            "category": "wellness",
+            "estimated_fob_usd": "8-15",
+            "notes": "Efficacy concerns. Avoid health-adjacent products with unverifiable claims."
+        }
+    ],
+    "summary": "Strong week with clear leader: Mini LED Projector (0.82 signal score) shows exceptional cross-platform traction—TikTok virality + Reddit validation + sustained AliExpress demand. Recommend immediate sample order. Secondary opportunities in 3-in-1 wireless charger and compact Bluetooth speaker as Core accessories. GaN travel charger has premium positioning potential. 4 products shortlisted for procurement. 4 on monitor. 2 discarded.",
+    "shortlisted_for_procurement": [
+        "trend-20251211-001",
+        "trend-20251211-002",
+        "trend-20251211-003",
+        "trend-20251211-004"
+    ],
+    "monitoring": [
+        "trend-20251211-005",
+        "trend-20251211-006",
+        "trend-20251211-007",
+        "trend-20251211-008"
+    ],
+    "discarded": [
+        "trend-20251211-009",
+        "trend-20251211-010"
+    ],
+    "next_action": "Trigger ProcurementAgent for shortlisted candidates",
+    "audit": [
+        {
+            "type": "signal",
+            "id": "scan-20251211-001",
+            "timestamp": "2025-12-11T02:00:00+05:30",
+            "summary": "Daily scan across 10 categories, 7 sources. 10 candidates evaluated."
+        }
+    ]
+}

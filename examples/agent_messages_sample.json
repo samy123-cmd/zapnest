@@ -1,0 +1,503 @@
+{
+    "examples": {
+        "trend_radar": {
+            "input": {
+                "run_date": "2025-12-10T02:00:00+05:30",
+                "queries": [
+                    "portable mini projector",
+                    "3-in-1 wireless charger"
+                ],
+                "sources": [
+                    "reddit_r/gadgets",
+                    "aliexpress_bestsellers",
+                    "tiktok_trending_products"
+                ],
+                "max_candidates": 10
+            },
+            "output": {
+                "status": "ok",
+                "run_date": "2025-12-10T02:00:00+05:30",
+                "candidates": [
+                    {
+                        "id": "trend-20251210020000-001",
+                        "name": "Mini Pocket Projector 720p LED - portable compact",
+                        "signal_score": 0.78,
+                        "signals": {
+                            "reddit_mentions": 89,
+                            "tiktok_views": 1250000,
+                            "aliexpress_order_rate": 420.5
+                        },
+                        "rationale": "Strong cross-platform signal with high TikTok virality (1.25M views tagged #miniprojector). Reddit sentiment 82% positive. AliExpress velocity suggests sustained demand.",
+                        "confidence": "high",
+                        "evidence": [
+                            {
+                                "source": "reddit",
+                                "url": "https://reddit.com/r/gadgets/comments/xyz123",
+                                "snippet": "Just used this mini projector for camping, game changer..."
+                            },
+                            {
+                                "source": "tiktok",
+                                "url": "https://tiktok.com/@techreviewer/video/xxx",
+                                "snippet": "POV: hotel room movie night (1.2M views)"
+                            },
+                            {
+                                "source": "aliexpress",
+                                "url": "https://aliexpress.com/item/xxx",
+                                "snippet": "8,500+ orders this month, 4.6 stars"
+                            }
+                        ],
+                        "recommended_action": "shortlist",
+                        "notes": ""
+                    },
+                    {
+                        "id": "trend-20251210020000-002",
+                        "name": "3-in-1 Magnetic Wireless Charger - Apple Watch + iPhone + AirPods",
+                        "signal_score": 0.65,
+                        "signals": {
+                            "reddit_mentions": 34,
+                            "tiktok_views": 450000,
+                            "aliexpress_order_rate": 280.0
+                        },
+                        "rationale": "Moderate signal strength. Appeals to Apple ecosystem users. Some quality concerns flagged in Reddit comments about MagSafe alignment.",
+                        "confidence": "medium",
+                        "evidence": [
+                            {
+                                "source": "reddit",
+                                "url": "https://reddit.com/r/apple/comments/abc456",
+                                "snippet": "These 3-in-1 chargers are hit or miss..."
+                            },
+                            {
+                                "source": "aliexpress",
+                                "url": "https://aliexpress.com/item/yyy",
+                                "snippet": "5,200+ orders, 4.4 stars"
+                            }
+                        ],
+                        "recommended_action": "shortlist",
+                        "notes": "Quality variance flagged - recommend multiple supplier samples"
+                    }
+                ],
+                "summary": "Strong projector signal warrants immediate sample order. Wireless charger shows potential but needs quality verification. Both recommended for procurement phase.",
+                "audit": [
+                    {
+                        "type": "signal",
+                        "id": "trend-20251210020000-001",
+                        "timestamp": "2025-12-10T02:00:00+05:30",
+                        "url": "https://reddit.com/r/gadgets/comments/xyz123",
+                        "summary": "89 Reddit mentions, 82% positive sentiment"
+                    }
+                ]
+            }
+        },
+        "procurement": {
+            "input": {
+                "candidate_id": "trend-20251210020000-001",
+                "product_query": "portable mini projector 720p LED",
+                "constraints": {
+                    "max_fob_usd": 25,
+                    "max_moq": 200,
+                    "preferred_regions": [
+                        "CN"
+                    ],
+                    "sample_currency": "USD"
+                }
+            },
+            "output": {
+                "status": "ok",
+                "candidate_id": "trend-20251210020000-001",
+                "supplier_list": [
+                    {
+                        "supplier_id": "sup-shz-001",
+                        "name": "Shenzhen ProVision Electronics Co.",
+                        "link": "https://alibaba.com/supplier/xxx",
+                        "country": "CN",
+                        "fob_usd": 18.50,
+                        "moq": 100,
+                        "lead_time_days": 22,
+                        "verifications": [
+                            "gold_supplier",
+                            "factory_verified",
+                            "trade_assurance"
+                        ],
+                        "estimated_landed_inr": 1580.0,
+                        "score": 0.84,
+                        "defect_rate_est": 0.018,
+                        "sample_cost_usd": 15.00,
+                        "negotiation_template": "Dear ProVision Team,\n\nWe are ZapNest, a curated tech subscription brand in India specializing in premium gadgets.\n\nWe are interested in your Mini LED Projector (Model: PV-720) for our subscription boxes.\n\nQuestions:\n1. Can you provide 3 samples at $15/unit?\n2. Is there flexibility on the 100-unit MOQ for first orders?\n3. Can you accommodate custom packaging (matte black box, our branding)?\n4. What is your current lead time to Mumbai port?\n5. Please share your QC process and defect rate data.\n\nLooking forward to your response.\n\nBest regards,\nZapNest Procurement Team",
+                        "notes": "Offers white-label packaging, 15-day additional lead time for custom branding. Factory visit report available from Oct 2024."
+                    },
+                    {
+                        "supplier_id": "sup-gz-002",
+                        "name": "Guangzhou DisplayTech Manufacturing",
+                        "link": "https://alibaba.com/supplier/yyy",
+                        "country": "CN",
+                        "fob_usd": 16.00,
+                        "moq": 150,
+                        "lead_time_days": 30,
+                        "verifications": [
+                            "gold_supplier"
+                        ],
+                        "estimated_landed_inr": 1420.0,
+                        "score": 0.68,
+                        "defect_rate_est": 0.035,
+                        "sample_cost_usd": 12.00,
+                        "negotiation_template": "Dear DisplayTech Team...",
+                        "notes": "Lower price point but higher estimated defect rate. No factory verification on file."
+                    }
+                ],
+                "recommended_supplier_id": "sup-shz-001",
+                "human_action": "approve_sample_order",
+                "cost_breakdown": {
+                    "fob_usd": 18.50,
+                    "freight_usd": 2.80,
+                    "insurance_usd": 0.40,
+                    "customs_duty_pct": 15.0,
+                    "gst_pct": 18.0,
+                    "exchange_rate_usd_inr": 83.50,
+                    "landed_inr": 1580.0
+                },
+                "audit": [
+                    {
+                        "type": "supplier",
+                        "id": "sup-shz-001",
+                        "timestamp": "2025-12-10T03:00:00+05:30",
+                        "url": "https://alibaba.com/supplier/xxx",
+                        "summary": "Gold supplier since 2019, factory verified Oct 2024, trade assurance active"
+                    }
+                ]
+            }
+        },
+        "curation": {
+            "input": {
+                "supplier_id": "sup-shz-001",
+                "sample_test": {
+                    "battery_cycles": 485,
+                    "runtime_hours": 3.15,
+                    "weight_g": 418,
+                    "measured_specs": {
+                        "lumens": 192,
+                        "resolution": "720p",
+                        "contrast_ratio": "800:1",
+                        "throw_ratio": "1.2:1"
+                    },
+                    "visual_inspection": "Build quality solid. Minor seam gap on left side (cosmetic only). Lens clear. Ports (HDMI, USB-C, 3.5mm) functional. Power button tactile.",
+                    "audio_test_score": 6,
+                    "thermal_test": "Surface temp 42°C after 2hr runtime (acceptable)"
+                },
+                "product_meta": {
+                    "name": "ProVision Mini Projector PV-720",
+                    "claimed_specs": {
+                        "lumens": 250,
+                        "resolution": "1080p",
+                        "battery_hours": 4,
+                        "contrast_ratio": "1000:1"
+                    }
+                }
+            },
+            "output": {
+                "status": "ok",
+                "product_id": "prod-proj-001",
+                "utility_score": 0.76,
+                "durability_score": 0.78,
+                "trust_score": 0.62,
+                "final_score": 0.72,
+                "final_decision": "approve_for_core",
+                "recommended_box_slot": "core_hero",
+                "spec_verification": {
+                    "lumens": {
+                        "claimed": 250,
+                        "measured": 192,
+                        "variance_pct": -23.2,
+                        "status": "underperforms"
+                    },
+                    "resolution": {
+                        "claimed": "1080p",
+                        "measured": "720p",
+                        "variance_pct": null,
+                        "status": "misrepresented"
+                    },
+                    "battery_hours": {
+                        "claimed": 4,
+                        "measured": 3.15,
+                        "variance_pct": -21.25,
+                        "status": "underperforms"
+                    },
+                    "contrast_ratio": {
+                        "claimed": "1000:1",
+                        "measured": "800:1",
+                        "variance_pct": -20,
+                        "status": "underperforms"
+                    }
+                },
+                "packaging_notes": "Black foam insert with custom projector cutout. Include: lens cleaning cloth, USB-C cable, quick-start card (use MEASURED specs only). Transparent sleeve for unboxing reveal.",
+                "compliance_flags": [
+                    "battery_cert_needed",
+                    "bis_cert_needed"
+                ],
+                "human_action": "approve_box",
+                "evidence": [
+                    {
+                        "type": "test",
+                        "id": "test-proj-001",
+                        "timestamp": "2025-12-18T14:30:00+05:30",
+                        "summary": "Sample tested: 3.15hr runtime, 192 lumens, 720p native. Build quality good. Spec claims inflated but performance acceptable for Core tier."
+                    }
+                ]
+            }
+        },
+        "narrative": {
+            "input": {
+                "drop_id": "drop-founder-001",
+                "box_tier": "core",
+                "products": [
+                    {
+                        "product_id": "prod-proj-001",
+                        "role": "hero",
+                        "name": "Mini Projector X",
+                        "measured_specs": {
+                            "lumens": 192,
+                            "resolution": "720p",
+                            "runtime_hours": 3.15,
+                            "weight_g": 418
+                        },
+                        "key_features": [
+                            "USB-C charging",
+                            "built-in speaker",
+                            "HDMI input"
+                        ]
+                    }
+                ],
+                "brand_voice": "futuristic_premium",
+                "reveal_constraints": {
+                    "do_not_use_claimed_specs": true
+                }
+            },
+            "output": {
+                "status": "ok",
+                "drop_id": "drop-founder-001",
+                "headline": "Pocket Cinema",
+                "subheadline": "Your wall, your screen, anywhere.",
+                "hero_description": "Pocket cinema, anywhere. The Mini Projector X delivers crisp 720p HD projection for over 3 hours on a single charge. At 418 grams, it vanishes into your backpack but transforms any wall into your personal screen. Perfect for hotel rooms, camping, or spontaneous movie nights. One USB-C cable. Zero compromise.",
+                "bullets": [
+                    "3+ hours of projection on one charge",
+                    "720p HD native resolution",
+                    "Built-in speaker for cable-free audio",
+                    "418g—lighter than most water bottles",
+                    "USB-C charging, universal compatibility",
+                    "HDMI input for any device"
+                ],
+                "faqs": [
+                    {
+                        "q": "How bright is it in a lit room?",
+                        "a": "This projector works best in dim to dark environments. For daytime use, we recommend curtains or low ambient light."
+                    },
+                    {
+                        "q": "What can I connect?",
+                        "a": "HDMI for laptops, gaming consoles, or streaming sticks. USB-C for compatible phones. Works with everything from Chromecast to Switch."
+                    },
+                    {
+                        "q": "How long does the battery actually last?",
+                        "a": "In our testing, it ran 3 hours and 9 minutes at full brightness. Your mileage may vary slightly based on content and volume."
+                    }
+                ],
+                "teasers": {
+                    "instagram": [
+                        "Your next carry-on essential weighs 418 grams. Coming soon.",
+                        "Hotels will never be boring again. ⬛"
+                    ],
+                    "tiktok_hooks": [
+                        "POV: you packed a cinema in your backpack",
+                        "the hotel room experience just leveled up"
+                    ],
+                    "x": [
+                        "418g. 3 hours. Any wall. The Mini Projector X is here.",
+                        "We tested 52 mini projectors. One made the cut."
+                    ]
+                },
+                "email_sequence": [
+                    {
+                        "email_id": "email-founder-001-pre",
+                        "subject": "Something's being tested",
+                        "preview_text": "Most didn't make the cut.",
+                        "body": "We've been busy.\n\nTesting gadgets. Breaking some. Rejecting most.\n\nBut what survived? It weighs 418 grams, runs for 3 hours, and turns any blank wall into a screen.\n\nFounder members get first access. 7 days.\n\nStay curious.\n\n— ZapNest",
+                        "cta_text": "Join the waitlist",
+                        "cta_url": "https://zapnest.com/waitlist",
+                        "send_window_days": -7
+                    },
+                    {
+                        "email_id": "email-founder-001-launch",
+                        "subject": "The ZapNest Founder Box is live",
+                        "preview_text": "200 units. That's it.",
+                        "body": "It's here.\n\nThe first ZapNest Founder Box:\n\n• Mini Projector X — 3+ hours, 720p, 418g pocket cinema\n• Premium packaging, no clutter\n• Founder-only pricing: ₹2,999\n\nWe tested 52 projectors. This one made the cut.\n\n200 units for founder members only.\nExclusive window closes in 48 hours.",
+                        "cta_text": "Get the Founder Box",
+                        "cta_url": "https://zapnest.com/box/founder",
+                        "send_window_days": 0
+                    },
+                    {
+                        "email_id": "email-founder-001-followup",
+                        "subject": "18 left",
+                        "preview_text": "The founder batch is almost gone.",
+                        "body": "Quick update.\n\n182 Founder Boxes claimed.\n18 remaining.\n\nNo restock date.\n\nIf you've been on the fence—now's the time.",
+                        "cta_text": "Claim yours",
+                        "cta_url": "https://zapnest.com/box/founder",
+                        "send_window_days": 3
+                    }
+                ],
+                "audit": [
+                    {
+                        "claim": "3+ hours runtime",
+                        "value": "3.15 hours",
+                        "source": "sample_test",
+                        "url": "internal://test-proj-001",
+                        "verified_by": "CurationAgent"
+                    },
+                    {
+                        "claim": "720p resolution",
+                        "value": "720p native",
+                        "source": "sample_test",
+                        "url": "internal://test-proj-001",
+                        "verified_by": "CurationAgent"
+                    },
+                    {
+                        "claim": "418g weight",
+                        "value": "418 grams",
+                        "source": "sample_test",
+                        "url": "internal://test-proj-001",
+                        "verified_by": "CurationAgent"
+                    }
+                ],
+                "human_action": "approve_copy"
+            }
+        },
+        "personalization": {
+            "input": {
+                "user_id": "user-xyz-789",
+                "onboarding_answers": {
+                    "platform": "android",
+                    "use_case": "travel",
+                    "budget": "core",
+                    "interests": [
+                        "audio",
+                        "portable_tech",
+                        "charging"
+                    ],
+                    "lifestyle": "night_owl"
+                },
+                "behavior": {
+                    "page_views": [
+                        {
+                            "page": "product/mini-projector",
+                            "dwell_time_s": 62
+                        },
+                        {
+                            "page": "product/wireless-charger",
+                            "dwell_time_s": 18
+                        },
+                        {
+                            "page": "product/bluetooth-speaker",
+                            "dwell_time_s": 45
+                        }
+                    ],
+                    "past_purchases": [],
+                    "email_opens": 5,
+                    "email_clicks": 2
+                }
+            },
+            "output": {
+                "status": "ok",
+                "user_id": "user-xyz-789",
+                "preference_vector": {
+                    "platform_android": 0.95,
+                    "platform_ios": 0.05,
+                    "travel": 0.88,
+                    "desk": 0.12,
+                    "home": 0.25,
+                    "audio": 0.72,
+                    "visual": 0.78,
+                    "charging": 0.45,
+                    "productivity": 0.20,
+                    "entertainment": 0.85,
+                    "budget_lite": 0.15,
+                    "budget_core": 0.80,
+                    "budget_elite": 0.35
+                },
+                "recommended_tiers": [
+                    "core",
+                    "elite"
+                ],
+                "recommended_variant": "android_travel",
+                "secondary_variant": "android_entertainment",
+                "personalized_products": [
+                    {
+                        "product_id": "prod-proj-001",
+                        "fit_score": 0.91,
+                        "fit_reason": "High alignment: travel + visual + entertainment. Extended dwell time (62s) confirms interest."
+                    },
+                    {
+                        "product_id": "prod-speaker-001",
+                        "fit_score": 0.78,
+                        "fit_reason": "Strong audio preference + travel use case. 45s dwell on speaker page."
+                    }
+                ],
+                "explainability": "User is Android-first with strong travel orientation and entertainment focus. Page behavior confirms visual/audio interests (62s on projector, 45s on speaker). Core tier matches stated budget; elite upgrade potential based on engagement depth.",
+                "confidence": "high",
+                "signal_conflicts": [],
+                "human_action": "none"
+            }
+        },
+        "support": {
+            "input": {
+                "ticket_id": "tk-20250220-0042",
+                "order_hash": "ord-f8a2c",
+                "customer_id_hash": "cust-9x4rk",
+                "channel": "email",
+                "message": "Hi, my projector arrived yesterday and the lens appears to be cracked. I'm really disappointed as this was supposed to be a gift. Can I get a replacement or refund? I've attached a photo.",
+                "attachments": [
+                    "https://uploads.zapnest.com/tk-0042/lens-crack.jpg"
+                ],
+                "order_details": {
+                    "box_id": "box-core-founder-001",
+                    "purchase_date": "2025-02-10",
+                    "delivery_date": "2025-02-19",
+                    "order_value_inr": 2999
+                }
+            },
+            "output": {
+                "status": "ok",
+                "ticket_id": "tk-20250220-0042",
+                "category": "damage",
+                "subcategory": "physical_damage_lens",
+                "priority": "high",
+                "sentiment": "negative",
+                "recommended_response": "Hi,\n\nWe're truly sorry to see the damage to your projector—especially since it was meant to be a gift. That's not the experience we want for you or anyone receiving a ZapNest box.\n\nThank you for the photo; we can see the crack clearly.\n\nHere's what we can do:\n• **Replacement**: We'll ship a new unit immediately (3-5 business days)\n• **Full refund**: If you prefer, we'll process ₹2,999 back to your original payment method\n\nPlease let us know your preference, and we'll take care of it right away.\n\nAgain, we apologize for this experience.\n\nWarm regards,\nZapNest Support Team",
+                "response_template_id": "tpl-damage-replacement-refund",
+                "required_info": [
+                    "photos",
+                    "order_id",
+                    "preferred_resolution"
+                ],
+                "collected_info": {
+                    "photos": true,
+                    "order_id": true,
+                    "preferred_resolution": false
+                },
+                "escalate_to_human": true,
+                "escalation_reason": "Damage category requires human approval for replacement/refund",
+                "human_notes": "Customer received projector with cracked lens. Photo confirms visible crack on front lens element. Customer sentiment negative (mentioned gift disappointment). Order value ₹2,999. Awaiting resolution preference (replacement vs refund). Recommend replacement to preserve relationship.",
+                "sla_hours": 24,
+                "suggested_resolution": "replacement",
+                "canned_responses": [
+                    {
+                        "id": "resp-replacement-confirm",
+                        "text": "Great choice! We're processing your replacement now. You'll receive tracking within 24 hours. No need to return the damaged unit.",
+                        "next_action": "process_replacement"
+                    },
+                    {
+                        "id": "resp-refund-confirm",
+                        "text": "We've initiated your full refund of ₹2,999. Please allow 5-7 business days for it to appear in your account.",
+                        "next_action": "process_refund"
+                    }
+                ]
+            }
+        }
+    }
+}

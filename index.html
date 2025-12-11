@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZapNest Black Box</title>
+    <meta http-equiv="refresh" content="0;url=/landing/">
+    <style>
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: #050505;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .loader {
+            text-align: center;
+        }
+
+        .loader span {
+            color: #00FF88;
+            font-weight: 800;
+            font-size: 1.5rem;
+        }
+
+        .loader p {
+            color: #666;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader">
+        <span>ZapNest</span>
+        <p>Redirecting to landing page...</p>
+    </div>
+    <script>
+        // Immediate redirect in case meta refresh doesn't work
+        window.location.href = '/landing/';
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,219 @@
+{
+    "status": "ok",
+    "week_of": "2025-12-10",
+    "generated_at": "2025-12-10T00:00:00+05:30",
+    "orchestration_mode": "founder_launch",
+    "agents_scheduled": [
+        {
+            "agent": "TrendRadar",
+            "schedule": "daily",
+            "next_run": "2025-12-11T02:00:00+05:30",
+            "config": {
+                "queries": [
+                    "portable mini projector",
+                    "3-in-1 wireless charger",
+                    "compact bluetooth speaker",
+                    "travel power bank",
+                    "magnetic phone mount",
+                    "USB-C hub",
+                    "wireless earbuds case",
+                    "smart desk lamp",
+                    "portable keyboard",
+                    "mini air purifier"
+                ],
+                "sources": [
+                    "reddit_r/gadgets",
+                    "reddit_r/BuyItForLife",
+                    "tiktok_trending_products",
+                    "x_search",
+                    "aliexpress_bestsellers",
+                    "kickstarter_new",
+                    "amazon_movers"
+                ],
+                "max_candidates": 20
+            }
+        },
+        {
+            "agent": "Procurement",
+            "schedule": "weekly",
+            "next_run": "2025-12-14T03:00:00+05:30",
+            "config": {
+                "constraints": {
+                    "max_fob_usd": 30,
+                    "max_moq": 200,
+                    "preferred_regions": [
+                        "CN"
+                    ],
+                    "min_supplier_score": 0.55
+                }
+            }
+        },
+        {
+            "agent": "Curation",
+            "schedule": "on_sample_arrival",
+            "next_run": "pending",
+            "pending_triggers": [
+                {
+                    "candidate_id": "trend-20251203-005",
+                    "product": "Mini Projector 720p",
+                    "expected_arrival": "2025-12-18"
+                },
+                {
+                    "candidate_id": "trend-20251205-012",
+                    "product": "3-in-1 Wireless Charger",
+                    "expected_arrival": "2025-12-20"
+                }
+            ]
+        },
+        {
+            "agent": "Narrative",
+            "schedule": "on_box_approval",
+            "next_run": "pending",
+            "pending_triggers": []
+        },
+        {
+            "agent": "Personalization",
+            "schedule": "daily_incremental",
+            "next_run": "2025-12-11T04:00:00+05:30",
+            "config": {
+                "new_user_processing": true,
+                "behavior_update_window_hours": 24
+            }
+        },
+        {
+            "agent": "Launch",
+            "schedule": "on_approval",
+            "next_run": "pending",
+            "pending_triggers": []
+        },
+        {
+            "agent": "Support",
+            "schedule": "continuous",
+            "status": "active",
+            "config": {
+                "auto_response": true,
+                "escalation_enabled": true,
+                "sla_monitoring": true
+            }
+        }
+    ],
+    "hitl_checkpoints": [
+        {
+            "checkpoint_id": "hitl-2025-12-01",
+            "name": "supplier_shortlist_approval",
+            "status": "pending",
+            "due": "2025-12-15T18:00:00+05:30",
+            "owner": "procurement_lead",
+            "related_candidates": [
+                "trend-20251203-005",
+                "trend-20251205-012",
+                "trend-20251208-003"
+            ],
+            "priority": "high"
+        },
+        {
+            "checkpoint_id": "hitl-2025-12-02",
+            "name": "sample_order_authorization",
+            "status": "approved",
+            "approved_at": "2025-12-08T14:30:00+05:30",
+            "approved_by": "finance_lead@zapnest.com",
+            "related_candidates": [
+                "trend-20251203-005",
+                "trend-20251205-012"
+            ]
+        },
+        {
+            "checkpoint_id": "hitl-2025-12-03",
+            "name": "final_box_contents_approval",
+            "status": "not_started",
+            "due": "2025-12-22T18:00:00+05:30",
+            "owner": "product_lead",
+            "notes": "Pending sample approvals"
+        },
+        {
+            "checkpoint_id": "hitl-2025-12-04",
+            "name": "legal_copy_review",
+            "status": "not_started",
+            "due": "2025-12-26T18:00:00+05:30",
+            "owner": "legal_team",
+            "notes": "Pending narrative generation"
+        },
+        {
+            "checkpoint_id": "hitl-2025-12-05",
+            "name": "launch_budget_approval",
+            "status": "not_started",
+            "due": "2025-12-28T18:00:00+05:30",
+            "owner": "cfo",
+            "estimated_budget_inr": 150000
+        }
+    ],
+    "pipeline_status": {
+        "active_candidates": 8,
+        "samples_in_transit": 2,
+        "samples_pending_test": 0,
+        "products_approved": 0,
+        "boxes_in_composition": 0,
+        "drops_ready_to_launch": 0
+    },
+    "founder_drop_timeline": {
+        "target_launch_date": "2025-01-15T10:00:00+05:30",
+        "days_remaining": 36,
+        "milestones": [
+            {
+                "name": "Samples received",
+                "target": "2025-12-20",
+                "status": "on_track"
+            },
+            {
+                "name": "QA complete",
+                "target": "2025-12-25",
+                "status": "pending"
+            },
+            {
+                "name": "Box approved",
+                "target": "2025-12-28",
+                "status": "pending"
+            },
+            {
+                "name": "Narrative approved",
+                "target": "2026-01-02",
+                "status": "pending"
+            },
+            {
+                "name": "Launch budget approved",
+                "target": "2026-01-05",
+                "status": "pending"
+            },
+            {
+                "name": "Pre-launch emails",
+                "target": "2026-01-08",
+                "status": "pending"
+            },
+            {
+                "name": "Founder drop live",
+                "target": "2026-01-15",
+                "status": "pending"
+            }
+        ]
+    },
+    "expected_outcomes": "This week: Run daily trend scans across 10 product categories, shortlist top 8-12 candidates with signal_score ≥ 0.55, receive 2 sample shipments (projector + wireless charger), initiate QA testing upon arrival. Human approvals needed for supplier shortlist by Dec 15. On track for founder drop Jan 15.",
+    "risk_factors": [
+        {
+            "risk": "Sample shipping delays due to year-end logistics",
+            "probability": "medium",
+            "mitigation": "Track shipments daily, have backup supplier ready"
+        },
+        {
+            "risk": "HITL approval delays during holiday period",
+            "probability": "low",
+            "mitigation": "Pre-schedule approver availability, enable mobile approvals"
+        }
+    ],
+    "metrics_snapshot": {
+        "candidates_processed_this_week": 0,
+        "candidates_shortlisted": 0,
+        "samples_ordered": 2,
+        "samples_approved": 0,
+        "discovery_to_ship_estimate_days": 44
+    }
+}

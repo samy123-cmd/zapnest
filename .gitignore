@@ -1,0 +1,23 @@
+# Environment
+.env
+.env.local
+*.log
+
+# Dependencies
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python (from any tools)
+__pycache__/
+*.pyc
+venv/
+
+# Gemini brain (internal)
+.gemini/

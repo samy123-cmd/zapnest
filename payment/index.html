@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Payment — ZapNest Black Box</title>
+    <meta name="description" content="Complete your ZapNest subscription payment and become a founding member.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="payment.css">
+
+    <!-- Razorpay Checkout -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+    <!-- Supabase Configuration -->
+    <script>
+        window.SUPABASE_URL = 'https://vqxviqsvmlevabqihwir.supabase.co';
+        window.SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZxeHZpcXN2bWxldmFicWlod2lyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjUzODk2MDEsImV4cCI6MjA4MDk2NTYwMX0.er-NquFxi5__5ZxqEu6M0pwY9xHWxcCMu9cteL_V6HY';
+
+        // Razorpay Configuration (Test Mode)
+        // Replace with your actual Razorpay key in production
+        window.RAZORPAY_KEY = 'rzp_test_XXXXXXXXXX';
+    </script>
+</head>
+
+<body>
+    <!-- Background Effects -->
+    <div class="payment-bg">
+        <div class="payment-bg__gradient"></div>
+        <div class="payment-bg__mesh"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="payment-header">
+        <div class="payment-header__container">
+            <a href="/landing/" class="payment-header__logo">ZapNest</a>
+            <div class="payment-header__nav">
+                <a href="/landing/" class="payment-header__link">← Back to Home</a>
+                <a href="/member/" class="payment-header__link">My Account</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="payment-main">
+        <div class="payment-container">
+            <!-- Left Column: Order Summary -->
+            <div class="payment-summary">
+                <div class="payment-summary__badge">
+                    <span class="payment-summary__badge-icon">🚀</span>
+                    <span>Founders Batch</span>
+                </div>
+
+                <h1 class="payment-summary__title">Complete Your Subscription</h1>
+                <p class="payment-summary__subtitle">Join 500 founding members and lock in exclusive pricing forever.
+                </p>
+
+                <!-- Tier Selection -->
+                <div class="payment-tiers" id="tier-selection">
+                    <label class="payment-tier" data-tier="lite">
+                        <input type="radio" name="tier" value="lite">
+                        <div class="payment-tier__content">
+                            <div class="payment-tier__header">
+                                <span class="payment-tier__name">Lite</span>
+                                <span class="payment-tier__price">₹1,499<span>/mo</span></span>
+                            </div>
+                            <p class="payment-tier__desc">1 accessory product monthly</p>
+                        </div>
+                        <div class="payment-tier__check">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                    </label>
+
+                    <label class="payment-tier payment-tier--featured" data-tier="core">
+                        <input type="radio" name="tier" value="core" checked>
+                        <span class="payment-tier__popular">Most Popular</span>
+                        <div class="payment-tier__content">
+                            <div class="payment-tier__header">
+                                <span class="payment-tier__name">Core</span>
+                                <span class="payment-tier__price">₹2,999<span>/mo</span></span>
+                            </div>
+                            <p class="payment-tier__desc">1 hero + 1-2 accessories</p>
+                        </div>
+                        <div class="payment-tier__check">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                    </label>
+
+                    <label class="payment-tier" data-tier="elite">
+                        <input type="radio" name="tier" value="elite">
+                        <div class="payment-tier__content">
+                            <div class="payment-tier__header">
+                                <span class="payment-tier__name">Elite</span>
+                                <span class="payment-tier__price">₹4,999<span>/mo</span></span>
+                            </div>
+                            <p class="payment-tier__desc">Premium hero + 2-3 curated items</p>
+                        </div>
+                        <div class="payment-tier__check">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- What's Included -->
+                <div class="payment-includes">
+                    <h3>What's Included</h3>
+                    <ul id="tier-features">
+                        <li>Monthly curated tech box</li>
+                        <li>Free shipping across India</li>
+                        <li>Exclusive founder pricing forever</li>
+                        <li>Priority customer support</li>
+                        <li>Early access to new products</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Column: Payment Form -->
+            <div class="payment-form-container">
+                <div class="payment-card">
+                    <h2 class="payment-card__title">Order Summary</h2>
+
+                    <div class="payment-card__line">
+                        <span>Selected Plan</span>
+                        <span id="summary-tier">Core</span>
+                    </div>
+                    <div class="payment-card__line">
+                        <span>Billing Cycle</span>
+                        <span>Monthly</span>
+                    </div>
+                    <div class="payment-card__line payment-card__line--total">
+                        <span>Total Today</span>
+                        <span id="summary-price">₹2,999</span>
+                    </div>
+
+                    <div class="payment-card__divider"></div>
+
+                    <!-- Email Input -->
+                    <div class="payment-form-group">
+                        <label for="payment-email">Email Address</label>
+                        <input type="email" id="payment-email" placeholder="your@email.com" required>
+                        <p class="payment-form-hint">We'll send your receipt and order updates here</p>
+                    </div>
+
+                    <!-- Phone Input -->
+                    <div class="payment-form-group">
+                        <label for="payment-phone">Phone Number</label>
+                        <input type="tel" id="payment-phone" placeholder="+91 XXXXX XXXXX" required>
+                    </div>
+
+                    <!-- Pay Button -->
+                    <button type="button" id="pay-btn" class="payment-btn">
+                        <span class="payment-btn__text">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                                <line x1="1" y1="10" x2="23" y2="10"></line>
+                            </svg>
+                            Pay ₹<span id="btn-price">2,999</span>
+                        </span>
+                        <span class="payment-btn__loading">
+                            <span class="payment-spinner"></span>
+                            Processing...
+                        </span>
+                    </button>
+
+                    <div class="payment-secure">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                        <span>Secured by Razorpay • 256-bit encryption</span>
+                    </div>
+
+                    <div class="payment-guarantee">
+                        <div class="payment-guarantee__item">
+                            <span>🔒</span>
+                            <span>Price locked forever</span>
+                        </div>
+                        <div class="payment-guarantee__item">
+                            <span>❌</span>
+                            <span>Cancel anytime</span>
+                        </div>
+                        <div class="payment-guarantee__item">
+                            <span>📦</span>
+                            <span>First box ships Jan 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="payment-modal" hidden>
+        <div class="payment-modal__overlay"></div>
+        <div class="payment-modal__content">
+            <div class="payment-modal__icon">🎉</div>
+            <h2>Welcome, Founder!</h2>
+            <p>Your subscription is now active. We're thrilled to have you on board.</p>
+            <div class="payment-modal__details">
+                <div class="payment-modal__detail">
+                    <span>Plan</span>
+                    <strong id="modal-tier">Core</strong>
+                </div>
+                <div class="payment-modal__detail">
+                    <span>First Box</span>
+                    <strong>January 2025</strong>
+                </div>
+            </div>
+            <a href="/member/" class="payment-btn">Go to Dashboard →</a>
+        </div>
+    </div>
+
+    <!-- Error Modal -->
+    <div id="error-modal" class="payment-modal" hidden>
+        <div class="payment-modal__overlay"></div>
+        <div class="payment-modal__content payment-modal__content--error">
+            <div class="payment-modal__icon">❌</div>
+            <h2>Payment Failed</h2>
+            <p id="error-message">Something went wrong. Please try again.</p>
+            <button class="payment-btn payment-btn--outline" onclick="closeErrorModal()">Try Again</button>
+        </div>
+    </div>
+
+    <script src="payment.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,305 @@
+{
+    "status": "ok",
+    "run_date": "2025-12-11T03:00:00+05:30",
+    "run_id": "procurement-20251211-001",
+    "candidates_processed": 3,
+    "procurement_results": [
+        {
+            "candidate_id": "trend-20251211-001",
+            "product_query": "Mini LED Projector 720p portable pocket cinema",
+            "status": "suppliers_found",
+            "supplier_list": [
+                {
+                    "supplier_id": "sup-shz-pv01",
+                    "name": "Shenzhen ProVision Display Technology Co., Ltd",
+                    "link": "https://provision-display.en.alibaba.com",
+                    "country": "CN",
+                    "city": "Shenzhen",
+                    "fob_usd": 17.80,
+                    "moq": 100,
+                    "sample_moq": 2,
+                    "sample_cost_usd": 22.00,
+                    "lead_time_days": 18,
+                    "custom_branding_lead_time_days": 25,
+                    "verifications": [
+                        "alibaba_gold_supplier_5yr",
+                        "factory_verified_2024",
+                        "trade_assurance",
+                        "iso_9001"
+                    ],
+                    "factory_details": {
+                        "founded": 2016,
+                        "employees": 85,
+                        "production_capacity": "50,000 units/month",
+                        "main_markets": [
+                            "EU",
+                            "NA",
+                            "SEA",
+                            "IN"
+                        ]
+                    },
+                    "estimated_landed_inr": 1520,
+                    "score": 0.87,
+                    "defect_rate_est_pct": 1.8,
+                    "payment_terms": "30% deposit, 70% before shipping",
+                    "notes": "Best overall score. Factory visit report available (Oct 2024). Offers white-label packaging with custom foam inserts. Can accommodate ZapNest branding. Previous India shipments verified.",
+                    "negotiation_template": "Subject: ZapNest Partnership Inquiry - Mini LED Projector 720p\n\nDear ProVision Team,\n\nWe are ZapNest, a curated tech subscription brand based in India, specializing in premium gadgets for discerning consumers. We deliver monthly subscription boxes featuring carefully selected tech products.\n\nWe are interested in your Mini LED Projector (720p native, USB-C input) for our upcoming Founder Box.\n\nOur inquiry:\n\n1. SAMPLES: Can you provide 3 sample units at $22/unit for testing? We need samples delivered to Mumbai by December 25.\n\n2. FIRST ORDER: Our initial order would be 150-200 units. Is there flexibility on payment terms for new partners?\n\n3. BRANDING: Can you accommodate custom packaging? We need:\n   - Matte black box with magnetic closure\n   - Our ZapNest logo on the box\n   - Custom foam insert\n   - Quick-start card printing\n\n4. SPECS: Please confirm:\n   - Native resolution: 720p\n   - Actual lumens (not ANSI claimed)\n   - USB-C input (not just charging)\n   - Battery capacity (Wh)\n   - CE/FCC certifications\n\n5. LEAD TIME: What is your current production + shipping lead time to Mumbai port/airport?\n\n6. QC: Please share your QC process and recent defect rate data.\n\nWe are looking for a long-term supplier partnership with monthly orders if quality meets our standards.\n\nLooking forward to your response.\n\nBest regards,\nZapNest Procurement Team\nprocurement@zapnest.com"
+                },
+                {
+                    "supplier_id": "sup-gz-dt02",
+                    "name": "Guangzhou DisplayTech Manufacturing Co.",
+                    "link": "https://gzdisplaytech.en.alibaba.com",
+                    "country": "CN",
+                    "city": "Guangzhou",
+                    "fob_usd": 15.50,
+                    "moq": 200,
+                    "sample_moq": 3,
+                    "sample_cost_usd": 18.00,
+                    "lead_time_days": 28,
+                    "custom_branding_lead_time_days": 35,
+                    "verifications": [
+                        "alibaba_gold_supplier_3yr",
+                        "trade_assurance"
+                    ],
+                    "factory_details": {
+                        "founded": 2019,
+                        "employees": 45,
+                        "production_capacity": "25,000 units/month",
+                        "main_markets": [
+                            "EU",
+                            "SA"
+                        ]
+                    },
+                    "estimated_landed_inr": 1380,
+                    "score": 0.68,
+                    "defect_rate_est_pct": 3.5,
+                    "payment_terms": "50% deposit, 50% before shipping",
+                    "notes": "Lower price but higher MOQ and defect rate. No factory verification. Slower lead time. Backup option only.",
+                    "negotiation_template": "..."
+                },
+                {
+                    "supplier_id": "sup-dg-vp03",
+                    "name": "Dongguan VisionPro Electronics",
+                    "link": "https://dgvisionpro.en.alibaba.com",
+                    "country": "CN",
+                    "city": "Dongguan",
+                    "fob_usd": 19.20,
+                    "moq": 50,
+                    "sample_moq": 2,
+                    "sample_cost_usd": 25.00,
+                    "lead_time_days": 22,
+                    "custom_branding_lead_time_days": 30,
+                    "verifications": [
+                        "alibaba_gold_supplier_4yr",
+                        "factory_verified_2023"
+                    ],
+                    "factory_details": {
+                        "founded": 2018,
+                        "employees": 65,
+                        "production_capacity": "35,000 units/month",
+                        "main_markets": [
+                            "NA",
+                            "EU",
+                            "JP"
+                        ]
+                    },
+                    "estimated_landed_inr": 1620,
+                    "score": 0.74,
+                    "defect_rate_est_pct": 2.2,
+                    "payment_terms": "30% deposit, 70% before shipping",
+                    "notes": "Lower MOQ (50 units) good for testing. Slightly higher price. Good for founder batch flexibility.",
+                    "negotiation_template": "..."
+                }
+            ],
+            "recommended_supplier_id": "sup-shz-pv01",
+            "cost_breakdown": {
+                "fob_usd": 17.80,
+                "freight_usd": 2.50,
+                "insurance_usd": 0.35,
+                "subtotal_usd": 20.65,
+                "exchange_rate_usd_inr": 83.50,
+                "cif_inr": 1724,
+                "customs_duty_pct": 15,
+                "customs_duty_inr": 259,
+                "gst_pct": 18,
+                "gst_inr": 357,
+                "landed_inr": 1520,
+                "notes": "Landed cost assumes sea freight. Air freight adds ~$4/unit but reduces transit by 15 days."
+            },
+            "human_action": "approve_sample_order"
+        },
+        {
+            "candidate_id": "trend-20251211-002",
+            "product_query": "3-in-1 Magnetic Wireless Charger iPhone Watch AirPods",
+            "status": "suppliers_found",
+            "supplier_list": [
+                {
+                    "supplier_id": "sup-shz-mc01",
+                    "name": "Shenzhen MagCharge Technology Co., Ltd",
+                    "link": "https://magcharge-tech.en.alibaba.com",
+                    "country": "CN",
+                    "city": "Shenzhen",
+                    "fob_usd": 11.20,
+                    "moq": 100,
+                    "sample_moq": 3,
+                    "sample_cost_usd": 15.00,
+                    "lead_time_days": 15,
+                    "verifications": [
+                        "alibaba_gold_supplier_4yr",
+                        "factory_verified_2024",
+                        "trade_assurance",
+                        "mfi_certified"
+                    ],
+                    "estimated_landed_inr": 980,
+                    "score": 0.81,
+                    "defect_rate_est_pct": 2.1,
+                    "notes": "MFi certified critical for Apple compatibility. Strong magnet alignment reported. Best charger supplier.",
+                    "negotiation_template": "Subject: ZapNest Inquiry - 3-in-1 Magnetic Wireless Charger\n\nDear MagCharge Team,\n\nWe are ZapNest, a curated tech subscription brand in India.\n\nInquiry for your 3-in-1 Magnetic Wireless Charger (iPhone/Watch/AirPods):\n\n1. SAMPLES: 3 units at $15/unit to Mumbai by December 25.\n\n2. SPECS: Please confirm:\n   - MagSafe alignment strength (gauss)\n   - Qi charging wattage per pad\n   - Watch charging compatibility (Series 3+)\n   - Cable included (USB-C?)\n\n3. CERTIFICATIONS: Please provide MFi/Qi certification documents.\n\n4. BRANDING: Custom packaging options?\n\nBest regards,\nZapNest Procurement"
+                },
+                {
+                    "supplier_id": "sup-shz-pw02",
+                    "name": "Shenzhen PowerWave Electronics",
+                    "link": "https://powerwave-elec.en.alibaba.com",
+                    "country": "CN",
+                    "city": "Shenzhen",
+                    "fob_usd": 9.80,
+                    "moq": 200,
+                    "sample_moq": 5,
+                    "sample_cost_usd": 12.00,
+                    "lead_time_days": 20,
+                    "verifications": [
+                        "alibaba_gold_supplier_3yr"
+                    ],
+                    "estimated_landed_inr": 870,
+                    "score": 0.62,
+                    "defect_rate_est_pct": 4.2,
+                    "notes": "Lower price but no MFi cert. Higher defect rate. Magnet alignment issues reported in reviews."
+                }
+            ],
+            "recommended_supplier_id": "sup-shz-mc01",
+            "cost_breakdown": {
+                "fob_usd": 11.20,
+                "freight_usd": 1.80,
+                "insurance_usd": 0.25,
+                "subtotal_usd": 13.25,
+                "exchange_rate_usd_inr": 83.50,
+                "cif_inr": 1106,
+                "customs_duty_pct": 15,
+                "customs_duty_inr": 166,
+                "gst_pct": 18,
+                "gst_inr": 229,
+                "landed_inr": 980
+            },
+            "human_action": "approve_sample_order"
+        },
+        {
+            "candidate_id": "trend-20251211-003",
+            "product_query": "Compact Bluetooth Speaker IPX7 waterproof portable",
+            "status": "suppliers_found",
+            "supplier_list": [
+                {
+                    "supplier_id": "sup-dg-as01",
+                    "name": "Dongguan AudioSonic Co., Ltd",
+                    "link": "https://audiosonic-dg.en.alibaba.com",
+                    "country": "CN",
+                    "city": "Dongguan",
+                    "fob_usd": 8.50,
+                    "moq": 200,
+                    "sample_moq": 3,
+                    "sample_cost_usd": 12.00,
+                    "lead_time_days": 18,
+                    "verifications": [
+                        "alibaba_gold_supplier_5yr",
+                        "factory_verified_2024",
+                        "trade_assurance"
+                    ],
+                    "estimated_landed_inr": 760,
+                    "score": 0.79,
+                    "defect_rate_est_pct": 1.9,
+                    "notes": "Specialized audio manufacturer. Good bass response per reviews. IPX7 certified. Excellent accessory supplier.",
+                    "negotiation_template": "Subject: ZapNest Inquiry - IPX7 Bluetooth Speaker\n\nDear AudioSonic Team,\n\nWe are ZapNest, a curated tech subscription brand in India.\n\nInquiry for your Compact IPX7 Bluetooth Speaker:\n\n1. SAMPLES: 3 units at $12/unit to Mumbai by December 25.\n\n2. SPECS: Please confirm:\n   - Driver size\n   - Frequency response\n   - Bluetooth version\n   - Battery life (hours)\n   - IPX7 test certification\n\n3. AUDIO TEST: Can you provide audio sample recordings?\n\n4. BRANDING: Custom color (matte black) + packaging options?\n\nBest regards,\nZapNest Procurement"
+                }
+            ],
+            "recommended_supplier_id": "sup-dg-as01",
+            "cost_breakdown": {
+                "fob_usd": 8.50,
+                "freight_usd": 1.50,
+                "insurance_usd": 0.20,
+                "subtotal_usd": 10.20,
+                "exchange_rate_usd_inr": 83.50,
+                "cif_inr": 852,
+                "customs_duty_pct": 15,
+                "customs_duty_inr": 128,
+                "gst_pct": 18,
+                "gst_inr": 176,
+                "landed_inr": 760
+            },
+            "human_action": "approve_sample_order"
+        }
+    ],
+    "sample_order_summary": {
+        "total_suppliers_contacted": 6,
+        "recommended_samples": [
+            {
+                "candidate": "Mini LED Projector",
+                "supplier": "sup-shz-pv01",
+                "quantity": 3,
+                "unit_cost_usd": 22.00,
+                "total_usd": 66.00
+            },
+            {
+                "candidate": "3-in-1 Wireless Charger",
+                "supplier": "sup-shz-mc01",
+                "quantity": 3,
+                "unit_cost_usd": 15.00,
+                "total_usd": 45.00
+            },
+            {
+                "candidate": "IPX7 Bluetooth Speaker",
+                "supplier": "sup-dg-as01",
+                "quantity": 3,
+                "unit_cost_usd": 12.00,
+                "total_usd": 36.00
+            }
+        ],
+        "total_sample_cost_usd": 147.00,
+        "total_sample_cost_inr": 12275,
+        "estimated_shipping_usd": 85.00,
+        "grand_total_usd": 232.00,
+        "grand_total_inr": 19372,
+        "expected_delivery": "2025-12-25"
+    },
+    "human_action": "approve_sample_order",
+    "hitl_checkpoint": {
+        "checkpoint_id": "hitl-procurement-20251211",
+        "name": "supplier_shortlist_approval",
+        "status": "pending",
+        "due": "2025-12-13T18:00:00+05:30",
+        "owner": "procurement_lead",
+        "approval_items": [
+            {
+                "candidate_id": "trend-20251211-001",
+                "supplier_id": "sup-shz-pv01",
+                "action": "approve_sample_order"
+            },
+            {
+                "candidate_id": "trend-20251211-002",
+                "supplier_id": "sup-shz-mc01",
+                "action": "approve_sample_order"
+            },
+            {
+                "candidate_id": "trend-20251211-003",
+                "supplier_id": "sup-dg-as01",
+                "action": "approve_sample_order"
+            }
+        ]
+    },
+    "audit": [
+        {
+            "type": "supplier",
+            "id": "procurement-20251211-001",
+            "timestamp": "2025-12-11T03:00:00+05:30",
+            "summary": "Evaluated 6 suppliers for 3 candidates. 3 recommended for sample orders. Total sample investment: $232."
+        }
+    ]
+}

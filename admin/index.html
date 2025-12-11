@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZapNest Admin — Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <!-- Login Overlay -->
+    <div id="admin-login" class="admin-login-overlay">
+        <div class="admin-login-card">
+            <div class="admin-login-header">
+                <span class="admin-login-logo">ZapNest</span>
+                <span class="admin-login-badge">Admin</span>
+            </div>
+            <h1 class="admin-login-title">Admin Login</h1>
+            <p class="admin-login-subtitle">Enter your credentials to access the dashboard</p>
+            <form id="admin-login-form" class="admin-login-form">
+                <div class="admin-login-field">
+                    <label for="admin-email">Email</label>
+                    <input type="email" id="admin-email" placeholder="admin@zapnest.com" required>
+                </div>
+                <div class="admin-login-field">
+                    <label for="admin-password">Password</label>
+                    <input type="password" id="admin-password" placeholder="••••••••" required>
+                </div>
+                <p id="login-error" class="admin-login-error" hidden></p>
+                <button type="submit" class="btn btn--primary admin-login-btn">
+                    <span class="btn-text">Sign In</span>
+                    <span class="btn-loading" hidden>Signing in...</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="admin-layout" id="admin-dashboard" hidden>
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="admin-sidebar__logo">
+                <span>ZapNest</span>
+                <span class="admin-sidebar__badge">Admin</span>
+            </div>
+            <nav class="admin-nav">
+                <a href="#" class="admin-nav__item admin-nav__item--active" data-section="overview">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                    Overview
+                </a>
+                <a href="#" class="admin-nav__item" data-section="waitlist">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    Waitlist
+                </a>
+                <a href="#" class="admin-nav__item" data-section="agents">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path
+                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                        </path>
+                    </svg>
+                    Agent Outputs
+                </a>
+                <a href="#" class="admin-nav__item" data-section="hitl">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    HITL Approvals
+                </a>
+                <a href="#" class="admin-nav__item" data-section="products">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                    Products
+                </a>
+                <div class="admin-nav__divider"></div>
+                <a href="#" class="admin-nav__item" data-section="subscribers">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    Subscribers
+                </a>
+                <a href="#" class="admin-nav__item" data-section="orders">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                        </path>
+                    </svg>
+                    Orders
+                </a>
+                <a href="#" class="admin-nav__item" data-section="revenue">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                    Revenue
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <!-- Header -->
+            <header class="admin-header">
+                <h1 class="admin-header__title">Dashboard</h1>
+                <div class="admin-header__actions">
+                    <span class="admin-header__status">
+                        <span class="status-dot status-dot--success"></span>
+                        All systems operational
+                    </span>
+                    <button onclick="adminLogout()" class="btn btn--outline btn--sm">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                            <polyline points="16 17 21 12 16 7"></polyline>
+                            <line x1="21" y1="12" x2="9" y2="12"></line>
+                        </svg>
+                        Logout
+                    </button>
+                </div>
+            </header>
+
+            <!-- Overview Section -->
+            <section id="overview" class="admin-section">
+                <!-- Stats Grid -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-card__icon stat-card__icon--blue">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <div class="stat-card__content">
+                            <span class="stat-card__value" id="waitlist-count">0</span>
+                            <span class="stat-card__label">Waitlist Signups</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__icon stat-card__icon--green">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            </svg>
+                        </div>
+                        <div class="stat-card__content">
+                            <span class="stat-card__value" id="conversion-rate">0%</span>
+                            <span class="stat-card__label">Conversion Rate</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__icon stat-card__icon--purple">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                            </svg>
+                        </div>
+                        <div class="stat-card__content">
+                            <span class="stat-card__value" id="candidates-count">0</span>
+                            <span class="stat-card__label">Active Candidates</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__icon stat-card__icon--orange">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <div class="stat-card__content">
+                            <span class="stat-card__value" id="pending-approvals">0</span>
+                            <span class="stat-card__label">Pending Approvals</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tier Distribution -->
+                <div class="card">
+                    <div class="card__header">
+                        <h3 class="card__title">Tier Distribution</h3>
+                    </div>
+                    <div class="card__body">
+                        <div class="tier-bars">
+                            <div class="tier-bar">
+                                <div class="tier-bar__label">Lite</div>
+                                <div class="tier-bar__track">
+                                    <div class="tier-bar__fill tier-bar__fill--lite" id="tier-lite" style="width: 0%">
+                                    </div>
+                                </div>
+                                <div class="tier-bar__count" id="tier-lite-count">0</div>
+                            </div>
+                            <div class="tier-bar">
+                                <div class="tier-bar__label">Core</div>
+                                <div class="tier-bar__track">
+                                    <div class="tier-bar__fill tier-bar__fill--core" id="tier-core" style="width: 0%">
+                                    </div>
+                                </div>
+                                <div class="tier-bar__count" id="tier-core-count">0</div>
+                            </div>
+                            <div class="tier-bar">
+                                <div class="tier-bar__label">Elite</div>
+                                <div class="tier-bar__track">
+                                    <div class="tier-bar__fill tier-bar__fill--elite" id="tier-elite" style="width: 0%">
+                                    </div>
+                                </div>
+                                <div class="tier-bar__count" id="tier-elite-count">0</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="card">
+                    <div class="card__header">
+                        <h3 class="card__title">Recent Activity</h3>
+                    </div>
+                    <div class="card__body">
+                        <div class="activity-list" id="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-item__icon activity-item__icon--success">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="activity-item__content">
+                                    <span class="activity-item__title">System initialized</span>
+                                    <span class="activity-item__time">Just now</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Waitlist Section -->
+            <section id="waitlist" class="admin-section" hidden>
+                <div class="card">
+                    <div class="card__header">
+                        <h3 class="card__title">Waitlist Signups</h3>
+                        <div class="card__actions">
+                            <button class="btn btn--outline" id="export-csv">Export CSV</button>
+                        </div>
+                    </div>
+                    <div class="card__body">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Email</th>
+                                    <th>Tier</th>
+                                    <th>Referral</th>
+                                    <th>Date</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="waitlist-table">
+                                <tr>
+                                    <td colspan="5" class="data-table__empty">No signups yet. Connect Supabase to load
+                                        data.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Agent Outputs Section -->
+            <section id="agents" class="admin-section" hidden>
+                <div class="agents-grid">
+                    <div class="agent-card">
+                        <div class="agent-card__header">
+                            <span class="agent-card__name">TrendRadar</span>
+                            <span class="agent-card__status agent-card__status--idle">Idle</span>
+                        </div>
+                        <div class="agent-card__body">
+                            <div class="agent-card__stat">
+                                <span class="agent-card__stat-value" id="trend-candidates">10</span>
+                                <span class="agent-card__stat-label">Candidates Found</span>
+                            </div>
+                            <div class="agent-card__stat">
+                                <span class="agent-card__stat-value" id="trend-shortlisted">4</span>
+                                <span class="agent-card__stat-label">Shortlisted</span>
+                            </div>
+                        </div>
+                        <div class="agent-card__footer">
+                            <span>Last run: Today, 02:00</span>
+                            <button class="btn btn--sm">View Output</button>
+                        </div>
+                    </div>
+                    <div class="agent-card">
+                        <div class="agent-card__header">
+                            <span class="agent-card__name">Procurement</span>
+                            <span class="agent-card__status agent-card__status--idle">Idle</span>
+                        </div>
+                        <div class="agent-card__body">
+                            <div class="agent-card__stat">
+                                <span class="agent-card__stat-value" id="proc-suppliers">6</span>
+                                <span class="agent-card__stat-label">Suppliers Evaluated</span>
+                            </div>
+                            <div class="agent-card__stat">
+                                <span class="agent-card__stat-value" id="proc-recommended">3</span>
+                                <span class="agent-card__stat-label">Recommended</span>
+                            </div>
+                        </div>
+                        <div class="agent-card__footer">
+                            <span>Last run: Today, 03:00</span>
+                            <button class="btn btn--sm">View Output</button>
+                        </div>
+                    </div>
+                    <div class="agent-card">
+                        <div class="agent-card__header">
+                            <span class="agent-card__name">Curation</span>
+                            <span class="agent-card__status agent-card__status--pending">Pending Samples</span>
+                        </div>
+                        <div class="agent-card__body">
+                            <div class="agent-card__stat">
+                                <span class="agent-card__stat-value">0</span>
+                                <span class="agent-card__stat-label">Products Tested</span>
+                            </div>
+                            <div class="agent-card__stat">
+                                <span class="agent-card__stat-value">0</span>
+                                <span class="agent-card__stat-label">Approved</span>
+                            </div>
+                        </div>
+                        <div class="agent-card__footer">
+                            <span>Awaiting sample arrival</span>
+                            <button class="btn btn--sm" disabled>No Output</button>
+                        </div>
+                    </div>
+                    <div class="agent-card">
+                        <div class="agent-card__header">
+                            <span class="agent-card__name">Narrative</span>
+                            <span class="agent-card__status agent-card__status--success">Ready</span>
+                        </div>
+                        <div class="agent-card__body">
+                            <div class="agent-card__stat">
+                                <span class="agent-card__stat-value">1</span>
+                                <span class="agent-card__stat-label">Landing Pages</span>
+                            </div>
+                            <div class="agent-card__stat">
+                                <span class="agent-card__stat-value">5</span>
+                                <span class="agent-card__stat-label">Emails Drafted</span>
+                            </div>
+                        </div>
+                        <div class="agent-card__footer">
+                            <span>Last run: Today, 04:00</span>
+                            <button class="btn btn--sm">View Output</button>
+                        </div>
+                    </div>
+                    <div class="agent-card">
+                        <div class="agent-card__header">
+                            <span class="agent-card__name">Personalization</span>
+                            <span class="agent-card__status agent-card__status--idle">Idle</span>
+                        </div>
+                        <div class="agent-card__body">
+                            <div class="agent-card__stat">
+                                <span class="agent-card__stat-value">0</span>
+                                <span class="agent-card__stat-label">Users Profiled</span>
+                            </div>
+                            <div class="agent-card__stat">
+                                <span class="agent-card__stat-value">0</span>
+                                <span class="agent-card__stat-label">Variants Mapped</span>
+                            </div>
+                        </div>
+                        <div class="agent-card__footer">
+                            <span>Waiting for signups</span>
+                            <button class="btn btn--sm" disabled>No Output</button>
+                        </div>
+                    </div>
+                    <div class="agent-card">
+                        <div class="agent-card__header">
+                            <span class="agent-card__name">Support</span>
+                            <span class="agent-card__status agent-card__status--success">Active</span>
+                        </div>
+                        <div class="agent-card__body">
+                            <div class="agent-card__stat">
+                                <span class="agent-card__stat-value">0</span>
+                                <span class="agent-card__stat-label">Tickets Today</span>
+                            </div>
+                            <div class="agent-card__stat">
+                                <span class="agent-card__stat-value">0</span>
+                                <span class="agent-card__stat-label">Escalated</span>
+                            </div>
+                        </div>
+                        <div class="agent-card__footer">
+                            <span>Monitoring continuously</span>
+                            <button class="btn btn--sm">View Queue</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HITL Approvals Section -->
+            <section id="hitl" class="admin-section" hidden>
+                <div class="card">
+                    <div class="card__header">
+                        <h3 class="card__title">Pending Approvals</h3>
+                    </div>
+                    <div class="card__body">
+                        <div class="approval-list" id="approval-list">
+                            <div class="approval-item">
+                                <div class="approval-item__header">
+                                    <span class="approval-item__title">Supplier Shortlist Approval</span>
+                                    <span class="approval-item__priority approval-item__priority--high">High
+                                        Priority</span>
+                                </div>
+                                <div class="approval-item__body">
+                                    <p>Review and approve 3 suppliers for sample orders.</p>
+                                    <ul class="approval-item__list">
+                                        <li>Shenzhen ProVision (sup-shz-pv01) — Mini LED Projector</li>
+                                        <li>Shenzhen MagCharge (sup-shz-mc01) — 3-in-1 Wireless Charger</li>
+                                        <li>Dongguan AudioSonic (sup-dg-as01) — Bluetooth Speaker</li>
+                                    </ul>
+                                    <div class="approval-item__meta">
+                                        <span>Due: 13 Dec 2025</span>
+                                        <span>Owner: Procurement Lead</span>
+                                        <span>Est. Cost: $232 USD</span>
+                                    </div>
+                                </div>
+                                <div class="approval-item__actions">
+                                    <button class="btn btn--primary">Approve All</button>
+                                    <button class="btn btn--outline">Review Details</button>
+                                    <button class="btn btn--danger">Reject</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__header">
+                        <h3 class="card__title">Completed Approvals</h3>
+                    </div>
+                    <div class="card__body">
+                        <div class="approval-list">
+                            <div class="approval-item approval-item--completed">
+                                <div class="approval-item__header">
+                                    <span class="approval-item__title">Sample Order Authorization</span>
+                                    <span class="approval-item__status approval-item__status--approved">Approved</span>
+                                </div>
+                                <div class="approval-item__body">
+                                    <p>Authorized sample orders for 2 candidates.</p>
+                                    <div class="approval-item__meta">
+                                        <span>Approved: 08 Dec 2025, 14:30</span>
+                                        <span>By: finance_lead@zapnest.com</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Products Section -->
+            <section id="products" class="admin-section" hidden>
+                <div class="card">
+                    <div class="card__header">
+                        <h3 class="card__title">Product Pipeline</h3>
+                    </div>
+                    <div class="card__body">
+                        <div class="pipeline">
+                            <div class="pipeline-stage">
+                                <div class="pipeline-stage__header">
+                                    <span class="pipeline-stage__title">Discovery</span>
+                                    <span class="pipeline-stage__count">10</span>
+                                </div>
+                                <div class="pipeline-stage__items">
+                                    <div class="pipeline-item">
+                                        <span class="pipeline-item__name">Mini LED Projector</span>
+                                        <span class="pipeline-item__score">0.82</span>
+                                    </div>
+                                    <div class="pipeline-item">
+                                        <span class="pipeline-item__name">3-in-1 Wireless Charger</span>
+                                        <span class="pipeline-item__score">0.74</span>
+                                    </div>
+                                    <div class="pipeline-item">
+                                        <span class="pipeline-item__name">Bluetooth Speaker IPX7</span>
+                                        <span class="pipeline-item__score">0.71</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pipeline-stage">
+                                <div class="pipeline-stage__header">
+                                    <span class="pipeline-stage__title">Procurement</span>
+                                    <span class="pipeline-stage__count">3</span>
+                                </div>
+                                <div class="pipeline-stage__items">
+                                    <div class="pipeline-item pipeline-item--active">
+                                        <span class="pipeline-item__name">Mini LED Projector</span>
+                                        <span class="pipeline-item__status">Samples Ordered</span>
+                                    </div>
+                                    <div class="pipeline-item pipeline-item--active">
+                                        <span class="pipeline-item__name">3-in-1 Charger</span>
+                                        <span class="pipeline-item__status">Samples Ordered</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pipeline-stage">
+                                <div class="pipeline-stage__header">
+                                    <span class="pipeline-stage__title">QA Testing</span>
+                                    <span class="pipeline-stage__count">0</span>
+                                </div>
+                                <div class="pipeline-stage__items pipeline-stage__items--empty">
+                                    <span>Awaiting samples</span>
+                                </div>
+                            </div>
+                            <div class="pipeline-stage">
+                                <div class="pipeline-stage__header">
+                                    <span class="pipeline-stage__title">Approved</span>
+                                    <span class="pipeline-stage__count">0</span>
+                                </div>
+                                <div class="pipeline-stage__items pipeline-stage__items--empty">
+                                    <span>No products yet</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Subscribers Section (NEW) -->
+            <section id="subscribers" class="admin-section" hidden>
+                <!-- Subscriber Stats -->
+                <div class="stats-grid stats-grid--4">
+                    <div class="stat-card stat-card--accent">
+                        <div class="stat-card__icon stat-card__icon--green">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <div class="stat-card__content">
+                            <span class="stat-card__value" id="active-subscribers">0</span>
+                            <span class="stat-card__label">Active Subscribers</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__icon stat-card__icon--blue">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                        </div>
+                        <div class="stat-card__content">
+                            <span class="stat-card__value" id="founder-count">0</span>
+                            <span class="stat-card__label">Founders</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__icon stat-card__icon--purple">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="12" y1="1" x2="12" y2="23"></line>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                        </div>
+                        <div class="stat-card__content">
+                            <span class="stat-card__value" id="mrr-value">₹0</span>
+                            <span class="stat-card__label">Monthly Revenue</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__icon stat-card__icon--orange">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                        </div>
+                        <div class="stat-card__content">
+                            <span class="stat-card__value" id="churn-count">0</span>
+                            <span class="stat-card__label">Churned</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Subscriber Table -->
+                <div class="card">
+                    <div class="card__header">
+                        <h3 class="card__title">Active Subscribers</h3>
+                        <div class="card__actions">
+                            <select class="form-select" id="subscriber-filter">
+                                <option value="all">All Tiers</option>
+                                <option value="lite">Lite</option>
+                                <option value="core">Core</option>
+                                <option value="elite">Elite</option>
+                            </select>
+                            <button class="btn btn--outline" id="export-subscribers">Export CSV</button>
+                        </div>
+                    </div>
+                    <div class="card__body">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Email</th>
+                                    <th>Tier</th>
+                                    <th>Status</th>
+                                    <th>Price</th>
+                                    <th>Next Billing</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="subscribers-table">
+                                <tr>
+                                    <td colspan="6" class="data-table__empty">No subscribers yet. Connect Supabase.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Orders Section (NEW) -->
+            <section id="orders" class="admin-section" hidden>
+                <!-- Order Stats -->
+                <div class="stats-grid stats-grid--4">
+                    <div class="stat-card">
+                        <div class="stat-card__icon stat-card__icon--blue">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="stat-card__content">
+                            <span class="stat-card__value" id="total-orders">0</span>
+                            <span class="stat-card__label">Total Orders</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__icon stat-card__icon--orange">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <div class="stat-card__content">
+                            <span class="stat-card__value" id="pending-orders">0</span>
+                            <span class="stat-card__label">Pending</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__icon stat-card__icon--purple">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="1" y="3" width="15" height="13"></rect>
+                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                            </svg>
+                        </div>
+                        <div class="stat-card__content">
+                            <span class="stat-card__value" id="shipped-orders">0</span>
+                            <span class="stat-card__label">Shipped</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__icon stat-card__icon--green">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <div class="stat-card__content">
+                            <span class="stat-card__value" id="delivered-orders">0</span>
+                            <span class="stat-card__label">Delivered</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Orders Table -->
+                <div class="card">
+                    <div class="card__header">
+                        <h3 class="card__title">January 2025 Orders</h3>
+                        <div class="card__actions">
+                            <select class="form-select" id="order-status-filter">
+                                <option value="all">All Status</option>
+                                <option value="pending">Pending</option>
+                                <option value="processing">Processing</option>
+                                <option value="shipped">Shipped</option>
+                                <option value="delivered">Delivered</option>
+                            </select>
+                            <button class="btn btn--outline" id="export-orders">Export CSV</button>
+                            <button class="btn btn--primary" id="generate-labels">Generate Labels</button>
+                        </div>
+                    </div>
+                    <div class="card__body">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" id="select-all-orders"></th>
+                                    <th>Order #</th>
+                                    <th>Subscriber</th>
+                                    <th>Tier</th>
+                                    <th>Status</th>
+                                    <th>Tracking</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="orders-table">
+                                <tr>
+                                    <td colspan="7" class="data-table__empty">No orders for this month yet.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Revenue Section (NEW) -->
+            <section id="revenue" class="admin-section" hidden>
+                <!-- Revenue Stats -->
+                <div class="stats-grid stats-grid--3">
+                    <div class="stat-card stat-card--large">
+                        <div class="stat-card__content">
+                            <span class="stat-card__label">Monthly Recurring Revenue</span>
+                            <span class="stat-card__value stat-card__value--large" id="total-mrr">₹0</span>
+                            <span class="stat-card__trend stat-card__trend--up" id="mrr-trend">—</span>
+                        </div>
+                    </div>
+                    <div class="stat-card stat-card--large">
+                        <div class="stat-card__content">
+                            <span class="stat-card__label">Total Collected</span>
+                            <span class="stat-card__value stat-card__value--large" id="total-collected">₹0</span>
+                            <span class="stat-card__trend" id="collected-period">All time</span>
+                        </div>
+                    </div>
+                    <div class="stat-card stat-card--large">
+                        <div class="stat-card__content">
+                            <span class="stat-card__label">Average Revenue Per User</span>
+                            <span class="stat-card__value stat-card__value--large" id="arpu">₹0</span>
+                            <span class="stat-card__trend">Per month</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tier Breakdown -->
+                <div class="card">
+                    <div class="card__header">
+                        <h3 class="card__title">Revenue by Tier</h3>
+                    </div>
+                    <div class="card__body">
+                        <div class="revenue-tiers">
+                            <div class="revenue-tier">
+                                <div class="revenue-tier__header">
+                                    <span class="revenue-tier__name">Lite</span>
+                                    <span class="revenue-tier__price">₹1,499/mo</span>
+                                </div>
+                                <div class="revenue-tier__bar">
+                                    <div class="revenue-tier__fill revenue-tier__fill--lite" id="revenue-lite-bar"
+                                        style="width: 0%"></div>
+                                </div>
+                                <div class="revenue-tier__stats">
+                                    <span id="revenue-lite-count">0 subscribers</span>
+                                    <span id="revenue-lite-amount">₹0</span>
+                                </div>
+                            </div>
+                            <div class="revenue-tier">
+                                <div class="revenue-tier__header">
+                                    <span class="revenue-tier__name">Core</span>
+                                    <span class="revenue-tier__price">₹2,999/mo</span>
+                                </div>
+                                <div class="revenue-tier__bar">
+                                    <div class="revenue-tier__fill revenue-tier__fill--core" id="revenue-core-bar"
+                                        style="width: 0%"></div>
+                                </div>
+                                <div class="revenue-tier__stats">
+                                    <span id="revenue-core-count">0 subscribers</span>
+                                    <span id="revenue-core-amount">₹0</span>
+                                </div>
+                            </div>
+                            <div class="revenue-tier">
+                                <div class="revenue-tier__header">
+                                    <span class="revenue-tier__name">Elite</span>
+                                    <span class="revenue-tier__price">₹4,999/mo</span>
+                                </div>
+                                <div class="revenue-tier__bar">
+                                    <div class="revenue-tier__fill revenue-tier__fill--elite" id="revenue-elite-bar"
+                                        style="width: 0%"></div>
+                                </div>
+                                <div class="revenue-tier__stats">
+                                    <span id="revenue-elite-count">0 subscribers</span>
+                                    <span id="revenue-elite-amount">₹0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Payments -->
+                <div class="card">
+                    <div class="card__header">
+                        <h3 class="card__title">Recent Payments</h3>
+                        <div class="card__actions">
+                            <button class="btn btn--outline" id="export-payments">Export</button>
+                        </div>
+                    </div>
+                    <div class="card__body">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Payment ID</th>
+                                    <th>Subscriber</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody id="payments-table">
+                                <tr>
+                                    <td colspan="5" class="data-table__empty">No payments recorded yet.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>

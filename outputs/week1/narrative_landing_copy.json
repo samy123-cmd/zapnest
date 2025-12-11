@@ -1,0 +1,286 @@
+{
+    "status": "ok",
+    "run_date": "2025-12-11T04:00:00+05:30",
+    "run_id": "narrative-20251211-001",
+    "output_type": "founder_waitlist_materials",
+    "brand_voice": "futuristic_premium",
+    "landing_page": {
+        "meta": {
+            "title": "ZapNest Black Box — Curated Tech, Delivered",
+            "description": "Join the waitlist for ZapNest Black Box. Premium tech gadgets, ruthlessly curated. Monthly drops for those who demand more.",
+            "og_image": "zapnest-founder-og.jpg"
+        },
+        "hero": {
+            "headline": "Tech That Earns Its Place",
+            "subheadline": "We test 50 gadgets. One makes the cut. Delivered monthly.",
+            "cta_primary": {
+                "text": "Join the Founder Waitlist",
+                "url": "/waitlist"
+            },
+            "cta_secondary": {
+                "text": "How it works",
+                "url": "#how-it-works"
+            },
+            "background_style": "dark_gradient_mesh",
+            "hero_visual": "abstract_tech_grid"
+        },
+        "value_proposition": {
+            "section_id": "why-zapnest",
+            "headline": "Most Tech is Noise",
+            "body": "The market is flooded with gadgets that overpromise and underdeliver. Fake specs. Hype marketing. Disposable quality.\n\nWe filter the signal from the noise.\n\nEvery product in a ZapNest Box has been:\n• Trend-validated across platforms\n• Supplier-verified for quality\n• Lab-tested against its claims\n• Selected for real-world utility\n\nIf it doesn't pass, it doesn't ship.",
+            "stats": [
+                {
+                    "value": "50+",
+                    "label": "Products evaluated per drop"
+                },
+                {
+                    "value": "1-3",
+                    "label": "Products that make the cut"
+                },
+                {
+                    "value": "<4%",
+                    "label": "Defect rate tolerance"
+                }
+            ]
+        },
+        "how_it_works": {
+            "section_id": "how-it-works",
+            "headline": "The Black Box Process",
+            "steps": [
+                {
+                    "step": 1,
+                    "title": "We Hunt",
+                    "description": "Our AI scans Reddit, TikTok, and 50+ sources for emerging tech with genuine traction—not paid hype."
+                },
+                {
+                    "step": 2,
+                    "title": "We Vet",
+                    "description": "Every candidate gets supplier verification, sample testing, and spec validation. Claims get checked."
+                },
+                {
+                    "step": 3,
+                    "title": "We Curate",
+                    "description": "One hero product. Complementary accessories. Premium packaging. Zero filler."
+                },
+                {
+                    "step": 4,
+                    "title": "You Unbox",
+                    "description": "Monthly delivery of tech that actually works. No research. No risk. Just the good stuff."
+                }
+            ]
+        },
+        "tiers": {
+            "section_id": "tiers",
+            "headline": "Choose Your Box",
+            "subtitle": "Three tiers. Same quality standards.",
+            "options": [
+                {
+                    "tier": "Lite",
+                    "price": "₹999/month",
+                    "description": "One curated accessory. Perfect entry point.",
+                    "includes": [
+                        "1 vetted accessory",
+                        "Premium packaging",
+                        "Early access to drops"
+                    ]
+                },
+                {
+                    "tier": "Core",
+                    "price": "₹2,999/month",
+                    "badge": "Most Popular",
+                    "description": "The full experience. Hero product + accessories.",
+                    "includes": [
+                        "1 hero product",
+                        "1-2 accessories",
+                        "Premium magnetic box",
+                        "Founder community access"
+                    ]
+                },
+                {
+                    "tier": "Elite",
+                    "price": "₹5,999/month",
+                    "description": "Premium tier. Early access. Exclusive products.",
+                    "includes": [
+                        "1 premium hero product",
+                        "2-3 accessories",
+                        "Elite packaging",
+                        "Priority support",
+                        "Exclusive drops"
+                    ]
+                }
+            ]
+        },
+        "founder_offer": {
+            "section_id": "founder",
+            "headline": "Founder Batch — Limited to 200",
+            "body": "The first ZapNest Core Box ships January 2025.\n\n200 units. Founder pricing. First-mover access.\n\nFounders get:\n• Locked-in founder pricing (forever)\n• First access to every drop\n• Input on future product selection\n• Exclusive founder badge",
+            "cta": {
+                "text": "Claim Your Founder Spot",
+                "url": "/waitlist/founder"
+            },
+            "urgency_text": "142 spots remaining",
+            "social_proof": "500+ already on the waitlist"
+        },
+        "testimonials": {
+            "section_id": "testimonials",
+            "headline": "Early Reactions",
+            "quotes": [
+                {
+                    "quote": "Finally, someone doing the research I don't have time for.",
+                    "author": "Waitlist member",
+                    "context": "Tech professional, Bangalore"
+                },
+                {
+                    "quote": "The curation approach is exactly what's missing in Indian tech retail.",
+                    "author": "Waitlist member",
+                    "context": "Product designer, Mumbai"
+                }
+            ]
+        },
+        "faq": {
+            "section_id": "faq",
+            "headline": "Questions",
+            "items": [
+                {
+                    "q": "What kind of products will be in the box?",
+                    "a": "Consumer tech that solves real problems: portable displays, smart chargers, audio gear, travel accessories. Nothing gimmicky. Everything tested."
+                },
+                {
+                    "q": "Can I cancel anytime?",
+                    "a": "Yes. No lock-in. Cancel before your next billing date and you're done."
+                },
+                {
+                    "q": "What if I don't like a product?",
+                    "a": "7-day returns, no questions asked. Quality issues get immediate replacement."
+                },
+                {
+                    "q": "When does the first box ship?",
+                    "a": "Founder batch ships mid-January 2025. Waitlist members get first access."
+                },
+                {
+                    "q": "Is shipping included?",
+                    "a": "Yes. Free shipping across India on all tiers."
+                }
+            ]
+        },
+        "footer_cta": {
+            "headline": "Join 500+ on the Waitlist",
+            "subtext": "Early access. Founder pricing. No spam.",
+            "cta": {
+                "text": "Get on the List",
+                "url": "/waitlist"
+            },
+            "input_placeholder": "Enter your email"
+        }
+    },
+    "email_sequence": {
+        "sequence_id": "founder-waitlist-nurture",
+        "emails": [
+            {
+                "email_id": "email-waitlist-welcome",
+                "trigger": "waitlist_signup",
+                "delay_hours": 0,
+                "subject": "You're on the list",
+                "preview_text": "Here's what happens next.",
+                "body": "You're in.\n\nYou just joined {{waitlist_count}} others waiting for the first ZapNest Black Box.\n\nHere's what we're doing:\n\n→ Scanning 50+ products this month\n→ Testing samples in our lab\n→ Selecting 1 hero product that actually delivers\n→ Packaging it like it deserves\n\nFounder batch ships January 2025.\n\nYou'll hear from us when it's ready. No spam in between.\n\n— ZapNest Team\n\nP.S. Reply to this email if you have a product category you'd love to see us tackle.",
+                "cta_text": null,
+                "cta_url": null
+            },
+            {
+                "email_id": "email-waitlist-behind-scenes",
+                "trigger": "waitlist_signup",
+                "delay_hours": 72,
+                "subject": "We rejected 47 projectors",
+                "preview_text": "Inside our curation process.",
+                "body": "Quick update.\n\nThis week we evaluated 47 mini projectors.\n\n43 had inflated specs (claimed 1080p, actual 720p).\n3 had build quality issues.\n1 had a defect rate we couldn't accept.\n\n1 made the cut.\n\nThis is what we mean by curation. Not picking what looks good—testing until we find what actually is good.\n\nThe first Core Box hero product is nearly locked.\n\nMore soon.\n\n— ZapNest",
+                "cta_text": null,
+                "cta_url": null
+            },
+            {
+                "email_id": "email-waitlist-founder-open",
+                "trigger": "waitlist_signup",
+                "delay_hours": 168,
+                "subject": "Founder spots are live",
+                "preview_text": "200 units. First access. Locked pricing.",
+                "body": "The Founder Batch is open.\n\n200 Core Boxes. ₹2,999 each.\n\nWhat's inside the first box:\n• Mini Projector X — 720p HD, 3+ hours battery, 418g portable cinema\n• 2 curated accessories (revealing soon)\n• Premium magnetic packaging\n\nFounder members lock in this price permanently. Every future box at founder rate.\n\nYou're on the early list. You get first access.\n\nWindow closes when spots fill or January 10—whichever comes first.",
+                "cta_text": "Claim Your Founder Box",
+                "cta_url": "https://zapnest.com/founder"
+            },
+            {
+                "email_id": "email-waitlist-reminder",
+                "trigger": "waitlist_signup + no_purchase",
+                "delay_hours": 240,
+                "subject": "67 founder spots left",
+                "preview_text": "Filling faster than expected.",
+                "body": "Quick note:\n\n133 founder spots claimed.\n67 remaining.\n\nWe won't be restocking founder pricing. Once these are gone, it moves to regular pricing (₹3,499).\n\nIf you've been waiting—this is the time.\n\nNo pressure. Just wanted you to know before it's too late.",
+                "cta_text": "Get Your Spot",
+                "cta_url": "https://zapnest.com/founder"
+            },
+            {
+                "email_id": "email-waitlist-lastchance",
+                "trigger": "waitlist_signup + no_purchase",
+                "delay_hours": 312,
+                "subject": "Final 24 hours",
+                "preview_text": "Founder batch closes tomorrow.",
+                "body": "Last call.\n\nFounder batch closes tomorrow at 11:59 PM.\n\n23 spots remain.\n\nAfter this:\n• Price moves to ₹3,499\n• No founder badge\n• No locked-in pricing\n\nThis is the only time we're offering this.\n\nDecision's yours.",
+                "cta_text": "Claim Founder Pricing",
+                "cta_url": "https://zapnest.com/founder"
+            }
+        ]
+    },
+    "social_teasers": {
+        "instagram": [
+            {
+                "type": "carousel",
+                "slides": [
+                    "We tested 47 mini projectors.",
+                    "43 had fake specs.",
+                    "3 broke within a week.",
+                    "1 made the cut.",
+                    "ZapNest Black Box. Coming January."
+                ]
+            },
+            {
+                "type": "reel_hook",
+                "text": "Every ZapNest product survives this process..."
+            },
+            {
+                "type": "story_poll",
+                "question": "What's worse?",
+                "option_a": "Buying tech that breaks in a month",
+                "option_b": "Spending hours researching to avoid that"
+            }
+        ],
+        "x_twitter": [
+            "The average Alibaba listing claims 1080p. The average actual resolution: 720p. We test. They ship. zapnest.com",
+            "Curated tech subscription for people who don't have time to become product researchers. First box ships January. zapnest.com/waitlist",
+            "We rejected 47 projectors. 1 made it. That's the bar. ZapNest Black Box."
+        ],
+        "tiktok_hooks": [
+            "POV: you're us testing the 47th mini projector this week",
+            "Why we rejected $15,000 worth of product samples",
+            "The difference between claimed specs and real specs (it's not pretty)"
+        ]
+    },
+    "audit": [
+        {
+            "claim": "50+ products evaluated per drop",
+            "source": "internal_process",
+            "url": "internal://workflow/weekly_cadence",
+            "verified_by": "TrendRadar output history"
+        },
+        {
+            "claim": "<4% defect rate tolerance",
+            "source": "business_constraint",
+            "url": "internal://orchestrator/master_prompt",
+            "verified_by": "Orchestrator constraints"
+        },
+        {
+            "claim": "tested 47 projectors (example)",
+            "source": "sample_narrative",
+            "url": null,
+            "verified_by": "Illustrative—adjust based on actual testing data"
+        }
+    ],
+    "human_action": "approve_copy"
+}

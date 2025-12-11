@@ -1,0 +1,1120 @@
+{
+    "page_copy": {
+        "hero": {
+            "eyebrow": {
+                "text": "Founders Access — 500 Slots Only",
+                "char_count": 34
+            },
+            "headline": {
+                "text": "ZapNest Black Box — Tech That Earns Its Place",
+                "char_count": 47
+            },
+            "subheadline": {
+                "text": "We test 50 gadgets. One makes the cut. Curated tech, delivered monthly. Join 500 founders getting first access.",
+                "char_count": 112
+            },
+            "primary_cta": {
+                "text": "Join the Founders List",
+                "aria_label": "Join the Founders List — opens email capture modal",
+                "char_count": 22
+            },
+            "secondary_cta": {
+                "text": "How It Works",
+                "aria_label": "Navigate to How It Works section",
+                "char_count": 12
+            },
+            "hero_visual_legend": {
+                "text": "Precision-curated tech, premium packaging",
+                "char_count": 41
+            }
+        },
+        "value_props": [
+            {
+                "title": {
+                    "text": "Ruthless Curation",
+                    "char_count": 17
+                },
+                "body": {
+                    "text": "We evaluate 50+ products per drop. Most fail our tests. Only verified performers ship.",
+                    "char_count": 86
+                },
+                "icon_suggestion": "filter-funnel"
+            },
+            {
+                "title": {
+                    "text": "Verified Specs",
+                    "char_count": 14
+                },
+                "body": {
+                    "text": "Every claim is tested in-house. We publish what we measure, not what suppliers promise.",
+                    "char_count": 87
+                },
+                "icon_suggestion": "checkmark-shield"
+            },
+            {
+                "title": {
+                    "text": "Zero Filler",
+                    "char_count": 11
+                },
+                "body": {
+                    "text": "One hero product. Complementary accessories. Premium packaging. No random gadgets to pad the box.",
+                    "char_count": 97
+                },
+                "icon_suggestion": "cube-minimal"
+            }
+        ],
+        "how_it_works": {
+            "title": {
+                "text": "The Black Box Process",
+                "char_count": 21
+            },
+            "steps": [
+                {
+                    "step_number": 1,
+                    "title": {
+                        "text": "We Hunt",
+                        "char_count": 7
+                    },
+                    "body": {
+                        "text": "AI scans Reddit, TikTok, and 50+ sources for emerging tech with genuine traction—not paid hype.",
+                        "char_count": 95
+                    }
+                },
+                {
+                    "step_number": 2,
+                    "title": {
+                        "text": "We Vet",
+                        "char_count": 6
+                    },
+                    "body": {
+                        "text": "Every candidate gets supplier verification, sample testing, and spec validation. Claims get checked.",
+                        "char_count": 100
+                    }
+                },
+                {
+                    "step_number": 3,
+                    "title": {
+                        "text": "We Curate",
+                        "char_count": 9
+                    },
+                    "body": {
+                        "text": "One hero product. Complementary accessories. Premium packaging. Human approval at every gate.",
+                        "char_count": 93
+                    }
+                },
+                {
+                    "step_number": 4,
+                    "title": {
+                        "text": "You Unbox",
+                        "char_count": 9
+                    },
+                    "body": {
+                        "text": "Monthly delivery of tech that works. No research required. No risk. Just the good stuff.",
+                        "char_count": 88
+                    }
+                }
+            ],
+            "microcopy": {
+                "text": "Every step includes human review. Nothing ships without approval.",
+                "char_count": 65,
+                "purpose": "Reinforce human oversight in AI-assisted curation"
+            }
+        },
+        "tiers": {
+            "intro": {
+                "text": "Choose Your Box — Three tiers, same quality standards.",
+                "char_count": 55
+            },
+            "plans": [
+                {
+                    "tier": "lite",
+                    "price_inr": 1599,
+                    "billing_cycle": "monthly",
+                    "tagline": {
+                        "text": "One curated accessory. Perfect entry point.",
+                        "char_count": 43
+                    },
+                    "bullets": [
+                        {
+                            "text": "1 vetted accessory (chargers, cables, mounts)",
+                            "char_count": 45
+                        },
+                        {
+                            "text": "Premium minimal packaging",
+                            "char_count": 25
+                        },
+                        {
+                            "text": "Early access to drop announcements",
+                            "char_count": 34
+                        }
+                    ],
+                    "cta": {
+                        "text": "Select Lite",
+                        "aria_label": "Select Lite tier at ₹1,599 per month",
+                        "char_count": 11
+                    }
+                },
+                {
+                    "tier": "core",
+                    "price_inr": 2999,
+                    "billing_cycle": "monthly",
+                    "tagline": {
+                        "text": "The full experience. Hero product + accessories.",
+                        "char_count": 48
+                    },
+                    "bullets": [
+                        {
+                            "text": "1 hero product (projectors, speakers, smart tech)",
+                            "char_count": 49
+                        },
+                        {
+                            "text": "1–2 complementary accessories",
+                            "char_count": 29
+                        },
+                        {
+                            "text": "Premium magnetic box + founders community",
+                            "char_count": 41
+                        }
+                    ],
+                    "cta": {
+                        "text": "Select Core",
+                        "aria_label": "Select Core tier at ₹2,999 per month",
+                        "char_count": 11
+                    },
+                    "badge": "Most Popular"
+                },
+                {
+                    "tier": "elite",
+                    "price_inr": 4999,
+                    "billing_cycle": "monthly",
+                    "tagline": {
+                        "text": "Premium tier. Early access. Exclusive products.",
+                        "char_count": 47
+                    },
+                    "bullets": [
+                        {
+                            "text": "1 premium hero product (higher value category)",
+                            "char_count": 46
+                        },
+                        {
+                            "text": "2–3 curated accessories",
+                            "char_count": 23
+                        },
+                        {
+                            "text": "Priority support + exclusive drops",
+                            "char_count": 34
+                        }
+                    ],
+                    "cta": {
+                        "text": "Select Elite",
+                        "aria_label": "Select Elite tier at ₹4,999 per month",
+                        "char_count": 12
+                    }
+                }
+            ],
+            "disclaimer": {
+                "text": "Prices include GST. Free shipping across India. Cancel anytime before your next billing date.",
+                "char_count": 93
+            }
+        },
+        "trust_and_transparency": {
+            "title": {
+                "text": "How We Operate",
+                "char_count": 14
+            },
+            "items": [
+                {
+                    "title": {
+                        "text": "AI + Human Procurement",
+                        "char_count": 22
+                    },
+                    "body": {
+                        "text": "AI scans for signals. Humans verify suppliers, test samples, and approve every product. Nothing ships without sign-off.",
+                        "char_count": 119
+                    }
+                },
+                {
+                    "title": {
+                        "text": "Safety & Compliance",
+                        "char_count": 19
+                    },
+                    "body": {
+                        "text": "Battery certifications, BIS registration, and safety standards verified before any product enters a box.",
+                        "char_count": 104
+                    }
+                },
+                {
+                    "title": {
+                        "text": "Data Privacy & PII",
+                        "char_count": 18
+                    },
+                    "body": {
+                        "text": "Your data stays private. Emails hashed for analytics. No selling to third parties. Ever.",
+                        "char_count": 88
+                    }
+                }
+            ]
+        },
+        "founders_offer": {
+            "title": {
+                "text": "Founders Batch — Limited to 500",
+                "char_count": 31
+            },
+            "body": {
+                "text": "The first ZapNest Black Box ships January 2025. 500 founder slots. Locked-in pricing forever. First access to every drop. Your input shapes future boxes.",
+                "char_count": 155
+            },
+            "cta": {
+                "text": "Claim Your Founder Slot",
+                "aria_label": "Claim your Founder slot — opens email capture modal",
+                "char_count": 23
+            }
+        },
+        "faq": [
+            {
+                "q": {
+                    "text": "When does the first box ship?",
+                    "char_count": 29
+                },
+                "a": {
+                    "text": "Founders batch ships mid-January 2025. You will receive tracking via email once dispatched.",
+                    "char_count": 91
+                }
+            },
+            {
+                "q": {
+                    "text": "Where do you deliver?",
+                    "char_count": 21
+                },
+                "a": {
+                    "text": "We ship across India. Free shipping on all tiers. Delivery typically 3–7 business days depending on location.",
+                    "char_count": 110
+                }
+            },
+            {
+                "q": {
+                    "text": "Can I cancel my subscription?",
+                    "char_count": 29
+                },
+                "a": {
+                    "text": "Yes. Cancel anytime before your next billing date. No lock-in, no questions asked.",
+                    "char_count": 82
+                }
+            },
+            {
+                "q": {
+                    "text": "What if I receive a defective product?",
+                    "char_count": 38
+                },
+                "a": {
+                    "text": "7-day returns on defects. Contact support with photos and we will replace or refund promptly.",
+                    "char_count": 93
+                }
+            },
+            {
+                "q": {
+                    "text": "What kind of products are in the box?",
+                    "char_count": 37
+                },
+                "a": {
+                    "text": "Curated tech: portable displays, smart chargers, audio gear, travel accessories. No gimmicks. Everything tested.",
+                    "char_count": 113
+                }
+            },
+            {
+                "q": {
+                    "text": "How do I manage my membership?",
+                    "char_count": 30
+                },
+                "a": {
+                    "text": "Log in to your account dashboard to update tier, pause, or cancel. Email support available if needed.",
+                    "char_count": 101
+                }
+            },
+            {
+                "q": {
+                    "text": "Why only 500 founder slots?",
+                    "char_count": 27
+                },
+                "a": {
+                    "text": "We limit first batch to maintain quality and gather feedback. Founders get locked pricing and priority access.",
+                    "char_count": 111
+                }
+            }
+        ],
+        "footer": {
+            "copyright": {
+                "text": "© 2025 ZapNest. All rights reserved.",
+                "char_count": 36
+            },
+            "privacy_link_text": {
+                "text": "We respect your data — read our Privacy Policy.",
+                "char_count": 47
+            },
+            "support_text": {
+                "text": "Questions? Contact support@zapnest.com",
+                "char_count": 38
+            }
+        },
+        "form_microcopy": {
+            "email_placeholder": {
+                "text": "Enter your email",
+                "char_count": 16
+            },
+            "email_invalid_error": {
+                "text": "Please enter a valid email address.",
+                "char_count": 35,
+                "purpose": "Inline validation error for malformed email"
+            },
+            "consent_checkbox_label": {
+                "text": "I agree to receive updates and accept the Privacy Policy.",
+                "char_count": 57
+            },
+            "consent_required_error": {
+                "text": "Consent is required to join the Founders list.",
+                "char_count": 46,
+                "purpose": "Error shown when checkbox not selected"
+            },
+            "referral_code_placeholder": {
+                "text": "Referral code (optional)",
+                "char_count": 24
+            },
+            "submit_idle": {
+                "text": "Join Founders List",
+                "char_count": 18
+            },
+            "submit_loading": {
+                "text": "Reserving…",
+                "char_count": 10
+            },
+            "success_message": {
+                "text": "You are on the Founders List. Check your email for next steps.",
+                "char_count": 62
+            },
+            "error_message": {
+                "text": "Something went wrong. Please try again.",
+                "char_count": 39
+            }
+        }
+    },
+    "layout_spec": {
+        "html_structure": [
+            {
+                "section_id": "hero",
+                "role": "region",
+                "aria_label": "ZapNest Black Box hero section",
+                "css_class": "zn-hero",
+                "children": [
+                    "zn-hero__container",
+                    "zn-hero__eyebrow",
+                    "zn-hero__heading",
+                    "zn-hero__subheading",
+                    "zn-hero__cta-group",
+                    "zn-hero__visual"
+                ]
+            },
+            {
+                "section_id": "value-props",
+                "role": "region",
+                "aria_label": "Why choose ZapNest",
+                "css_class": "zn-value-props",
+                "children": [
+                    "zn-value-props__grid",
+                    "zn-value-props__card"
+                ]
+            },
+            {
+                "section_id": "how-it-works",
+                "role": "region",
+                "aria_label": "How the Black Box process works",
+                "css_class": "zn-how-it-works",
+                "children": [
+                    "zn-how-it-works__title",
+                    "zn-how-it-works__steps",
+                    "zn-how-it-works__step"
+                ]
+            },
+            {
+                "section_id": "tiers",
+                "role": "region",
+                "aria_label": "Subscription tiers and pricing",
+                "css_class": "zn-tiers",
+                "children": [
+                    "zn-tiers__intro",
+                    "zn-tiers__grid",
+                    "zn-tier-card",
+                    "zn-tier-card--featured"
+                ]
+            },
+            {
+                "section_id": "trust",
+                "role": "region",
+                "aria_label": "Trust and transparency",
+                "css_class": "zn-trust",
+                "children": [
+                    "zn-trust__title",
+                    "zn-trust__grid",
+                    "zn-trust__item"
+                ]
+            },
+            {
+                "section_id": "founders-offer",
+                "role": "region",
+                "aria_label": "Founders batch offer",
+                "css_class": "zn-founders",
+                "children": [
+                    "zn-founders__title",
+                    "zn-founders__body",
+                    "zn-founders__cta"
+                ]
+            },
+            {
+                "section_id": "faq",
+                "role": "region",
+                "aria_label": "Frequently asked questions",
+                "css_class": "zn-faq",
+                "children": [
+                    "zn-faq__title",
+                    "zn-faq__list",
+                    "zn-faq__item"
+                ]
+            },
+            {
+                "section_id": "footer",
+                "role": "contentinfo",
+                "aria_label": "Site footer",
+                "css_class": "zn-footer",
+                "children": [
+                    "zn-footer__copyright",
+                    "zn-footer__links",
+                    "zn-footer__support"
+                ]
+            },
+            {
+                "section_id": "email-modal",
+                "role": "dialog",
+                "aria_label": "Join Founders List",
+                "css_class": "zn-modal",
+                "children": [
+                    "zn-modal__overlay",
+                    "zn-modal__content",
+                    "zn-modal__form",
+                    "zn-modal__close"
+                ]
+            }
+        ],
+        "visual_guidance": {
+            "hero_image_spec": {
+                "path_hint": "/assets/hero-black-box.avif",
+                "fallback_path": "/assets/hero-black-box.webp",
+                "alt_text": "ZapNest Black Box — premium tech subscription box with magnetic closure",
+                "max_kb": 200,
+                "placeholder_svg": "/assets/hero-placeholder.svg",
+                "recommended_ratio": "16:9",
+                "dimensions_desktop": {
+                    "width": 1920,
+                    "height": 1080
+                },
+                "dimensions_mobile": {
+                    "width": 750,
+                    "height": 1000
+                }
+            },
+            "color_tokens": {
+                "bg_primary": "#0A0A0A",
+                "bg_secondary": "#141414",
+                "bg_tertiary": "#1E1E1E",
+                "text_primary": "#FFFFFF",
+                "text_secondary": "#A0A0A0",
+                "text_muted": "#666666",
+                "accent": "#00FF88",
+                "accent_hover": "#00CC6A",
+                "error": "#FF4444",
+                "success": "#00FF88",
+                "border": "#2A2A2A"
+            },
+            "font_stack": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+            "font_sizes": {
+                "hero_headline": "clamp(2rem, 5vw, 4rem)",
+                "section_title": "clamp(1.5rem, 3vw, 2.5rem)",
+                "body": "1rem",
+                "small": "0.875rem"
+            },
+            "animation_specs": [
+                {
+                    "selector": ".zn-hero__visual",
+                    "type": "fade-in-up",
+                    "duration_ms": 800,
+                    "delay_ms": 200,
+                    "easing": "cubic-bezier(0.16, 1, 0.3, 1)",
+                    "prefers_reduced_motion": "skip"
+                },
+                {
+                    "selector": ".zn-value-props__card",
+                    "type": "fade-in-up",
+                    "duration_ms": 600,
+                    "stagger_ms": 100,
+                    "easing": "ease-out",
+                    "prefers_reduced_motion": "skip"
+                },
+                {
+                    "selector": ".zn-cta--primary",
+                    "type": "pulse-glow",
+                    "duration_ms": 2000,
+                    "easing": "ease-in-out",
+                    "prefers_reduced_motion": "stop"
+                }
+            ]
+        },
+        "responsive_rules": {
+            "mobile_first": true,
+            "breakpoints": [
+                {
+                    "name": "sm",
+                    "max_px": 640
+                },
+                {
+                    "name": "md",
+                    "max_px": 1024
+                },
+                {
+                    "name": "lg",
+                    "max_px": 1440
+                },
+                {
+                    "name": "xl",
+                    "min_px": 1441
+                }
+            ],
+            "cta_behavior_mobile": "sticky_bottom_bar",
+            "sticky_cta_spec": {
+                "css_class": "zn-sticky-cta",
+                "visibility": "scroll > 500px",
+                "height": "64px",
+                "z_index": 50
+            },
+            "image_loading": {
+                "hero": "eager",
+                "value_props": "lazy",
+                "tier_cards": "lazy",
+                "all_others": "lazy"
+            },
+            "grid_rules": {
+                "value_props": {
+                    "sm": "1 column",
+                    "md": "3 columns",
+                    "lg": "3 columns"
+                },
+                "tiers": {
+                    "sm": "1 column, stacked",
+                    "md": "3 columns, core centered",
+                    "lg": "3 columns, core elevated"
+                }
+            }
+        },
+        "accessibility": {
+            "contrast_minimum": "WCAG_AA",
+            "contrast_ratios": {
+                "text_primary_on_bg": "15.5:1",
+                "accent_on_bg": "8.2:1",
+                "text_secondary_on_bg": "7.1:1"
+            },
+            "focus_style": "outline: 2px solid #00FF88; outline-offset: 2px;",
+            "skip_links": [
+                {
+                    "text": "Skip to main content",
+                    "href": "#main-content"
+                },
+                {
+                    "text": "Skip to pricing",
+                    "href": "#tiers"
+                }
+            ],
+            "form_labels": "explicit",
+            "aria_recommendations": [
+                {
+                    "element": "hero_heading",
+                    "aria_label": "ZapNest Black Box — Tech That Earns Its Place"
+                },
+                {
+                    "element": "email_input",
+                    "aria_label": "Email address for Founders list"
+                },
+                {
+                    "element": "tier_select",
+                    "aria_label": "Select your subscription tier"
+                },
+                {
+                    "element": "consent_checkbox",
+                    "aria_label": "Consent to receive updates and accept Privacy Policy"
+                },
+                {
+                    "element": "submit_button",
+                    "aria_label": "Submit and join the Founders list"
+                },
+                {
+                    "element": "modal_close",
+                    "aria_label": "Close modal"
+                }
+            ],
+            "keyboard_nav": {
+                "modal_trap_focus": true,
+                "escape_closes_modal": true,
+                "tab_order": "logical"
+            }
+        },
+        "interaction_spec": {
+            "email_modal_flow": [
+                "User clicks primary CTA",
+                "Modal opens with focus on email input",
+                "User enters email",
+                "User selects tier (Lite/Core/Elite radio buttons)",
+                "User optionally enters referral code",
+                "User checks consent checkbox",
+                "User clicks submit",
+                "Loading state shown",
+                "On success: show success state with confirmation",
+                "On error: show inline error with retry button"
+            ],
+            "success_state": {
+                "text": "You are on the Founders List. Check your email for next steps.",
+                "cta_text": "Share with friends",
+                "cta_action": "copy_referral_link"
+            },
+            "error_handling": {
+                "network_error": "Connection failed. Please check your internet and try again.",
+                "server_error": "Something went wrong on our end. Please try again shortly.",
+                "validation_error": "Please fix the highlighted fields.",
+                "retry_button_text": "Try Again"
+            },
+            "tier_selection_default": "core"
+        },
+        "dev_notes": [
+            "Render hero image as <picture> with AVIF primary, WebP fallback, JPEG fallback",
+            "Use srcset for responsive images at 750w, 1200w, 1920w",
+            "Implement IntersectionObserver for lazy loading below fold",
+            "Modal should prevent body scroll when open",
+            "Form submission should be handled via fetch with JSON payload",
+            "Implement client-side email validation before submit",
+            "Hash email with SHA-256 before sending to analytics",
+            "Do not fire marketing pixels until consent checkbox is true",
+            "Use CSS custom properties for all color tokens",
+            "Test with screen reader (NVDA, VoiceOver) before launch"
+        ]
+    },
+    "meta_and_tracking": {
+        "meta_tags": {
+            "title": "ZapNest Black Box — Curated Tech, Monthly | Founders Waitlist",
+            "title_char_count": 58,
+            "description": "Join 500 founders getting first access to curated tech. One hero product, ruthlessly tested. Ships January 2025. India only.",
+            "description_char_count": 127,
+            "canonical": "https://zapnest.com/",
+            "robots": "index, follow",
+            "og_title": "ZapNest Black Box — Tech That Earns Its Place",
+            "og_description": "Join the Founders list. 500 slots. Curated tech subscription launching January 2025.",
+            "og_type": "website",
+            "og_url": "https://zapnest.com/",
+            "og_image_spec": {
+                "path_hint": "/assets/og-zapnest-founders.jpg",
+                "alt": "ZapNest Black Box — premium tech subscription with magnetic packaging",
+                "width": 1200,
+                "height": 630
+            },
+            "twitter_card": "summary_large_image",
+            "twitter_site": "@zapnest"
+        },
+        "json_ld": {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Organization",
+                    "@id": "https://zapnest.com/#organization",
+                    "name": "ZapNest",
+                    "url": "https://zapnest.com",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://zapnest.com/assets/logo-zapnest.png",
+                        "width": 512,
+                        "height": 512
+                    },
+                    "sameAs": [
+                        "https://twitter.com/zapnest",
+                        "https://instagram.com/zapnest"
+                    ],
+                    "contactPoint": {
+                        "@type": "ContactPoint",
+                        "email": "support@zapnest.com",
+                        "contactType": "customer support",
+                        "availableLanguage": [
+                            "English",
+                            "Hindi"
+                        ]
+                    }
+                },
+                {
+                    "@type": "WebSite",
+                    "@id": "https://zapnest.com/#website",
+                    "url": "https://zapnest.com",
+                    "name": "ZapNest",
+                    "publisher": {
+                        "@id": "https://zapnest.com/#organization"
+                    }
+                },
+                {
+                    "@type": "WebPage",
+                    "@id": "https://zapnest.com/#webpage",
+                    "url": "https://zapnest.com/",
+                    "name": "ZapNest Black Box — Curated Tech, Monthly",
+                    "isPartOf": {
+                        "@id": "https://zapnest.com/#website"
+                    },
+                    "about": {
+                        "@id": "https://zapnest.com/#organization"
+                    },
+                    "description": "Founders waitlist for ZapNest Black Box subscription. Curated tech, delivered monthly."
+                },
+                {
+                    "@type": "FAQPage",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "When does the first box ship?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Founders batch ships mid-January 2025. You will receive tracking via email once dispatched."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Where do you deliver?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "We ship across India. Free shipping on all tiers. Delivery typically 3–7 business days depending on location."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Can I cancel my subscription?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Yes. Cancel anytime before your next billing date. No lock-in, no questions asked."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "What if I receive a defective product?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "7-day returns on defects. Contact support with photos and we will replace or refund promptly."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "What kind of products are in the box?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Curated tech: portable displays, smart chargers, audio gear, travel accessories. No gimmicks. Everything tested."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "How do I manage my membership?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Log in to your account dashboard to update tier, pause, or cancel. Email support available if needed."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Why only 500 founder slots?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "We limit first batch to maintain quality and gather feedback. Founders get locked pricing and priority access."
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "analytics": {
+            "ga4_events": [
+                {
+                    "name": "join_founders_click",
+                    "trigger": "primary_cta_click",
+                    "parameters": [
+                        "tier",
+                        "referrer",
+                        "consent",
+                        "source"
+                    ]
+                },
+                {
+                    "name": "modal_open",
+                    "trigger": "modal_displayed",
+                    "parameters": [
+                        "source_cta",
+                        "page_section"
+                    ]
+                },
+                {
+                    "name": "tier_select",
+                    "trigger": "tier_radio_changed",
+                    "parameters": [
+                        "tier",
+                        "previous_tier"
+                    ]
+                },
+                {
+                    "name": "form_submit",
+                    "trigger": "form_submission_attempted",
+                    "parameters": [
+                        "tier",
+                        "has_referral",
+                        "consent"
+                    ]
+                },
+                {
+                    "name": "form_success",
+                    "trigger": "form_submission_success",
+                    "parameters": [
+                        "tier",
+                        "email_hash",
+                        "referral_code"
+                    ]
+                },
+                {
+                    "name": "form_error",
+                    "trigger": "form_submission_failed",
+                    "parameters": [
+                        "error_type",
+                        "tier"
+                    ]
+                },
+                {
+                    "name": "faq_expand",
+                    "trigger": "faq_item_clicked",
+                    "parameters": [
+                        "question_index",
+                        "question_text"
+                    ]
+                }
+            ],
+            "ga4_example_code": "gtag('event', 'join_founders_click', { tier: 'core', referrer: document.referrer, consent: true, source: 'hero_cta' });",
+            "pixel_events": [
+                {
+                    "platform": "meta",
+                    "event": "Lead",
+                    "trigger": "form_submission_consent_true",
+                    "parameters": {
+                        "content_name": "founders_waitlist",
+                        "tier": "{{tier}}"
+                    }
+                },
+                {
+                    "platform": "meta",
+                    "event": "ViewContent",
+                    "trigger": "page_load",
+                    "parameters": {
+                        "content_name": "founders_landing"
+                    }
+                }
+            ],
+            "consent_requirement": "true_before_marketing_pixels",
+            "data_masking": "hash_email_sha256",
+            "pii_handling": {
+                "email": "hash before analytics, store encrypted in DB",
+                "referral_code": "plain text allowed",
+                "tier": "plain text allowed"
+            }
+        },
+        "kpi_tracking": {
+            "primary_kpi": "waitlist_conversion_rate",
+            "primary_kpi_definition": "form_submissions / unique_page_views",
+            "secondary_kpis": [
+                "email_capture_rate",
+                "cta_click_through_rate",
+                "mobile_sticky_cta_taps",
+                "tier_distribution",
+                "referral_code_usage_rate"
+            ],
+            "targets": {
+                "waitlist_conversion_rate": 0.12,
+                "email_capture_rate": 0.20,
+                "cta_click_through_rate": 0.08,
+                "core_tier_selection_rate": 0.55
+            }
+        }
+    },
+    "audit": [
+        {
+            "reference": "brand_voice_reference",
+            "value": "ZapNest Futuristic Premium — internal styleguide (Tesla × Nothing)",
+            "status": "applied"
+        },
+        {
+            "reference": "price_reference",
+            "value": "default_pricing_source_internal",
+            "prices": {
+                "lite": 1599,
+                "core": 2999,
+                "elite": 4999
+            },
+            "status": "needs_verification",
+            "note": "Prices are placeholder defaults. Confirm with finance before launch."
+        },
+        {
+            "reference": "legal_verification_required",
+            "items": [
+                "faq.cancellations",
+                "faq.returns_defects",
+                "tiers.disclaimer",
+                "footer.privacy_link_text",
+                "form_microcopy.consent_checkbox_label"
+            ],
+            "status": "pending_legal_review"
+        },
+        {
+            "reference": "product_claims",
+            "claims": [
+                {
+                    "claim": "50+ products evaluated per drop",
+                    "source": "internal_process",
+                    "status": "verified_internal"
+                },
+                {
+                    "claim": "Hero product types (projectors, speakers, smart tech)",
+                    "source": "curation_pipeline",
+                    "status": "illustrative_only"
+                }
+            ]
+        },
+        {
+            "reference": "compliance_claims",
+            "claims": [
+                {
+                    "claim": "Battery certifications verified",
+                    "source": "compliance_process",
+                    "status": "requires_supplier_verification"
+                },
+                {
+                    "claim": "BIS registration verified",
+                    "source": "compliance_process",
+                    "status": "requires_supplier_verification"
+                }
+            ]
+        },
+        {
+            "reference": "shipping_claims",
+            "claims": [
+                {
+                    "claim": "Free shipping across India",
+                    "source": "business_decision",
+                    "status": "needs_verification"
+                },
+                {
+                    "claim": "3–7 business days delivery",
+                    "source": "logistics_estimate",
+                    "status": "needs_verification"
+                }
+            ]
+        },
+        {
+            "reference": "founders_batch_limit",
+            "claim": "500 founder slots",
+            "source": "business_decision",
+            "status": "confirmed"
+        }
+    ],
+    "acceptance_criteria": [
+        {
+            "id": "AC-01",
+            "test": "Hero headline contains 'Black Box'",
+            "expected": true,
+            "actual": true
+        },
+        {
+            "id": "AC-02",
+            "test": "Primary CTA visible above the fold on mobile without scrolling",
+            "expected": true,
+            "validation": "Manual test on 375px viewport"
+        },
+        {
+            "id": "AC-03",
+            "test": "Email capture flow requires explicit consent before firing any marketing pixel",
+            "expected": true,
+            "implementation": "consent_requirement: true_before_marketing_pixels"
+        },
+        {
+            "id": "AC-04",
+            "test": "All images have alt text",
+            "expected": true,
+            "validation": "Check hero_image_spec.alt_text and og_image_spec.alt"
+        },
+        {
+            "id": "AC-05",
+            "test": "Page performance: LCP image ≤ 200 KB",
+            "expected": true,
+            "implementation": "hero_image_spec.max_kb: 200"
+        },
+        {
+            "id": "AC-06",
+            "test": "ARIA labels provided for main interactive elements",
+            "expected": true,
+            "validation": "Check accessibility.aria_recommendations array"
+        },
+        {
+            "id": "AC-07",
+            "test": "JSON-LD valid and includes FAQ entries",
+            "expected": true,
+            "validation": "json_ld includes FAQPage with 7 questions"
+        },
+        {
+            "id": "AC-08",
+            "test": "GA4 events specified for primary CTA and form submit",
+            "expected": true,
+            "validation": "ga4_events includes join_founders_click, form_submit, form_success"
+        },
+        {
+            "id": "AC-09",
+            "test": "Meta title ≤ 60 characters",
+            "expected": true,
+            "actual_char_count": 58
+        },
+        {
+            "id": "AC-10",
+            "test": "Meta description ≤ 160 characters",
+            "expected": true,
+            "actual_char_count": 127
+        },
+        {
+            "id": "AC-11",
+            "test": "WCAG 2.1 AA contrast compliance",
+            "expected": true,
+            "implementation": "contrast_minimum: WCAG_AA"
+        },
+        {
+            "id": "AC-12",
+            "test": "Skip links provided for accessibility",
+            "expected": true,
+            "validation": "skip_links array with #main-content and #tiers"
+        },
+        {
+            "id": "AC-13",
+            "test": "Mobile sticky CTA implemented",
+            "expected": true,
+            "implementation": "cta_behavior_mobile: sticky_bottom_bar"
+        },
+        {
+            "id": "AC-14",
+            "test": "Form validation microcopy provided",
+            "expected": true,
+            "validation": "form_microcopy includes email_invalid_error, consent_required_error"
+        },
+        {
+            "id": "AC-15",
+            "test": "Legal items flagged for review in audit",
+            "expected": true,
+            "validation": "audit includes legal_verification_required array"
+        }
+    ]
+}

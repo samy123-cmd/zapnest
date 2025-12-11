@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZapNest Black Box — Curated Tech, Monthly | Founders Waitlist</title>
+  <meta name="description"
+    content="Join 500 founders getting first access to curated tech. One hero product, ruthlessly tested. Ships January 2025. India only.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://zapnest.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ZapNest Black Box — Tech That Earns Its Place">
+  <meta property="og:description"
+    content="Join the Founders list. 500 slots. Curated tech subscription launching January 2025.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zapnest.com/">
+  <meta property="og:image" content="/assets/og-zapnest-founders.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@zapnest">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Supabase Configuration -->
+  <script>
+    window.SUPABASE_URL = 'https://vqxviqsvmlevabqihwir.supabase.co';
+    window.SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZxeHZpcXN2bWxldmFicWlod2lyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjUzODk2MDEsImV4cCI6MjA4MDk2NTYwMX0.er-NquFxi5__5ZxqEu6M0pwY9xHWxcCMu9cteL_V6HY';
+    window.ANALYTICS_CONSENT = false; // Set to true after user consents
+  </script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://zapnest.com/#organization",
+        "name": "ZapNest",
+        "url": "https://zapnest.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://zapnest.com/assets/logo-zapnest.png",
+          "width": 512,
+          "height": 512
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "support@zapnest.com",
+          "contactType": "customer support"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://zapnest.com/#website",
+        "url": "https://zapnest.com",
+        "name": "ZapNest",
+        "publisher": {"@id": "https://zapnest.com/#organization"}
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "When does the first box ship?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Founders batch ships mid-January 2025. You will receive tracking via email once dispatched."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where do you deliver?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We ship across India. Free shipping on all tiers. Delivery typically 3–7 business days depending on location."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I cancel my subscription?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Cancel anytime before your next billing date. No lock-in, no questions asked."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <!-- Skip Links -->
+  <a href="#main-content" class="zn-skip-link">Skip to main content</a>
+  <a href="#tiers" class="zn-skip-link">Skip to pricing</a>
+
+  <!-- Header -->
+  <header class="zn-header">
+    <div class="zn-container">
+      <a href="/" class="zn-logo" aria-label="ZapNest Home">
+        <span class="zn-logo__text">ZapNest</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="zn-nav zn-nav--desktop" aria-label="Main navigation">
+        <a href="#how-it-works" class="zn-nav__link">How It Works</a>
+        <a href="#tiers" class="zn-nav__link">Pricing</a>
+        <a href="#faq" class="zn-nav__link">FAQ</a>
+        <a href="/member/" class="zn-nav__link zn-nav__link--login">Member Login</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button class="zn-menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="zn-menu-toggle__bar"></span>
+        <span class="zn-menu-toggle__bar"></span>
+        <span class="zn-menu-toggle__bar"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <nav class="zn-nav-mobile" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="#how-it-works" class="zn-nav-mobile__link" data-close-menu>How It Works</a>
+      <a href="#tiers" class="zn-nav-mobile__link" data-close-menu>Pricing</a>
+      <a href="#faq" class="zn-nav-mobile__link" data-close-menu>FAQ</a>
+      <a href="/member/" class="zn-nav-mobile__link zn-nav-mobile__link--primary">Member Login</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section id="hero" class="zn-hero" role="region" aria-label="ZapNest Black Box hero section">
+      <div class="zn-container">
+        <div class="zn-hero__content">
+          <span class="zn-hero__eyebrow">📦 Founder 500 — First Wave Ships Feb 2025</span>
+          <h1 class="zn-hero__heading" aria-label="ZapNest Black Box — Tech That Earns Its Place">
+            ZapNest Black Box — <br>Tech That Earns Its Place
+          </h1>
+          <p class="zn-hero__subheading">
+            We test 50+ products. One makes the cut. What's inside? That's the surprise. Join 500 founders getting first
+            access to curated tech drops.
+          </p>
+          <div class="zn-hero__cta-group">
+            <button class="zn-cta zn-cta--primary" id="hero-cta"
+              aria-label="Join the Founders List — opens email capture modal" data-modal-trigger="founders-modal">
+              Claim Your Founder Spot
+            </button>
+            <a href="#how-it-works" class="zn-cta zn-cta--secondary" aria-label="Navigate to How It Works section">
+              How It Works
+            </a>
+          </div>
+        </div>
+        <div class="zn-hero__visual">
+          <picture>
+            <source srcset="assets/hero-black-box.png" type="image/png">
+            <img src="assets/hero-black-box.png"
+              alt="ZapNest Black Box — premium tech subscription box with magnetic closure" class="zn-hero__image"
+              width="600" height="400" loading="eager" fetchpriority="high">
+          </picture>
+          <span class="zn-hero__visual-legend">What's inside? Open to find out. 🎁</span>
+        </div>
+      </div>
+      <div class="zn-hero__gradient"></div>
+    </section>
+
+    <!-- Value Props Section -->
+    <section id="value-props" class="zn-value-props" role="region" aria-label="Why choose ZapNest">
+      <div class="zn-container">
+        <h2 class="zn-section-title">Why 50+ Products Fail Our Tests Every Month</h2>
+        <p class="zn-section-subtitle">We're not a gadget warehouse. We're curators with standards.</p>
+        <div class="zn-value-props__grid">
+          <article class="zn-value-props__card">
+            <div class="zn-value-props__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+              </svg>
+            </div>
+            <h3 class="zn-value-props__title">Ruthless Curation</h3>
+            <p class="zn-value-props__body">We evaluate 50+ products every month. Most fail our quality bar — poor
+              build, exaggerated specs, or supplier red flags. Only the top 2% make it to your box.</p>
+          </article>
+          <article class="zn-value-props__card">
+            <div class="zn-value-props__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <polyline points="9 12 11 14 15 10"></polyline>
+              </svg>
+            </div>
+            <h3 class="zn-value-props__title">Verified Specs</h3>
+            <p class="zn-value-props__body">"12-hour battery" that lasts 4 hours? We catch that. Every claim is tested
+              in-house. We publish what we actually measure, not what suppliers promise.</p>
+          </article>
+          <article class="zn-value-props__card">
+            <div class="zn-value-props__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              </svg>
+            </div>
+            <h3 class="zn-value-props__title">Zero Filler</h3>
+            <p class="zn-value-props__body">No random phone grips or cable winders to inflate "value". One hero product,
+              maybe 1-2 accessories that complement it. Premium magnetic packaging. Done.</p>
+          </article>
+          <article class="zn-value-props__card">
+            <div class="zn-value-props__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+            </div>
+            <h3 class="zn-value-props__title">Human at Every Gate</h3>
+            <p class="zn-value-props__body">AI helps us discover trends. But humans order samples, test prototypes,
+              negotiate with suppliers, and sign off before anything ships. No fully automated decisions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="zn-how-it-works" role="region" aria-label="How the Black Box process works">
+      <div class="zn-container">
+        <h2 class="zn-section-title">The Black Box Process</h2>
+        <div class="zn-how-it-works__steps">
+          <div class="zn-how-it-works__step">
+            <span class="zn-how-it-works__number">1</span>
+            <h3 class="zn-how-it-works__step-title">We Hunt</h3>
+            <p class="zn-how-it-works__step-body">AI scans Reddit, TikTok, and 50+ sources for emerging tech with
+              genuine traction—not paid hype.</p>
+          </div>
+          <div class="zn-how-it-works__step">
+            <span class="zn-how-it-works__number">2</span>
+            <h3 class="zn-how-it-works__step-title">We Vet</h3>
+            <p class="zn-how-it-works__step-body">Every candidate gets supplier verification, sample testing, and spec
+              validation. Claims get checked.</p>
+          </div>
+          <div class="zn-how-it-works__step">
+            <span class="zn-how-it-works__number">3</span>
+            <h3 class="zn-how-it-works__step-title">We Curate</h3>
+            <p class="zn-how-it-works__step-body">One hero product. Complementary accessories. Premium packaging. Human
+              approval at every gate.</p>
+          </div>
+          <div class="zn-how-it-works__step">
+            <span class="zn-how-it-works__number">4</span>
+            <h3 class="zn-how-it-works__step-title">You Unbox</h3>
+            <p class="zn-how-it-works__step-body">Monthly delivery of tech that works. No research required. No risk.
+              Just the good stuff.</p>
+          </div>
+        </div>
+        <p class="zn-how-it-works__microcopy">Every step includes human review. Nothing ships without approval.</p>
+      </div>
+    </section>
+
+    <!-- Next Drop Teaser Section -->
+    <section id="next-drop" class="zn-teaser" role="region" aria-label="January 2025 Box Preview">
+      <div class="zn-container">
+        <div class="zn-teaser__content">
+          <div class="zn-teaser__badge">
+            <span class="zn-teaser__badge-pulse"></span>
+            <span>Drop 001 — January 2025</span>
+          </div>
+          <h2 class="zn-teaser__title">Something's Brewing</h2>
+          <p class="zn-teaser__subtitle">Our first hero product is currently in final testing. 47 candidates didn't make
+            the cut. The one that did? Let's just say it changes how you consume content at home.</p>
+
+          <div class="zn-teaser__hints">
+            <div class="zn-teaser__hint">
+              <span class="zn-teaser__hint-icon">📺</span>
+              <span class="zn-teaser__hint-text">Not a phone accessory</span>
+            </div>
+            <div class="zn-teaser__hint">
+              <span class="zn-teaser__hint-icon">✨</span>
+              <span class="zn-teaser__hint-text">Under ₹8,000 retail</span>
+            </div>
+            <div class="zn-teaser__hint">
+              <span class="zn-teaser__hint-icon">🔋</span>
+              <span class="zn-teaser__hint-text">Tested battery: 3.2 hours real-world</span>
+            </div>
+          </div>
+
+          <div class="zn-teaser__countdown" id="countdown">
+            <p class="zn-teaser__countdown-label">Founders Waitlist Closes In</p>
+            <div class="zn-teaser__countdown-timer">
+              <div class="zn-teaser__countdown-unit">
+                <span class="zn-teaser__countdown-value" id="countdown-days">00</span>
+                <span class="zn-teaser__countdown-suffix">days</span>
+              </div>
+              <div class="zn-teaser__countdown-unit">
+                <span class="zn-teaser__countdown-value" id="countdown-hours">00</span>
+                <span class="zn-teaser__countdown-suffix">hours</span>
+              </div>
+              <div class="zn-teaser__countdown-unit">
+                <span class="zn-teaser__countdown-value" id="countdown-minutes">00</span>
+                <span class="zn-teaser__countdown-suffix">mins</span>
+              </div>
+              <div class="zn-teaser__countdown-unit">
+                <span class="zn-teaser__countdown-value" id="countdown-seconds">00</span>
+                <span class="zn-teaser__countdown-suffix">secs</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="zn-teaser__scarcity">
+            <div class="zn-teaser__scarcity-bar">
+              <div class="zn-teaser__scarcity-fill" id="scarcity-fill" style="width: 12%"></div>
+            </div>
+            <p class="zn-teaser__scarcity-text"><strong id="slots-remaining">438</strong> of 500 founder slots remaining
+            </p>
+          </div>
+        </div>
+
+        <div class="zn-teaser__visual">
+          <div class="zn-teaser__box">
+            <div class="zn-teaser__box-glow"></div>
+            <span class="zn-teaser__box-text">?</span>
+          </div>
+          <p class="zn-teaser__visual-caption">January's hero reveal: Dec 31st</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tiers Section -->
+    <section id="tiers" class="zn-tiers" role="region" aria-label="Subscription tiers and pricing">
+      <div class="zn-container">
+        <h2 class="zn-section-title">Choose Your Box</h2>
+        <p class="zn-tiers__intro">Three tiers, same quality standards.</p>
+        <div class="zn-tiers__grid">
+          <!-- Lite Tier -->
+          <article class="zn-tier-card">
+            <div class="zn-tier-card__header">
+              <h3 class="zn-tier-card__name">Lite</h3>
+              <div class="zn-tier-card__price">
+                <span class="zn-tier-card__amount">₹1,599</span>
+                <span class="zn-tier-card__period">/month</span>
+              </div>
+              <p class="zn-tier-card__tagline">One surprise accessory. Perfect entry point.</p>
+            </div>
+            <ul class="zn-tier-card__features">
+              <li>1 curated accessory each month</li>
+              <li>Premium minimal packaging</li>
+              <li>Early access to drop announcements</li>
+            </ul>
+            <button class="zn-cta zn-cta--outline" aria-label="Select Lite tier at ₹1,599 per month"
+              data-modal-trigger="founders-modal" data-tier="lite">
+              Select Lite
+            </button>
+          </article>
+
+          <!-- Core Tier (Featured) -->
+          <article class="zn-tier-card zn-tier-card--featured">
+            <span class="zn-tier-card__badge">Most Popular</span>
+            <div class="zn-tier-card__header">
+              <h3 class="zn-tier-card__name">Core</h3>
+              <div class="zn-tier-card__price">
+                <span class="zn-tier-card__amount">₹2,999</span>
+                <span class="zn-tier-card__period">/month</span>
+              </div>
+              <p class="zn-tier-card__tagline">The full surprise. Hero product + accessories.</p>
+            </div>
+            <ul class="zn-tier-card__features">
+              <li>1 hero product (surprise category)</li>
+              <li>1–2 complementary accessories</li>
+              <li>Premium magnetic box + founders community</li>
+            </ul>
+            <button class="zn-cta zn-cta--primary" aria-label="Select Core tier at ₹2,999 per month"
+              data-modal-trigger="founders-modal" data-tier="core">
+              Select Core
+            </button>
+          </article>
+
+          <!-- Elite Tier -->
+          <article class="zn-tier-card">
+            <div class="zn-tier-card__header">
+              <h3 class="zn-tier-card__name">Elite</h3>
+              <div class="zn-tier-card__price">
+                <span class="zn-tier-card__amount">₹4,999</span>
+                <span class="zn-tier-card__period">/month</span>
+              </div>
+              <p class="zn-tier-card__tagline">Premium surprise. Maximum value. Exclusive extras.</p>
+            </div>
+            <ul class="zn-tier-card__features">
+              <li>1 premium hero product (higher value)</li>
+              <li>2–3 curated accessories</li>
+              <li>Priority support + exclusive drops</li>
+            </ul>
+            <button class="zn-cta zn-cta--outline" aria-label="Select Elite tier at ₹4,999 per month"
+              data-modal-trigger="founders-modal" data-tier="elite">
+              Select Elite
+            </button>
+          </article>
+        </div>
+        <p class="zn-tiers__disclaimer">Prices include GST. Free shipping across India. Cancel anytime before your next
+          billing date.</p>
+      </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section id="trust" class="zn-trust" role="region" aria-label="Trust and transparency">
+      <div class="zn-container">
+        <h2 class="zn-section-title">How We Operate</h2>
+        <div class="zn-trust__grid">
+          <article class="zn-trust__item">
+            <h3 class="zn-trust__item-title">AI + Human Procurement</h3>
+            <p class="zn-trust__item-body">AI scans for signals. Humans verify suppliers, test samples, and approve
+              every product. Nothing ships without sign-off.</p>
+          </article>
+          <article class="zn-trust__item">
+            <h3 class="zn-trust__item-title">Safety & Compliance</h3>
+            <p class="zn-trust__item-body">Battery certifications, BIS registration, and safety standards verified
+              before any product enters a box.</p>
+          </article>
+          <article class="zn-trust__item">
+            <h3 class="zn-trust__item-title">Data Privacy & PII</h3>
+            <p class="zn-trust__item-body">Your data stays private. Emails hashed for analytics. No selling to third
+              parties. Ever.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Founders Offer Section -->
+    <section id="founders-offer" class="zn-founders" role="region" aria-label="Founders batch offer">
+      <div class="zn-container">
+        <div class="zn-founders__content">
+          <span class="zn-founders__badge">🚀 Limited Batch</span>
+          <h2 class="zn-founders__title">Join the First 500 Founders</h2>
+          <p class="zn-founders__body">
+            This isn't just a subscription — it's a founding membership. You'll get locked-in pricing forever,
+            direct input on future products, and early access to every drop. Once 500 founders are in, the waitlist
+            closes.
+          </p>
+
+          <div class="zn-founders__guarantees">
+            <div class="zn-founders__guarantee">
+              <span class="zn-founders__guarantee-icon">🔒</span>
+              <span>Price locked for life</span>
+            </div>
+            <div class="zn-founders__guarantee">
+              <span class="zn-founders__guarantee-icon">📦</span>
+              <span>First box ships Jan 2025</span>
+            </div>
+            <div class="zn-founders__guarantee">
+              <span class="zn-founders__guarantee-icon">❌</span>
+              <span>Cancel anytime, no lock-in</span>
+            </div>
+          </div>
+
+          <button class="zn-cta zn-cta--primary zn-cta--large"
+            aria-label="Claim your Founder slot — opens email capture modal" data-modal-trigger="founders-modal">
+            Claim Your Founder Slot →
+          </button>
+          <p class="zn-founders__reassurance">No payment now. Just email to secure your spot.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="zn-faq" role="region" aria-label="Frequently asked questions">
+      <div class="zn-container">
+        <h2 class="zn-section-title">Your Questions, Answered</h2>
+        <div class="zn-faq__list">
+          <details class="zn-faq__item">
+            <summary class="zn-faq__question">What exactly is ZapNest Black Box?</summary>
+            <div class="zn-faq__answer">
+              <p>ZapNest Black Box is a <strong>premium tech subscription</strong> that delivers one carefully selected
+                gadget to your door every month. Unlike random gadget boxes that stuff in cheap items, we focus on
+                <strong>one hero product</strong> that genuinely improves your daily life.
+              </p>
+              <p>Every product goes through our rigorous testing process: we evaluate 50+ candidates, verify supplier
+                claims, test samples in-house, and only ship what actually works. Think of us as your personal tech
+                curator — we do the research so you don't have to.</p>
+            </div>
+          </details>
+          <details class="zn-faq__item">
+            <summary class="zn-faq__question">When does the first box ship?</summary>
+            <div class="zn-faq__answer">
+              <p>The <strong>Founders batch ships mid-January 2025</strong>. As a founder, you'll be among the first 500
+                people to receive the inaugural ZapNest Black Box.</p>
+              <p><strong>What to expect:</strong></p>
+              <p>🔔 December 2024 — Join the waitlist and lock in your pricing<br>
+                📧 Early January — Receive payment link and confirm subscription<br>
+                📦 Mid-January — First box ships with tracking via email<br>
+                🚚 Within 3-7 days — Unbox your curated tech at home</p>
+            </div>
+          </details>
+          <details class="zn-faq__item">
+            <summary class="zn-faq__question">Where do you deliver?</summary>
+            <div class="zn-faq__answer">
+              <p>We currently ship <strong>across India only</strong> — covering 19,000+ pin codes from metros to tier-3
+                cities.</p>
+              <p><strong>Shipping is completely free</strong> on all tiers — no hidden costs, no surprises at checkout.
+                Delivery typically takes 3-7 business days depending on your location. You'll receive tracking
+                information via email as soon as your box ships.</p>
+              <p>International shipping is on our roadmap for late 2025. Join the waitlist to get notified when we
+                expand globally.</p>
+            </div>
+          </details>
+          <details class="zn-faq__item">
+            <summary class="zn-faq__question">What's the difference between Lite, Core, and Elite?</summary>
+            <div class="zn-faq__answer">
+              <p>All three tiers maintain the same <strong>quality standards</strong> — we never ship filler products.
+                The difference is in what you receive:</p>
+              <p><strong>Lite (₹1,599/month):</strong> One premium accessory — high-quality cables, mounts, or compact
+                chargers. Perfect for experiencing our curation without big-ticket items.</p>
+              <p><strong>Core (₹2,999/month):</strong> The full experience — one hero product (like a mini projector or
+                premium speaker) plus 1-2 complementary accessories in premium magnetic packaging. Our most popular
+                tier.</p>
+              <p><strong>Elite (₹4,999/month):</strong> Premium hero products from higher-value categories, 2-3
+                accessories, priority support, and exclusive early access to limited drops. For tech enthusiasts who
+                want the best.</p>
+              <p>You can upgrade, downgrade, or switch tiers anytime before your next billing date.</p>
+            </div>
+          </details>
+          <details class="zn-faq__item">
+            <summary class="zn-faq__question">Can I cancel my subscription?</summary>
+            <div class="zn-faq__answer">
+              <p><strong>Yes, absolutely.</strong> Cancel anytime before your next billing date — no lock-in contracts,
+                no cancellation fees, no awkward phone calls. One click in your dashboard and you're done.</p>
+              <p>We believe our boxes should earn your subscription every single month. If we're not delivering value,
+                you should have the freedom to leave. You can also <strong>pause</strong> your subscription for up to 3
+                months if you're traveling or need a break.</p>
+            </div>
+          </details>
+          <details class="zn-faq__item">
+            <summary class="zn-faq__question">What if I receive a defective product?</summary>
+            <div class="zn-faq__answer">
+              <p>We stand behind everything we ship. If you receive a defective product:</p>
+              <p>✓ <strong>7-day returns</strong> — Contact us within 7 days with photos of the defect<br>
+                ✓ <strong>Free pickup</strong> — We arrange pickup at no cost to you<br>
+                ✓ <strong>Your choice</strong> — Full replacement or complete refund<br>
+                ✓ <strong>Fast resolution</strong> — We process replacements within 48 hours</p>
+              <p>Every product is inspected before shipping, but if something slips through, we make it right — quickly
+                and without hassle.</p>
+            </div>
+          </details>
+          <details class="zn-faq__item">
+            <summary class="zn-faq__question">What kind of products are in the box?</summary>
+            <div class="zn-faq__answer">
+              <p>We focus on <strong>practical, everyday tech</strong> that genuinely improves your life — not novelty
+                gadgets that end up in a drawer:</p>
+              <p>🎬 Mini LED projectors for movie nights<br>
+                ⚡ GaN chargers and premium cables<br>
+                🔊 Compact Bluetooth speakers<br>
+                🎧 True wireless earbuds<br>
+                💡 Smart home accessories<br>
+                ✈️ Travel tech essentials</p>
+              <p>Every product is <strong>verified and tested</strong>: we measure actual battery life, check build
+                quality, verify certifications (BIS, safety standards), and only ship what meets our bar.</p>
+            </div>
+          </details>
+          <details class="zn-faq__item">
+            <summary class="zn-faq__question">How is this different from other subscription boxes?</summary>
+            <div class="zn-faq__answer">
+              <p>Most subscription boxes stuff in random items to hit a "value" number. We take the opposite approach:
+              </p>
+              <p>✓ <strong>Quality over quantity</strong> — One hero product that works, not five items that don't<br>
+                ✓ <strong>Verified specs</strong> — We test every claim in-house; you get what we measure, not what
+                suppliers promise<br>
+                ✓ <strong>Human curation</strong> — AI helps us discover trends, but humans approve every product<br>
+                ✓ <strong>No filler</strong> — Every item in your box serves a purpose</p>
+              <p>We're building the subscription for people who are tired of cheap gadgets and want tech that's worth
+                keeping.</p>
+            </div>
+          </details>
+          <details class="zn-faq__item">
+            <summary class="zn-faq__question">Why only 500 founder slots?</summary>
+            <div class="zn-faq__answer">
+              <p>We're limiting our first batch to <strong>500 founders</strong> for three important reasons:</p>
+              <p>1. <strong>Quality control</strong> — Smaller batches mean we can personally ensure every box meets our
+                standards<br>
+                2. <strong>Feedback loop</strong> — We want to learn from early subscribers and iterate quickly<br>
+                3. <strong>Exclusivity</strong> — Founders get locked-in pricing forever, even when we raise prices
+                later</p>
+              <p>As a founder, you also get priority access to all future drops, direct input on product selection, and
+                exclusive community access. Your feedback shapes the future of ZapNest.</p>
+            </div>
+          </details>
+          <details class="zn-faq__item">
+            <summary class="zn-faq__question">How do I manage my membership?</summary>
+            <div class="zn-faq__answer">
+              <p>Once subscribed, you'll have access to your <strong>personal dashboard</strong> where you can:</p>
+              <p>📊 View subscription status and upcoming shipments<br>
+                🔄 Switch between Lite, Core, and Elite tiers<br>
+                ⏸️ Pause your subscription for up to 3 months<br>
+                ❌ Cancel with one click (no retention calls)<br>
+                📍 Update your shipping address<br>
+                🎁 Access your unique referral code</p>
+              <p>Need help? Email us at <strong>support@zapnest.com</strong> — real humans respond within 24 hours,
+                usually much faster.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="zn-footer" role="contentinfo" aria-label="Site footer">
+    <div class="zn-container">
+      <div class="zn-footer__content">
+        <p class="zn-footer__copyright">© 2025 ZapNest. All rights reserved.</p>
+        <nav class="zn-footer__links">
+          <a href="/legal/privacy.html" class="zn-footer__link">Privacy Policy</a>
+          <a href="/legal/terms.html" class="zn-footer__link">Terms of Service</a>
+          <a href="mailto:support@zapnest.com" class="zn-footer__link">Contact Support</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky CTA -->
+  <div class="zn-sticky-cta" id="sticky-cta">
+    <button class="zn-cta zn-cta--primary zn-cta--full" aria-label="Join the Founders List"
+      data-modal-trigger="founders-modal">
+      Join Founders List
+    </button>
+  </div>
+
+  <!-- Modal -->
+  <div class="zn-modal" id="founders-modal" role="dialog" aria-label="Join Founders List" aria-modal="true" hidden>
+    <div class="zn-modal__overlay" data-modal-close></div>
+    <div class="zn-modal__content">
+      <button class="zn-modal__close" aria-label="Close modal" data-modal-close>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="zn-modal__body" id="modal-form-state">
+        <h2 class="zn-modal__title">Join the Founders List</h2>
+        <p class="zn-modal__subtitle">500 slots. First access. Locked pricing forever.</p>
+
+        <form class="zn-form" id="founders-form" novalidate>
+          <div class="zn-form__group">
+            <label for="email" class="zn-form__label">Email</label>
+            <input type="email" id="email" name="email" class="zn-form__input" placeholder="Enter your email"
+              aria-label="Email address for Founders list" required>
+            <span class="zn-form__error" id="email-error">Please enter a valid email address.</span>
+          </div>
+
+          <div class="zn-form__group">
+            <span class="zn-form__label">Select Tier</span>
+            <div class="zn-form__radio-group" role="radiogroup" aria-label="Select your subscription tier">
+              <label class="zn-form__radio">
+                <input type="radio" name="tier" value="lite">
+                <span class="zn-form__radio-label">Lite — ₹1,599/mo</span>
+              </label>
+              <label class="zn-form__radio">
+                <input type="radio" name="tier" value="core" checked>
+                <span class="zn-form__radio-label">Core — ₹2,999/mo</span>
+              </label>
+              <label class="zn-form__radio">
+                <input type="radio" name="tier" value="elite">
+                <span class="zn-form__radio-label">Elite — ₹4,999/mo</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="zn-form__group">
+            <label for="referral" class="zn-form__label">Referral code (optional)</label>
+            <input type="text" id="referral" name="referral" class="zn-form__input"
+              placeholder="Referral code (optional)">
+          </div>
+
+          <div class="zn-form__group">
+            <label class="zn-form__checkbox">
+              <input type="checkbox" name="consent" id="consent"
+                aria-label="Consent to receive updates and accept Privacy Policy" required>
+              <span class="zn-form__checkbox-label">I agree to receive updates and accept the <a href="/privacy">Privacy
+                  Policy</a>.</span>
+            </label>
+            <span class="zn-form__error" id="consent-error">Consent is required to join the Founders list.</span>
+          </div>
+
+          <button type="submit" class="zn-cta zn-cta--primary zn-cta--full" id="submit-btn"
+            aria-label="Submit and join the Founders list">
+            <span class="zn-cta__text">Join Founders List</span>
+            <span class="zn-cta__loading">Reserving…</span>
+          </button>
+
+          <p class="zn-form__error-message" id="form-error">Something went wrong. Please try again.</p>
+        </form>
+      </div>
+
+      <div class="zn-modal__body zn-modal__success" id="modal-success-state" hidden>
+        <div class="zn-success">
+          <svg class="zn-success__icon" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="9 12 11 14 15 10"></polyline>
+          </svg>
+          <h2 class="zn-success__title">You're on the list!</h2>
+          <p class="zn-success__body">You are on the Founders List. Check your email for next steps.</p>
+          <button class="zn-cta zn-cta--outline" data-modal-close>Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://zapnest.com/schemas/box.json",
+    "title": "Box Definition",
+    "description": "Canonical schema for ZapNest subscription box definitions",
+    "type": "object",
+    "required": [
+        "box_id",
+        "tier",
+        "hero_product_id",
+        "price_inr",
+        "cost_inr"
+    ],
+    "properties": {
+        "box_id": {
+            "type": "string",
+            "pattern": "^box-[a-z]+-[0-9]{4}-[0-9]{2}$",
+            "description": "Unique box identifier (e.g., box-core-2025-02)"
+        },
+        "tier": {
+            "type": "string",
+            "enum": [
+                "lite",
+                "core",
+                "elite"
+            ],
+            "description": "Subscription tier"
+        },
+        "hero_product_id": {
+            "type": "string",
+            "pattern": "^prod-[a-z0-9]+$",
+            "description": "Primary product in box"
+        },
+        "accessories": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "pattern": "^prod-[a-z0-9]+$"
+            },
+            "description": "Accessory product IDs"
+        },
+        "price_inr": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Retail price in INR"
+        },
+        "cost_inr": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Total cost (products + packaging + shipping)"
+        },
+        "estimated_margin_pct": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "description": "Estimated gross margin percentage"
+        },
+        "box_packaging_spec": {
+            "type": "string",
+            "enum": [
+                "matte_white_magnetic",
+                "matte_black_magnetic",
+                "kraft_minimal",
+                "custom"
+            ],
+            "description": "Packaging specification"
+        },
+        "ship_weight_kg": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Total shipping weight in kg"
+        },
+        "compliance_flags": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "Outstanding compliance requirements"
+        },
+        "ship_ready_date": {
+            "type": "string",
+            "format": "date",
+            "description": "Earliest ship date"
+        },
+        "drop_id": {
+            "type": "string",
+            "pattern": "^drop-[0-9]+$",
+            "description": "Associated drop ID"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "updated_at": {
+            "type": "string",
+            "format": "date-time"
+        }
+    }
+}

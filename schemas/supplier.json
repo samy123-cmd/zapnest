@@ -1,0 +1,96 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://zapnest.com/schemas/supplier.json",
+    "title": "Supplier Record",
+    "description": "Canonical schema for ZapNest supplier records",
+    "type": "object",
+    "required": [
+        "supplier_id",
+        "name",
+        "country",
+        "fob_usd",
+        "moq",
+        "lead_time_days"
+    ],
+    "properties": {
+        "supplier_id": {
+            "type": "string",
+            "pattern": "^sup-[a-z0-9]+$",
+            "description": "Unique supplier identifier"
+        },
+        "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200,
+            "description": "Supplier company name"
+        },
+        "country": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 2,
+            "description": "ISO 3166-1 alpha-2 country code"
+        },
+        "contact_hash": {
+            "type": "string",
+            "description": "Hashed contact email (privacy protection)"
+        },
+        "fob_usd": {
+            "type": "number",
+            "minimum": 0,
+            "description": "FOB price in USD"
+        },
+        "moq": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Minimum order quantity"
+        },
+        "lead_time_days": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Production + shipping lead time in days"
+        },
+        "verifications": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "alibaba_gold",
+                    "gold_supplier",
+                    "factory_verified",
+                    "trade_assurance",
+                    "iso_certified",
+                    "factory_visit_verified"
+                ]
+            },
+            "description": "Supplier verification badges"
+        },
+        "estimated_defect_rate_pct": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "description": "Historical/estimated defect rate"
+        },
+        "sample_cost_usd": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Cost per sample unit in USD"
+        },
+        "notes": {
+            "type": "string",
+            "description": "Additional supplier notes (packaging, branding capabilities)"
+        },
+        "link": {
+            "type": "string",
+            "format": "uri",
+            "description": "Supplier listing URL"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "updated_at": {
+            "type": "string",
+            "format": "date-time"
+        }
+    }
+}
