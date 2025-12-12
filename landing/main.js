@@ -334,21 +334,14 @@
   }
 
   /**
-   * Send welcome email via Supabase Edge Function
+   * Send welcome email via Vercel API route
    */
   async function sendWelcomeEmail(email, tier) {
-    const supabaseUrl = window.SUPABASE_URL;
-    if (!supabaseUrl) {
-      console.warn('[Email] Supabase URL not configured');
-      return;
-    }
-
     try {
-      const response = await fetch(`${supabaseUrl}/functions/v1/send-welcome-email`, {
+      const response = await fetch('/api/send-welcome-email', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${window.SUPABASE_ANON_KEY}`
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({ email, tier })
       });
