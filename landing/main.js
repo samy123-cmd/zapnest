@@ -590,6 +590,59 @@
   }
 
   // ============================================
+  // Load Real Slots Remaining from Database
+  // ============================================
+
+  async function loadSlotsRemaining() {
+    const slotsElement = document.getElementById('signal-spots-remaining');
+    if (!slotsElement) return;
+
+    const supabaseUrl = window.SUPABASE_URL;
+    const supabaseKey = window.SUPABASE_ANON_KEY;
+
+    if (!supabaseUrl || !supabaseKey) {
+      // No Supabase config - show default
+      slotsElement.textContent = '500';
+      return;
+    }
+
+    try {
+      // Fetch count of waitlist signups
+      const response = await fetch(`${supabaseUrl}/rest/v1/waitlist?select=id`, {
+        headers: {
+          'apikey': supabaseKey,
+          'Authorization': `Bearer ${supabaseKey}`,
+          'Prefer': 'count=exact'
+        }
+      });
+
+      if (response.ok) {
+        // Get count from content-range header
+        const contentRange = response.headers.get('content-range');
+        let count = 0;
+
+        if (contentRange) {
+          // Format: "0-24/147" or "*/147"
+          const match = contentRange.match(/\/(\d+)$/);
+          if (match) {
+            count = parseInt(match[1], 10);
+          }
+        }
+
+        const remaining = Math.max(0, 500 - count);
+        slotsElement.textContent = remaining.toString();
+
+        console.log(`[ZapNest] Waitlist: ${count} signups, ${remaining} slots remaining`);
+      } else {
+        slotsElement.textContent = '500';
+      }
+    } catch (error) {
+      console.warn('[ZapNest] Could not fetch slots remaining:', error);
+      slotsElement.textContent = '500';
+    }
+  }
+
+  // ============================================
   // Initialization
   // ============================================
 
@@ -599,10 +652,12 @@
       document.addEventListener('DOMContentLoaded', () => {
         initEventListeners();
         initCountdown();
+        loadSlotsRemaining();
       });
     } else {
       initEventListeners();
       initCountdown();
+      loadSlotsRemaining();
     }
 
     // Track page view
