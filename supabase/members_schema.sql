@@ -145,11 +145,20 @@ CREATE POLICY "Service role full access to payments" ON payments
   FOR ALL TO service_role
   USING (true);
 
--- Sessions: Public can insert (for magic link), only service role can read
+-- Sessions: Public can insert (for magic link), and can validate their own token
 ALTER TABLE member_sessions ENABLE ROW LEVEL SECURITY;
 
 CREATE POLICY "Anyone can create session" ON member_sessions
   FOR INSERT TO anon
+  WITH CHECK (true);
+
+CREATE POLICY "Anyone can read sessions for validation" ON member_sessions
+  FOR SELECT TO anon
+  USING (true);
+
+CREATE POLICY "Anyone can mark session as used" ON member_sessions
+  FOR UPDATE TO anon
+  USING (true)
   WITH CHECK (true);
 
 CREATE POLICY "Service role full access to sessions" ON member_sessions
