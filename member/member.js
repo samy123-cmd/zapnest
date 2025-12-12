@@ -124,10 +124,27 @@
                 throw new Error('Failed to create session');
             }
 
-            // In production, this would send an email via backend
-            // For now, we'll show the link in console (dev mode)
+            // Generate magic link
             const magicLink = `${window.location.origin}/member/?token=${token}&email=${encodeURIComponent(email)}`;
-            console.log('[ZapNest] Magic Link (dev mode):', magicLink);
+            console.log('[ZapNest] Magic Link generated:', magicLink);
+
+            // Send email via API route
+            try {
+                const emailResponse = await fetch('/api/send-magic-link', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email: email.toLowerCase().trim(), magicLink })
+                });
+                const emailResult = await emailResponse.json();
+                if (emailResult.success) {
+                    console.log('[ZapNest] Magic link email sent:', emailResult.id);
+                } else {
+                    console.warn('[ZapNest] Email send failed, but link created:', emailResult.error);
+                }
+            } catch (emailError) {
+                console.warn('[ZapNest] Email send failed, but link created:', emailError);
+                // Continue anyway - the link is still valid
+            }
 
             // Show success message
             elements.loginForm.hidden = true;

@@ -320,8 +320,9 @@
         const error = await response.json();
         console.error('[API] Error:', error);
 
-        // Check for duplicate email - treat as success with special flag
-        if (error.code === '23505') {
+        // Check for duplicate email (HTTP 409 Conflict or PostgreSQL 23505)
+        if (response.status === 409 || error.code === '23505') {
+          console.log('[API] Email already exists on waitlist');
           return { success: true, alreadyOnWaitlist: true };
         }
 
