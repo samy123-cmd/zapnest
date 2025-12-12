@@ -1653,6 +1653,35 @@ textarea:focus-visible {
     color: var(--zn-accent);
 }
 
+.member-waitlist-hero__cta {
+    margin-top: var(--zn-space-8);
+    text-align: center;
+}
+
+.member-waitlist-hero__cta-hint {
+    font-size: 0.8125rem;
+    color: var(--zn-text-muted);
+    margin-top: var(--zn-space-3);
+}
+
+.member-btn--lg {
+    padding: var(--zn-space-5) var(--zn-space-10);
+    font-size: 1.125rem;
+    min-width: 280px;
+}
+
+.member-btn__loading {
+    display: none;
+}
+
+.member-btn.loading .member-btn__text {
+    display: none;
+}
+
+.member-btn.loading .member-btn__loading {
+    display: inline;
+}
+
 /* ============================================
    Modal System
    ============================================ */

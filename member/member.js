@@ -84,7 +84,10 @@
         toast: document.getElementById('toast'),
         toastIcon: document.getElementById('toast-icon'),
         toastTitle: document.getElementById('toast-title'),
-        toastMessage: document.getElementById('toast-message')
+        toastMessage: document.getElementById('toast-message'),
+
+        // Payment
+        completeSubscriptionBtn: document.getElementById('complete-subscription-btn')
     };
 
     // Waitlist data
@@ -666,6 +669,116 @@
     }
 
     // ============================================
+    // Payment Functions
+    // ============================================
+
+    async function handlePayment() {
+        if (!currentUser || !waitlistData) {
+            showToast('Error', 'Please log in to complete your subscription', true);
+            return;
+        }
+
+        const btn = elements.completeSubscriptionBtn;
+        btn.classList.add('loading');
+        btn.disabled = true;
+
+        const tier = waitlistData.tier || 'core';
+        const email = currentUser.email;
+
+        try {
+            // Create payment order
+            const createResponse = await fetch('/api/create-payment', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, tier })
+            });
+
+            if (!createResponse.ok) {
+                throw new Error('Failed to create payment order');
+            }
+
+            const orderData = await createResponse.json();
+
+            // Open Razorpay checkout
+            const options = {
+                key: orderData.key_id,
+                amount: orderData.amount,
+                currency: orderData.currency,
+                name: 'ZapNest',
+                description: `${capitalizeFirst(tier)} Subscription`,
+                order_id: orderData.order_id,
+                prefill: {
+                    email: email
+                },
+                notes: orderData.notes,
+                theme: {
+                    color: '#00FF88'
+                },
+                modal: {
+                    ondismiss: function () {
+                        btn.classList.remove('loading');
+                        btn.disabled = false;
+                    }
+                },
+                handler: async function (response) {
+                    // Verify payment
+                    try {
+                        const verifyResponse = await fetch('/api/verify-payment', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                razorpay_order_id: response.razorpay_order_id,
+                                razorpay_payment_id: response.razorpay_payment_id,
+                                razorpay_signature: response.razorpay_signature,
+                                email: email,
+                                tier: tier
+                            })
+                        });
+
+                        if (!verifyResponse.ok) {
+                            throw new Error('Payment verification failed');
+                        }
+
+                        const result = await verifyResponse.json();
+
+                        // Success! Show celebration and reload
+                        showToast('🎉 Payment Successful!', 'Your subscription is now active. Welcome to ZapNest!');
+
+                        // Reload page after 2 seconds to show subscriber state
+                        setTimeout(() => {
+                            window.location.reload();
+                        }, 2500);
+
+                    } catch (verifyError) {
+                        console.error('[Payment] Verification error:', verifyError);
+                        showToast('Verification Failed', 'Payment received but verification failed. Please contact support.', true);
+                    }
+
+                    btn.classList.remove('loading');
+                    btn.disabled = false;
+                }
+            };
+
+            const rzp = new Razorpay(options);
+
+            rzp.on('payment.failed', function (response) {
+                console.error('[Payment] Failed:', response.error);
+                showToast('Payment Failed', response.error.description || 'Please try again', true);
+                btn.classList.remove('loading');
+                btn.disabled = false;
+            });
+
+            rzp.open();
+
+        } catch (error) {
+            console.error('[Payment] Error:', error);
+            showToast('Error', 'Failed to start payment. Please try again.', true);
+            btn.classList.remove('loading');
+            btn.disabled = false;
+        }
+    }
+
+    // ============================================
     // Utilities
     // ============================================
 
@@ -704,6 +817,11 @@
         // Address form
         if (elements.addressForm) {
             elements.addressForm.addEventListener('submit', handleAddressSubmit);
+        }
+
+        // Payment button
+        if (elements.completeSubscriptionBtn) {
+            elements.completeSubscriptionBtn.addEventListener('click', handlePayment);
         }
 
         // Action buttons - open modals

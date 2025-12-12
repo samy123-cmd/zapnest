@@ -20,6 +20,9 @@
 
     <!-- Vercel Analytics -->
     <script defer src="/_vercel/insights/script.js"></script>
+
+    <!-- Razorpay Checkout -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
 
 <body>
@@ -154,6 +157,15 @@
                         </ul>
                     </div>
                     <p class="member-waitlist-hero__shipping">📦 First box ships: <strong>February 2026</strong></p>
+
+                    <!-- Payment CTA -->
+                    <div class="member-waitlist-hero__cta">
+                        <button class="member-btn member-btn--primary member-btn--lg" id="complete-subscription-btn">
+                            <span class="member-btn__text">Complete Subscription →</span>
+                            <span class="member-btn__loading">Processing...</span>
+                        </button>
+                        <p class="member-waitlist-hero__cta-hint">Secure payment via Razorpay</p>
+                    </div>
                 </div>
 
                 <!-- Active Subscription Stats (hidden for waitlist users) -->
