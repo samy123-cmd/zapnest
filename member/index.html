@@ -121,11 +121,43 @@
             <section id="dashboard" class="member-section" hidden>
                 <div class="member-section__header">
                     <h1 class="member-section__title">Welcome back! 👋</h1>
-                    <p class="member-section__subtitle">Here's what's happening with your subscription</p>
+                    <p class="member-section__subtitle" id="dashboard-subtitle">Here's your founder status</p>
                 </div>
 
-                <!-- Stats Grid -->
-                <div class="member-stats">
+                <!-- Waitlist Hero (shown for waitlist users) -->
+                <div class="member-waitlist-hero" id="waitlist-hero">
+                    <div class="member-waitlist-hero__badge">🎉 Founders Waitlist</div>
+                    <h2 class="member-waitlist-hero__title">You're on the Founders List!</h2>
+                    <p class="member-waitlist-hero__subtitle">
+                        Your slot is reserved. We'll notify you when it's time to complete your subscription.
+                    </p>
+                    <div class="member-waitlist-hero__stats">
+                        <div class="member-waitlist-hero__stat">
+                            <span class="member-waitlist-hero__stat-value" id="slots-remaining">—</span>
+                            <span class="member-waitlist-hero__stat-label">Slots Remaining</span>
+                        </div>
+                        <div class="member-waitlist-hero__stat">
+                            <span class="member-waitlist-hero__stat-value" id="user-position">—</span>
+                            <span class="member-waitlist-hero__stat-label">Your Position</span>
+                        </div>
+                        <div class="member-waitlist-hero__stat">
+                            <span class="member-waitlist-hero__stat-value" id="preferred-tier-display">—</span>
+                            <span class="member-waitlist-hero__stat-label">Selected Tier</span>
+                        </div>
+                    </div>
+                    <div class="member-waitlist-hero__rewards">
+                        <h3>🎁 Your Founder Rewards</h3>
+                        <ul>
+                            <li>✓ Exclusive Founders Tee (ships with first box)</li>
+                            <li>✓ Genesis Token #001–500</li>
+                            <li>✓ Lifetime founder pricing locked</li>
+                        </ul>
+                    </div>
+                    <p class="member-waitlist-hero__shipping">📦 First box ships: <strong>February 2026</strong></p>
+                </div>
+
+                <!-- Active Subscription Stats (hidden for waitlist users) -->
+                <div class="member-stats" id="subscription-stats" hidden>
                     <div class="member-stat-card">
                         <div class="member-stat-card__icon member-stat-card__icon--tier">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -182,13 +214,13 @@
                     </div>
                 </div>
 
-                <!-- Next Box Card -->
-                <div class="member-next-box">
+                <!-- Next Box Card (hidden for waitlist) -->
+                <div class="member-next-box" id="next-box-card" hidden>
                     <div class="member-next-box__visual">
                         <div class="member-next-box__icon">📦</div>
                     </div>
                     <div class="member-next-box__content">
-                        <h3 class="member-next-box__title">January 2025 Box</h3>
+                        <h3 class="member-next-box__title">February 2026 Box</h3>
                         <p class="member-next-box__subtitle">Your first box is being curated</p>
                         <div class="member-next-box__status">
                             <span class="member-next-box__status-dot"></span>
@@ -201,7 +233,7 @@
                 </div>
 
                 <!-- Founder Badge -->
-                <div class="member-founder-badge" id="founder-badge" hidden>
+                <div class="member-founder-badge" id="founder-badge">
                     <div class="member-founder-badge__icon">🚀</div>
                     <div class="member-founder-badge__content">
                         <h3>Founding Member</h3>
@@ -222,7 +254,8 @@
                     <div class="member-orders__empty">
                         <div class="member-orders__empty-icon">📭</div>
                         <h3>No orders yet</h3>
-                        <p>Your first box ships in January 2025</p>
+                        <p>Your first box ships in <strong>February 2026</strong></p>
+                        <p class="member-orders__empty-hint">Complete your subscription to reserve your spot!</p>
                     </div>
                 </div>
             </section>
@@ -354,11 +387,119 @@
 
                 <div class="member-settings-group member-settings-group--danger">
                     <h3 class="member-settings-group__title">Danger Zone</h3>
-                    <button class="member-btn member-btn--danger" id="cancel-sub-btn">Cancel Subscription</button>
-                    <p class="member-settings-group__hint">You can cancel anytime. No questions asked.</p>
+                    <button class="member-btn member-btn--danger" id="cancel-sub-btn">Leave Waitlist</button>
+                    <p class="member-settings-group__hint">This will remove you from the Founders waitlist. You can
+                        rejoin later if slots are available.</p>
                 </div>
             </section>
         </main>
+    </div>
+
+    <!-- Modal: Change Tier -->
+    <div class="member-modal" id="modal-change-tier" hidden aria-modal="true" role="dialog">
+        <div class="member-modal__backdrop"></div>
+        <div class="member-modal__content">
+            <button class="member-modal__close" aria-label="Close modal">&times;</button>
+            <h2 class="member-modal__title">Change Your Tier</h2>
+            <p class="member-modal__subtitle">Select your preferred subscription tier</p>
+            <div class="member-modal__tiers">
+                <label class="member-tier-option">
+                    <input type="radio" name="modal-tier" value="core">
+                    <div class="member-tier-option__content">
+                        <span class="member-tier-option__name">Core</span>
+                        <span class="member-tier-option__price">₹2,999/mo</span>
+                        <span class="member-tier-option__desc">1 hero product + accessories</span>
+                    </div>
+                </label>
+                <label class="member-tier-option">
+                    <input type="radio" name="modal-tier" value="pro">
+                    <div class="member-tier-option__content">
+                        <span class="member-tier-option__name">Pro</span>
+                        <span class="member-tier-option__price">₹4,999/mo</span>
+                        <span class="member-tier-option__desc">2 hero products + premium accessories</span>
+                    </div>
+                </label>
+                <label class="member-tier-option">
+                    <input type="radio" name="modal-tier" value="elite">
+                    <div class="member-tier-option__content">
+                        <span class="member-tier-option__name">Elite</span>
+                        <span class="member-tier-option__price">₹7,999/mo</span>
+                        <span class="member-tier-option__desc">3 hero products + exclusive drops</span>
+                    </div>
+                </label>
+            </div>
+            <div class="member-modal__actions">
+                <button class="member-btn member-btn--ghost" data-close-modal>Cancel</button>
+                <button class="member-btn member-btn--primary" id="confirm-tier-change">Update Tier</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Pause Subscription -->
+    <div class="member-modal" id="modal-pause" hidden aria-modal="true" role="dialog">
+        <div class="member-modal__backdrop"></div>
+        <div class="member-modal__content">
+            <button class="member-modal__close" aria-label="Close modal">&times;</button>
+            <h2 class="member-modal__title">Pause Your Subscription</h2>
+            <p class="member-modal__subtitle">Take a break from your monthly boxes</p>
+            <div class="member-modal__options">
+                <label class="member-pause-option">
+                    <input type="radio" name="pause-duration" value="1">
+                    <span>Pause for 1 month</span>
+                </label>
+                <label class="member-pause-option">
+                    <input type="radio" name="pause-duration" value="2">
+                    <span>Pause for 2 months</span>
+                </label>
+                <label class="member-pause-option">
+                    <input type="radio" name="pause-duration" value="3">
+                    <span>Pause for 3 months</span>
+                </label>
+            </div>
+            <p class="member-modal__note">Note: For waitlist members, pausing will hold your spot but delay your first
+                box.</p>
+            <div class="member-modal__actions">
+                <button class="member-btn member-btn--ghost" data-close-modal>Cancel</button>
+                <button class="member-btn member-btn--primary" id="confirm-pause">Pause Subscription</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Cancel Confirmation -->
+    <div class="member-modal" id="modal-cancel" hidden aria-modal="true" role="dialog">
+        <div class="member-modal__backdrop"></div>
+        <div class="member-modal__content member-modal__content--danger">
+            <button class="member-modal__close" aria-label="Close modal">&times;</button>
+            <div class="member-modal__icon">⚠️</div>
+            <h2 class="member-modal__title">Leave the Founders Waitlist?</h2>
+            <p class="member-modal__subtitle">
+                You'll lose your reserved slot and founder benefits. If you rejoin later, you may not get the same
+                position or pricing.
+            </p>
+            <div class="member-modal__warning">
+                <strong>You will lose:</strong>
+                <ul>
+                    <li>Your reserved founder slot</li>
+                    <li>Exclusive Founders Tee</li>
+                    <li>Genesis Token eligibility</li>
+                    <li>Locked founder pricing</li>
+                </ul>
+            </div>
+            <div class="member-modal__actions">
+                <button class="member-btn member-btn--primary" data-close-modal>Keep My Spot</button>
+                <button class="member-btn member-btn--danger" id="confirm-cancel">Yes, Remove Me</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="member-toast" id="toast" hidden>
+        <div class="member-toast__icon" id="toast-icon">✓</div>
+        <div class="member-toast__content">
+            <span class="member-toast__title" id="toast-title">Success</span>
+            <span class="member-toast__message" id="toast-message">Your changes have been saved.</span>
+        </div>
+        <button class="member-toast__close" aria-label="Close">&times;</button>
     </div>
 
     <script src="member.js"></script>
