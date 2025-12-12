@@ -1,0 +1,502 @@
+{
+    "meta_snippets": {
+        "landing": {
+            "title": "ZapNest Black Box — Premium Tech Subscription Box India",
+            "meta_description": "India's first curated tech subscription box. One premium gadget, hand-tested monthly. Join 500 founders for exclusive pricing. Ships Feb 2026.",
+            "canonical": "https://zapneststore.in/landing/",
+            "og_title": "ZapNest Black Box — Premium Tech Subscription Box India",
+            "og_description": "50 products tested. 1 ships. Zero filler. Join 500 founders for exclusive pricing on India's first curated tech subscription.",
+            "og_image_hint": "/landing/assets/og-zapnest-founders.jpg",
+            "twitter_card": "summary_large_image"
+        },
+        "about": {
+            "title": "About ZapNest — Our Mission & Team",
+            "meta_description": "ZapNest curates premium tech accessories monthly. We test 50+ products so you get one exceptional item. Built by tech enthusiasts in India.",
+            "canonical": "https://zapneststore.in/about/",
+            "og_title": "About ZapNest — Our Mission & Team",
+            "og_description": "We test 50+ products monthly so you get one exceptional item. Built by tech enthusiasts in India.",
+            "og_image_hint": "/landing/assets/og-zapnest-founders.jpg",
+            "twitter_card": "summary_large_image"
+        },
+        "how_it_works": {
+            "title": "How ZapNest Works — Curated Tech Delivered Monthly",
+            "meta_description": "Choose your tier, receive curated tech monthly. We test 50+ products, ship only the best. Free delivery across India, cancel anytime.",
+            "canonical": "https://zapneststore.in/how-it-works/",
+            "og_title": "How ZapNest Works — Curated Tech Delivered Monthly",
+            "og_description": "Choose your tier, receive curated tech monthly. Free delivery, cancel anytime.",
+            "og_image_hint": "/landing/assets/og-zapnest-founders.jpg",
+            "twitter_card": "summary_large_image"
+        },
+        "shipping": {
+            "title": "Shipping & Delivery — ZapNest India",
+            "meta_description": "Free shipping across India on all ZapNest tiers. Delivery in 3-7 business days. Track your order in real-time.",
+            "canonical": "https://zapneststore.in/shipping/",
+            "og_title": "Shipping & Delivery — ZapNest India",
+            "og_description": "Free shipping across India. Delivery in 3-7 business days.",
+            "og_image_hint": "/landing/assets/og-zapnest-founders.jpg",
+            "twitter_card": "summary"
+        },
+        "terms": {
+            "title": "Terms of Service — ZapNest",
+            "meta_description": "ZapNest terms of service. Subscription terms, cancellation policy, and user agreement for ZapNest Black Box.",
+            "canonical": "https://zapneststore.in/terms/",
+            "og_title": "Terms of Service — ZapNest",
+            "og_description": "Subscription terms, cancellation policy, and user agreement.",
+            "og_image_hint": "/landing/assets/og-zapnest-founders.jpg",
+            "twitter_card": "summary"
+        },
+        "privacy": {
+            "title": "Privacy Policy — ZapNest",
+            "meta_description": "ZapNest privacy policy. How we collect, use, and protect your data. GDPR and Indian data protection compliant.",
+            "canonical": "https://zapneststore.in/privacy/",
+            "og_title": "Privacy Policy — ZapNest",
+            "og_description": "How we collect, use, and protect your data.",
+            "og_image_hint": "/landing/assets/og-zapnest-founders.jpg",
+            "twitter_card": "summary"
+        }
+    },
+    "json_ld": {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://zapneststore.in/#organization",
+                "name": "ZapNest",
+                "url": "https://zapneststore.in",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://zapneststore.in/landing/assets/logo-zapnest.png",
+                    "width": 512,
+                    "height": 512
+                },
+                "sameAs": [
+                    "https://twitter.com/zapnest",
+                    "https://instagram.com/zapneststore"
+                ],
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "email": "hello@zapneststore.in",
+                    "contactType": "customer service",
+                    "availableLanguage": [
+                        "English",
+                        "Hindi"
+                    ]
+                },
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressCountry": "IN"
+                }
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://zapneststore.in/#website",
+                "url": "https://zapneststore.in",
+                "name": "ZapNest",
+                "description": "India's first curated tech subscription box. Premium products, monthly surprise.",
+                "publisher": {
+                    "@id": "https://zapneststore.in/#organization"
+                },
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://zapneststore.in/?q={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                }
+            },
+            {
+                "@type": "Product",
+                "@id": "https://zapneststore.in/#product-core",
+                "name": "ZapNest Black Box — Core",
+                "description": "Monthly curated tech subscription featuring one hero product and complementary accessories. Hand-tested from 50+ candidates.",
+                "image": "https://zapneststore.in/landing/assets/hero-black-box.png",
+                "brand": {
+                    "@type": "Brand",
+                    "name": "ZapNest"
+                },
+                "category": "Tech Subscription Box",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "2999",
+                    "priceCurrency": "INR",
+                    "availability": "https://schema.org/PreOrder",
+                    "priceValidUntil": "2026-02-28",
+                    "url": "https://zapneststore.in/landing/",
+                    "seller": {
+                        "@id": "https://zapneststore.in/#organization"
+                    },
+                    "shippingDetails": {
+                        "@type": "OfferShippingDetails",
+                        "shippingDestination": {
+                            "@type": "DefinedRegion",
+                            "addressCountry": "IN"
+                        },
+                        "shippingRate": {
+                            "@type": "MonetaryAmount",
+                            "value": "0",
+                            "currency": "INR"
+                        }
+                    },
+                    "hasMerchantReturnPolicy": {
+                        "@type": "MerchantReturnPolicy",
+                        "applicableCountry": "IN",
+                        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                        "merchantReturnDays": 30,
+                        "returnMethod": "https://schema.org/ReturnByMail",
+                        "returnFees": "https://schema.org/FreeReturn"
+                    }
+                }
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "When does the first box ship?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Founders batch ships end of February 2026. You will receive tracking via email once dispatched."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What's in the box?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "That's the surprise! Each month features a different curated tech category. Core and Elite tiers include hero products; Lite includes accessories."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Where do you deliver?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "We ship across India. Free shipping on all tiers. Delivery typically 3-7 business days."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can I cancel my subscription?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Cancel anytime before the 5th of the month. No lock-in, no questions asked."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What payment methods do you accept?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "We accept all major credit/debit cards, UPI, net banking, and popular wallets via Razorpay."
+                        }
+                    }
+                ]
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://zapneststore.in/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Join Founders",
+                        "item": "https://zapneststore.in/landing/"
+                    }
+                ]
+            }
+        ]
+    },
+    "sitemap_xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n  <url>\n    <loc>https://zapneststore.in/</loc>\n    <lastmod>2024-12-12</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>\n  </url>\n  <url>\n    <loc>https://zapneststore.in/landing/</loc>\n    <lastmod>2024-12-12</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.9</priority>\n  </url>\n  <url>\n    <loc>https://zapneststore.in/about/</loc>\n    <lastmod>2024-12-12</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>\n  <url>\n    <loc>https://zapneststore.in/how-it-works/</loc>\n    <lastmod>2024-12-12</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>\n  <url>\n    <loc>https://zapneststore.in/shipping/</loc>\n    <lastmod>2024-12-12</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>\n  <url>\n    <loc>https://zapneststore.in/terms/</loc>\n    <lastmod>2024-12-12</lastmod>\n    <changefreq>yearly</changefreq>\n    <priority>0.3</priority>\n  </url>\n  <url>\n    <loc>https://zapneststore.in/privacy/</loc>\n    <lastmod>2024-12-12</lastmod>\n    <changefreq>yearly</changefreq>\n    <priority>0.3</priority>\n  </url>\n  <url>\n    <loc>https://zapneststore.in/member/</loc>\n    <lastmod>2024-12-12</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.5</priority>\n  </url>\n</urlset>",
+    "robots_txt": "# ZapNest Robots.txt\n# https://zapneststore.in/robots.txt\n\nUser-agent: *\nAllow: /\n\n# Disallow private endpoints\nDisallow: /api/\nDisallow: /admin/\nDisallow: /_vercel/\nDisallow: /*.json$\nDisallow: /config.generated.js\n\n# Disallow member dashboard (requires login)\nDisallow: /member/\n\n# Allow specific public assets\nAllow: /landing/assets/\nAllow: /assets/\n\n# Sitemap location\nSitemap: https://zapneststore.in/sitemap.xml\n\n# Crawl-delay (optional, for polite crawling)\nCrawl-delay: 1",
+    "head_injection_html": "<!-- ============================================\n     ZapNest SEO Head Injection\n     Paste this in <head> of landing/index.html\n     ============================================ -->\n\n<title>ZapNest Black Box — Premium Tech Subscription Box India | Join 500 Founders</title>\n<meta name=\"description\" content=\"India's first curated tech subscription box. One premium gadget, hand-tested monthly. Join 500 founders for exclusive pricing. Ships Feb 2026. Free delivery.\">\n<meta name=\"robots\" content=\"index, follow, max-image-preview:large, max-snippet:-1\">\n<link rel=\"canonical\" href=\"https://zapneststore.in/landing/\">\n\n<!-- Open Graph -->\n<meta property=\"og:locale\" content=\"en_IN\">\n<meta property=\"og:type\" content=\"product\">\n<meta property=\"og:title\" content=\"ZapNest Black Box — Premium Tech Subscription Box India\">\n<meta property=\"og:description\" content=\"50 products tested. 1 ships. Zero filler. Join 500 founders for exclusive pricing on India's first curated tech subscription.\">\n<meta property=\"og:url\" content=\"https://zapneststore.in/landing/\">\n<meta property=\"og:site_name\" content=\"ZapNest\">\n<meta property=\"og:image\" content=\"https://zapneststore.in/landing/assets/og-zapnest-founders.jpg\">\n<meta property=\"og:image:secure_url\" content=\"https://zapneststore.in/landing/assets/og-zapnest-founders.jpg\">\n<meta property=\"og:image:width\" content=\"1200\">\n<meta property=\"og:image:height\" content=\"630\">\n<meta property=\"og:image:alt\" content=\"ZapNest Black Box — Premium Tech Subscription\">\n<meta property=\"product:price:amount\" content=\"2999\">\n<meta property=\"product:price:currency\" content=\"INR\">\n\n<!-- Twitter Card -->\n<meta name=\"twitter:card\" content=\"summary_large_image\">\n<meta name=\"twitter:site\" content=\"@zapnest\">\n<meta name=\"twitter:creator\" content=\"@zapnest\">\n<meta name=\"twitter:title\" content=\"ZapNest Black Box — Premium Tech Subscription Box India\">\n<meta name=\"twitter:description\" content=\"50 products tested. 1 ships. Zero filler. Join 500 founders.\">\n<meta name=\"twitter:image\" content=\"https://zapneststore.in/landing/assets/og-zapnest-founders.jpg\">\n\n<!-- Performance: Preload Critical Resources -->\n<link rel=\"preload\" as=\"image\" href=\"assets/hero-black-box.avif\" type=\"image/avif\" fetchpriority=\"high\">\n<link rel=\"preload\" as=\"image\" href=\"assets/hero-black-box.webp\" type=\"image/webp\">\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link rel=\"preload\" as=\"style\" href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap\">\n\n<!-- Favicon -->\n<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/landing/assets/favicon-32x32.png\">\n<link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/landing/assets/favicon-16x16.png\">\n<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/landing/assets/apple-touch-icon.png\">\n<meta name=\"theme-color\" content=\"#0A0A0A\">\n\n<!-- JSON-LD Structured Data (see json_ld key for full content) -->\n<script type=\"application/ld+json\">\n{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Organization\",\"@id\":\"https://zapneststore.in/#organization\",\"name\":\"ZapNest\",\"url\":\"https://zapneststore.in\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://zapneststore.in/landing/assets/logo-zapnest.png\",\"width\":512,\"height\":512}},{\"@type\":\"WebSite\",\"@id\":\"https://zapneststore.in/#website\",\"url\":\"https://zapneststore.in\",\"name\":\"ZapNest\",\"publisher\":{\"@id\":\"https://zapneststore.in/#organization\"}}]}\n</script>",
+    "trust_pages": {
+        "about_html": "<!-- About Page - https://zapneststore.in/about/ -->\n<!-- Canonical: https://zapneststore.in/about/ -->\n\n<main class=\"zn-page zn-page--about\">\n  <section class=\"zn-hero zn-hero--compact\">\n    <h1>About ZapNest</h1>\n    <p class=\"zn-lead\">We believe great tech shouldn't require endless research.</p>\n  </section>\n\n  <section class=\"zn-content\">\n    <h2>Our Mission</h2>\n    <p>ZapNest was born from a simple frustration: finding quality tech accessories takes too much time. Reviews are paid, listings are cluttered, and most products underwhelm.</p>\n    <p>We test 50+ products every month across categories—audio, charging, organisation, connectivity. Only one makes the cut. That's what ships in your ZapNest Black Box.</p>\n    \n    <h2>The Team</h2>\n    <p>We're a small team of tech enthusiasts and product designers based in India. We obsess over build quality, materials, and whether something actually improves daily life. No affiliates, no sponsored picks—just honest curation.</p>\n    \n    <h2>Why Subscription?</h2>\n    <p>Discovery is part of the joy. Each month brings a new category, a new surprise. The subscription model lets us negotiate better pricing, test at scale, and pass savings to you.</p>\n  </section>\n\n  <section class=\"zn-faq zn-faq--mini\">\n    <h3>Quick Questions</h3>\n    <details>\n      <summary>Who runs ZapNest?</summary>\n      <p>A small team of product enthusiasts in India who test tech for a living.</p>\n    </details>\n    <details>\n      <summary>Are you affiliated with brands?</summary>\n      <p>No. We purchase products independently and have no affiliate relationships.</p>\n    </details>\n  </section>\n</main>",
+        "how_it_works_html": "<!-- How It Works Page - https://zapneststore.in/how-it-works/ -->\n<!-- Canonical: https://zapneststore.in/how-it-works/ -->\n\n<main class=\"zn-page zn-page--how-it-works\">\n  <section class=\"zn-hero zn-hero--compact\">\n    <h1>How ZapNest Works</h1>\n    <p class=\"zn-lead\">Three simple steps to premium tech, delivered monthly.</p>\n  </section>\n\n  <section class=\"zn-content zn-steps\">\n    <div class=\"zn-step\">\n      <span class=\"zn-step__number\">1</span>\n      <h2>Choose Your Tier</h2>\n      <p>Pick from Lite (₹1,599), Core (₹2,999), or Elite (₹4,999). Each tier includes curated tech suited to different budgets and preferences. All include free shipping across India.</p>\n    </div>\n\n    <div class=\"zn-step\">\n      <span class=\"zn-step__number\">2</span>\n      <h2>We Curate & Test</h2>\n      <p>Our team tests 50+ products monthly across categories—audio, charging, organisation, and more. Only products that pass rigorous quality checks make the final selection.</p>\n    </div>\n\n    <div class=\"zn-step\">\n      <span class=\"zn-step__number\">3</span>\n      <h2>Unbox Monthly</h2>\n      <p>Your Black Box arrives each month with carefully packaged tech. Each box includes a product card explaining why we chose it. Cancel anytime before the 5th of the month.</p>\n    </div>\n  </section>\n\n  <section class=\"zn-faq zn-faq--mini\">\n    <h3>Common Questions</h3>\n    <details>\n      <summary>Can I skip a month?</summary>\n      <p>Yes, pause your subscription anytime from your member dashboard.</p>\n    </details>\n    <details>\n      <summary>Do I know what's coming?</summary>\n      <p>The category is revealed, but the exact product is a surprise.</p>\n    </details>\n  </section>\n</main>",
+        "shipping_html": "<!-- Shipping Page - https://zapneststore.in/shipping/ -->\n<!-- Canonical: https://zapneststore.in/shipping/ -->\n\n<main class=\"zn-page zn-page--shipping\">\n  <section class=\"zn-hero zn-hero--compact\">\n    <h1>Shipping & Delivery</h1>\n    <p class=\"zn-lead\">Free delivery across India on all ZapNest subscriptions.</p>\n  </section>\n\n  <section class=\"zn-content\">\n    <h2>Delivery Timeline</h2>\n    <p>All ZapNest boxes ship between the 15th and 20th of each month. Delivery typically takes 3-7 business days depending on your location. Metro cities usually receive within 3-4 days.</p>\n    \n    <h2>Tracking</h2>\n    <p>Once your box ships, you'll receive a tracking link via email and WhatsApp. Track in real-time through our logistics partner's portal.</p>\n    \n    <h2>Shipping Costs</h2>\n    <p>Shipping is free on all tiers—Lite, Core, and Elite. No hidden charges, no minimum order value. The price you see is the price you pay.</p>\n    \n    <h2>Delivery Partners</h2>\n    <p>We work with trusted logistics partners including Delhivery and BlueDart to ensure safe and timely delivery. All packages are insured during transit.</p>\n  </section>\n\n  <section class=\"zn-faq zn-faq--mini\">\n    <h3>Shipping FAQ</h3>\n    <details>\n      <summary>Do you ship internationally?</summary>\n      <p>Currently, we only ship within India. International shipping is planned for 2026.</p>\n    </details>\n    <details>\n      <summary>What if my package is damaged?</summary>\n      <p>Contact us within 48 hours with photos. We'll send a replacement at no cost.</p>\n    </details>\n  </section>\n</main>"
+    },
+    "image_optimisation": {
+        "hero_image_commands": "# Convert master image to optimised AVIF (target ≤200KB)\navifenc hero-black-box-master.png hero-black-box.avif --min 20 --max 40 --speed 4\n\n# Alternative using squoosh-cli (npm install -g @squoosh/cli)\nsquoosh-cli --avif '{\"quality\":50,\"speed\":4}' -d ./assets hero-black-box-master.png\n\n# Generate WebP fallback\ncwebp -q 80 hero-black-box-master.png -o hero-black-box.webp\n\n# Or using squoosh-cli for WebP\nsquoosh-cli --webp '{\"quality\":80}' -d ./assets hero-black-box-master.png\n\n# Generate responsive sizes\nconvert hero-black-box-master.png -resize 640x hero-black-box-640.webp\nconvert hero-black-box-master.png -resize 960x hero-black-box-960.webp\nconvert hero-black-box-master.png -resize 1280x hero-black-box-1280.webp",
+        "srcset_html": "<picture>\n  <source srcset=\"assets/hero-black-box.avif\" type=\"image/avif\">\n  <source srcset=\"assets/hero-black-box.webp\" type=\"image/webp\">\n  <source srcset=\"assets/hero-black-box-640.webp 640w,\n                  assets/hero-black-box-960.webp 960w,\n                  assets/hero-black-box-1280.webp 1280w\"\n          sizes=\"(max-width: 640px) 640px, (max-width: 960px) 960px, 1280px\"\n          type=\"image/webp\">\n  <img src=\"assets/hero-black-box.png\" \n       alt=\"ZapNest Black Box premium tech subscription\" \n       width=\"600\" height=\"600\"\n       loading=\"eager\" \n       fetchpriority=\"high\"\n       decoding=\"async\">\n</picture>",
+        "npm_script": "\"scripts\": {\n  \"images:optimise\": \"squoosh-cli --avif '{\\\"quality\\\":50}' --webp '{\\\"quality\\\":80}' -d ./landing/assets ./landing/assets/src/*.png\",\n  \"images:resize\": \"for size in 640 960 1280; do convert ./landing/assets/src/hero-black-box.png -resize ${size}x ./landing/assets/hero-black-box-${size}.webp; done\",\n  \"build:images\": \"npm run images:optimise && npm run images:resize\"\n}",
+        "cdn_headers": "# Vercel vercel.json headers for images\n{\n  \"headers\": [\n    {\n      \"source\": \"/landing/assets/(.*)\",\n      \"headers\": [\n        { \"key\": \"Cache-Control\", \"value\": \"public, max-age=31536000, immutable\" },\n        { \"key\": \"Vary\", \"value\": \"Accept\" }\n      ]\n    }\n  ]\n}",
+        "quality_targets": {
+            "hero_avif": "≤200KB, quality 40-50",
+            "hero_webp": "≤300KB, quality 80",
+            "og_image": "1200x630px, JPEG quality 85, ≤150KB",
+            "thumbnails": "≤50KB each"
+        }
+    },
+    "keyword_map": {
+        "primary_branded": {
+            "keywords": [
+                "ZapNest",
+                "ZapNest Black Box",
+                "ZapNest subscription",
+                "ZapNest founders"
+            ],
+            "target_url": "https://zapneststore.in/landing/",
+            "intent": "navigational"
+        },
+        "transactional": {
+            "keywords": [
+                "tech subscription box India",
+                "gadget subscription India",
+                "monthly tech box",
+                "curated tech subscription"
+            ],
+            "target_url": "https://zapneststore.in/landing/",
+            "intent": "transactional"
+        },
+        "informational": {
+            "keywords": [
+                "how tech subscription works",
+                "best subscription boxes India"
+            ],
+            "target_url": "https://zapneststore.in/how-it-works/",
+            "intent": "informational"
+        },
+        "local_india": {
+            "keywords": [
+                "tech box India",
+                "gadget box India delivery",
+                "subscription box free shipping India"
+            ],
+            "target_url": "https://zapneststore.in/shipping/",
+            "intent": "local"
+        },
+        "long_tail": {
+            "keywords": [
+                "premium tech accessories subscription",
+                "founder tech box early access",
+                "curated gadgets monthly India"
+            ],
+            "target_url": "https://zapneststore.in/landing/",
+            "intent": "transactional"
+        }
+    },
+    "gsc_instructions": {
+        "step_1_verify_ownership": "## Google Search Console Verification\n\n### Option A: DNS TXT Record (Recommended)\n1. Go to https://search.google.com/search-console\n2. Click 'Add Property' → Enter 'zapneststore.in'\n3. Select 'Domain' property type\n4. Copy the TXT record value (looks like: google-site-verification=xxxxx)\n5. In your DNS provider (Cloudflare/GoDaddy):\n   - Add TXT record for @ (root)\n   - Value: the verification string\n   - TTL: Auto or 3600\n6. Wait 5-10 minutes, click 'Verify' in GSC\n\n### Option B: HTML File\n1. Download the verification HTML file from GSC\n2. Upload to your site root: /googlexxxxxxxx.html\n3. Verify the file is accessible: https://zapneststore.in/googlexxxxxxxx.html\n4. Click 'Verify' in GSC",
+        "step_2_submit_sitemap": "## Submit Sitemap\n1. In GSC, go to 'Sitemaps' in left sidebar\n2. Enter: sitemap.xml\n3. Click 'Submit'\n4. Status should show 'Success' within 24 hours\n5. Verify URL count matches expected (8 URLs)",
+        "step_3_url_inspection": "## URL Inspection\n1. Go to 'URL Inspection' in GSC\n2. Enter: https://zapneststore.in/landing/\n3. Click 'Request Indexing' if not indexed\n4. Repeat for key pages: /, /about/, /how-it-works/\n5. Check 'Page indexing' for any issues",
+        "step_4_mobile_usability": "## Mobile Usability Alerts\n1. Go to 'Experience' → 'Mobile Usability'\n2. Ensure no errors (text too small, clickable elements too close)\n3. Set up email alerts: Settings → Email preferences → Mobile issues",
+        "api_automation": "## GSC API Automation (Optional)\n\n# Install Google APIs client\nnpm install googleapis\n\n# Example: Check indexing status\ncurl -X GET \\\n  'https://searchconsole.googleapis.com/v1/urlInspection/index:inspect' \\\n  -H 'Authorization: Bearer YOUR_ACCESS_TOKEN' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"inspectionUrl\": \"https://zapneststore.in/landing/\",\n    \"siteUrl\": \"sc-domain:zapneststore.in\"\n  }'"
+    },
+    "lighthouse_ci_yaml": "name: Lighthouse CI\n\non:\n  schedule:\n    - cron: '0 6 * * 1'  # Every Monday at 6 AM UTC\n  push:\n    branches: [main]\n  workflow_dispatch:\n\njobs:\n  lighthouse:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      \n      - name: Setup Node.js\n        uses: actions/setup-node@v4\n        with:\n          node-version: '20'\n\n      - name: Install Lighthouse CI\n        run: npm install -g @lhci/cli@0.13.x\n\n      - name: Run Lighthouse CI\n        run: |\n          lhci autorun --config=lighthouserc.json\n        env:\n          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}\n\n      - name: Upload Lighthouse Report\n        uses: actions/upload-artifact@v4\n        with:\n          name: lighthouse-report\n          path: .lighthouseci/\n          retention-days: 30\n\n# lighthouserc.json (create in repo root)\n# {\n#   \"ci\": {\n#     \"collect\": {\n#       \"url\": [\n#         \"https://zapneststore.in/\",\n#         \"https://zapneststore.in/landing/\"\n#       ],\n#       \"numberOfRuns\": 3\n#     },\n#     \"assert\": {\n#       \"assertions\": {\n#         \"categories:performance\": [\"error\", { \"minScore\": 0.9 }],\n#         \"categories:accessibility\": [\"error\", { \"minScore\": 0.9 }],\n#         \"categories:seo\": [\"error\", { \"minScore\": 0.9 }],\n#         \"categories:best-practices\": [\"warn\", { \"minScore\": 0.85 }],\n#         \"first-contentful-paint\": [\"error\", { \"maxNumericValue\": 2000 }],\n#         \"largest-contentful-paint\": [\"error\", { \"maxNumericValue\": 2500 }],\n#         \"cumulative-layout-shift\": [\"error\", { \"maxNumericValue\": 0.01 }]\n#       }\n#     },\n#     \"upload\": {\n#       \"target\": \"temporary-public-storage\"\n#     }\n#   }\n# }",
+    "qa_checks": [
+        {
+            "check": "Meta title present and ≤60 chars",
+            "tool": "Browser DevTools → document.title",
+            "automated": true
+        },
+        {
+            "check": "Meta description present and ≤160 chars",
+            "tool": "Browser DevTools → document.querySelector('meta[name=\"description\"]').content",
+            "automated": true
+        },
+        {
+            "check": "Canonical URL present and correct",
+            "tool": "Browser DevTools → document.querySelector('link[rel=\"canonical\"]').href",
+            "automated": true
+        },
+        {
+            "check": "JSON-LD valid and error-free",
+            "tool": "https://search.google.com/test/rich-results",
+            "automated": false
+        },
+        {
+            "check": "OpenGraph image loads (1200x630)",
+            "tool": "https://developers.facebook.com/tools/debug/",
+            "automated": false
+        },
+        {
+            "check": "Twitter Card preview correct",
+            "tool": "https://cards-dev.twitter.com/validator",
+            "automated": false
+        },
+        {
+            "check": "robots.txt accessible and correct",
+            "tool": "curl https://zapneststore.in/robots.txt",
+            "automated": true
+        },
+        {
+            "check": "sitemap.xml accessible and valid",
+            "tool": "curl https://zapneststore.in/sitemap.xml | xmllint --noout -",
+            "automated": true
+        },
+        {
+            "check": "GSC shows no indexing errors",
+            "tool": "Google Search Console → URL Inspection",
+            "automated": false
+        },
+        {
+            "check": "LCP ≤ 2.5s",
+            "tool": "Lighthouse → Performance → LCP",
+            "automated": true
+        },
+        {
+            "check": "CLS < 0.01",
+            "tool": "Lighthouse → Performance → CLS",
+            "automated": true
+        },
+        {
+            "check": "GZIP/Brotli compression enabled",
+            "tool": "curl -I -H 'Accept-Encoding: gzip,br' https://zapneststore.in/landing/ | grep content-encoding",
+            "automated": true
+        },
+        {
+            "check": "HTTPS redirect works",
+            "tool": "curl -I http://zapneststore.in/ | grep location",
+            "automated": true
+        },
+        {
+            "check": "Mobile viewport meta present",
+            "tool": "document.querySelector('meta[name=\"viewport\"]')",
+            "automated": true
+        },
+        {
+            "check": "No console errors on page load",
+            "tool": "Browser DevTools → Console",
+            "automated": false
+        }
+    ],
+    "remediation_guides": {
+        "json_ld_warnings": "## JSON-LD Warnings\n\n**Issue**: Google Rich Results Test shows warnings\n\n**Fix**:\n1. Check for missing required fields (name, image, offers)\n2. Ensure all URLs are absolute (https://zapneststore.in/...)\n3. Remove any made-up/unverified specs\n4. Validate at https://validator.schema.org/\n\n**Code fix**:\n```json\n{\n  \"@type\": \"Product\",\n  \"name\": \"ZapNest Black Box\",\n  \"image\": \"https://zapneststore.in/landing/assets/hero-black-box.png\",\n  \"offers\": {\n    \"@type\": \"Offer\",\n    \"price\": \"2999\",\n    \"priceCurrency\": \"INR\",\n    \"availability\": \"https://schema.org/PreOrder\"\n  }\n}\n```",
+        "missing_og_image": "## Missing OG Image\n\n**Issue**: Social shares show no preview image\n\n**Fix**:\n1. Create 1200x630px image (JPEG, ≤150KB)\n2. Upload to /landing/assets/og-zapnest-founders.jpg\n3. Add meta tags:\n```html\n<meta property=\"og:image\" content=\"https://zapneststore.in/landing/assets/og-zapnest-founders.jpg\">\n<meta property=\"og:image:width\" content=\"1200\">\n<meta property=\"og:image:height\" content=\"630\">\n```\n4. Clear cache at https://developers.facebook.com/tools/debug/",
+        "low_lcp": "## Low LCP (>2.5s)\n\n**Issue**: Largest Contentful Paint too slow\n\n**Fixes**:\n1. **Preload hero image**:\n```html\n<link rel=\"preload\" as=\"image\" href=\"assets/hero-black-box.avif\" fetchpriority=\"high\">\n```\n\n2. **Use AVIF/WebP format** (50-70% smaller)\n\n3. **Lazy load below-fold images**:\n```html\n<img loading=\"lazy\" src=\"...\">\n```\n\n4. **Inline critical CSS** or use `<link rel=\"preload\" as=\"style\">`\n\n5. **Remove render-blocking JS**:\n```html\n<script defer src=\"main.js\"></script>\n```",
+        "high_cls": "## High CLS (>0.01)\n\n**Issue**: Cumulative Layout Shift too high\n\n**Fixes**:\n1. **Set explicit dimensions on images**:\n```html\n<img src=\"...\" width=\"600\" height=\"400\" alt=\"...\">\n```\n\n2. **Reserve space for dynamic content**:\n```css\n.hero-image { aspect-ratio: 1/1; }\n```\n\n3. **Avoid inserting content above visible area**\n\n4. **Use font-display: swap and preconnect**:\n```html\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">\n```",
+        "robots_blocking": "## Robots.txt Blocking Pages\n\n**Issue**: Important pages blocked by robots.txt\n\n**Fix**:\n1. Check /robots.txt for overly broad Disallow rules\n2. Ensure public pages are NOT in Disallow list:\n```\nUser-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /admin/\n```\n3. Use GSC → URL Inspection to verify crawlability",
+        "duplicate_canonical": "## Duplicate/Conflicting Canonicals\n\n**Issue**: Multiple canonical tags or wrong URL\n\n**Fix**:\n1. Ensure only ONE canonical tag per page\n2. Use absolute URLs:\n```html\n<link rel=\"canonical\" href=\"https://zapneststore.in/landing/\">\n```\n3. Trailing slash consistency: pick one (with or without) and stick to it\n4. Check for duplicate tags from CMS/plugins"
+    },
+    "deploy_checklist": [
+        {
+            "step": 1,
+            "action": "Verify build completed without errors",
+            "command": "npm run build 2>&1 | tail -20"
+        },
+        {
+            "step": 2,
+            "action": "Check robots.txt is accessible",
+            "command": "curl -s https://zapneststore.in/robots.txt | head -10"
+        },
+        {
+            "step": 3,
+            "action": "Check sitemap.xml is valid",
+            "command": "curl -s https://zapneststore.in/sitemap.xml | xmllint --noout - && echo 'Valid XML'"
+        },
+        {
+            "step": 4,
+            "action": "Verify JSON-LD passes Rich Results",
+            "url": "https://search.google.com/test/rich-results?url=https://zapneststore.in/landing/"
+        },
+        {
+            "step": 5,
+            "action": "Run Lighthouse audit",
+            "command": "npx lighthouse https://zapneststore.in/landing/ --output=json --output-path=./lighthouse-report.json"
+        },
+        {
+            "step": 6,
+            "action": "Check LCP and CLS from Lighthouse",
+            "command": "cat lighthouse-report.json | jq '.audits[\"largest-contentful-paint\"].numericValue, .audits[\"cumulative-layout-shift\"].numericValue'"
+        },
+        {
+            "step": 7,
+            "action": "Verify OG image loads",
+            "command": "curl -I https://zapneststore.in/landing/assets/og-zapnest-founders.jpg | grep -E 'HTTP|content-type|content-length'"
+        },
+        {
+            "step": 8,
+            "action": "Check GZIP/Brotli compression",
+            "command": "curl -sI -H 'Accept-Encoding: gzip, br' https://zapneststore.in/landing/ | grep -i content-encoding"
+        },
+        {
+            "step": 9,
+            "action": "Verify HTTPS redirect",
+            "command": "curl -sI http://zapneststore.in/ | grep -i location"
+        },
+        {
+            "step": 10,
+            "action": "Submit sitemap to GSC",
+            "url": "https://search.google.com/search-console/sitemaps?resource_id=sc-domain:zapneststore.in"
+        },
+        {
+            "step": 11,
+            "action": "Request indexing for landing page",
+            "url": "https://search.google.com/search-console/inspect?resource_id=sc-domain:zapneststore.in&id=https://zapneststore.in/landing/"
+        },
+        {
+            "step": 12,
+            "action": "Test Facebook OG preview",
+            "url": "https://developers.facebook.com/tools/debug/?q=https://zapneststore.in/landing/"
+        },
+        {
+            "step": 13,
+            "action": "Monitor Core Web Vitals (24h later)",
+            "url": "https://search.google.com/search-console/core-web-vitals?resource_id=sc-domain:zapneststore.in"
+        }
+    ],
+    "acceptance_criteria": [
+        {
+            "test": "Landing page title contains 'ZapNest Black Box'",
+            "expected": true
+        },
+        {
+            "test": "Meta description is between 120-160 characters",
+            "expected": true
+        },
+        {
+            "test": "Canonical URL is https://zapneststore.in/landing/",
+            "expected": true
+        },
+        {
+            "test": "OG image is 1200x630 and returns 200 OK",
+            "expected": true
+        },
+        {
+            "test": "JSON-LD passes Google Rich Results Test with no errors",
+            "expected": true
+        },
+        {
+            "test": "robots.txt allows / and disallows /api/",
+            "expected": true
+        },
+        {
+            "test": "sitemap.xml contains at least 6 URLs",
+            "expected": true
+        },
+        {
+            "test": "LCP < 2.5 seconds on mobile (Lighthouse)",
+            "expected": true
+        },
+        {
+            "test": "CLS < 0.01 (Lighthouse)",
+            "expected": true
+        },
+        {
+            "test": "Lighthouse SEO score ≥ 90",
+            "expected": true
+        },
+        {
+            "test": "Lighthouse Accessibility score ≥ 90",
+            "expected": true
+        },
+        {
+            "test": "Page returns Content-Encoding: gzip or br",
+            "expected": true
+        },
+        {
+            "test": "HTTP to HTTPS redirect works",
+            "expected": true
+        },
+        {
+            "test": "No console errors on page load",
+            "expected": true
+        },
+        {
+            "test": "Mobile viewport meta tag present",
+            "expected": true
+        }
+    ]
+}

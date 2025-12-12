@@ -1,0 +1,25 @@
+# ZapNest Robots.txt
+# https://zapneststore.in/robots.txt
+
+User-agent: *
+Allow: /
+
+# Disallow private endpoints
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_vercel/
+Disallow: /*.json$
+Disallow: /config.generated.js
+
+# Disallow member dashboard (requires login)
+Disallow: /member/
+
+# Allow specific public assets
+Allow: /landing/assets/
+Allow: /assets/
+
+# Sitemap location
+Sitemap: https://zapneststore.in/sitemap.xml
+
+# Crawl-delay (optional, for polite crawling)
+Crawl-delay: 1
