@@ -27,9 +27,9 @@ export default async function handler(req, res) {
 
     // Validate tier and get pricing
     const tierPricing = {
+        lite: { amount: 159900, name: 'Lite' },      // ₹1,599 in paise
         core: { amount: 299900, name: 'Core' },      // ₹2,999 in paise
-        pro: { amount: 499900, name: 'Pro' },        // ₹4,999 in paise
-        elite: { amount: 799900, name: 'Elite' }     // ₹7,999 in paise
+        elite: { amount: 499900, name: 'Elite' }     // ₹4,999 in paise
     };
 
     const selectedTier = tierPricing[tier.toLowerCase()];

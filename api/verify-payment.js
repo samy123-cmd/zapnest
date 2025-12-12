@@ -63,9 +63,9 @@ export default async function handler(req, res) {
 
         // Tier pricing for storing in DB
         const tierPricing = {
+            lite: 1599,
             core: 2999,
-            pro: 4999,
-            elite: 7999
+            elite: 4999
         };
 
         const monthlyPrice = tierPricing[tier.toLowerCase()] || 2999;
