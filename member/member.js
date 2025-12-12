@@ -203,6 +203,10 @@
 
     async function validateMagicLink(token, email) {
         try {
+            // Check if this is from welcome email
+            const urlParams = new URLSearchParams(window.location.search);
+            const isWelcomeFlow = urlParams.get('welcome') === '1';
+
             // Check token in database
             const response = await supabaseFetch(
                 `/member_sessions?token=eq.${token}&email=eq.${encodeURIComponent(email)}&used=eq.false&select=*`,
@@ -215,14 +219,14 @@
 
             const sessions = await response.json();
             if (sessions.length === 0) {
-                alert('This magic link is invalid or has expired.');
+                alert('This link is invalid or has expired. Please request a new magic link.');
                 showLogin();
                 return;
             }
 
             const session = sessions[0];
             if (new Date(session.expires_at) < new Date()) {
-                alert('This magic link has expired. Please request a new one.');
+                alert('This link has expired. Please request a new magic link.');
                 showLogin();
                 return;
             }
@@ -237,17 +241,26 @@
             const localSession = {
                 email: email,
                 expires_at: Date.now() + 7 * 24 * 60 * 60 * 1000, // 7 days
-                created_at: Date.now()
+                created_at: Date.now(),
+                isWelcomeFlow: isWelcomeFlow
             };
 
             localStorage.setItem('zn_session', JSON.stringify(localSession));
             currentUser = localSession;
 
-            // Clean URL
+            // Clean URL but keep track of welcome flow
             window.history.replaceState({}, document.title, '/member/');
 
+            // Show dashboard
             showDashboard();
-            loadUserData();
+
+            // Load user data
+            await loadUserData();
+
+            // If welcome flow and no address, show onboarding prompt
+            if (isWelcomeFlow) {
+                showOnboardingPrompt();
+            }
 
         } catch (error) {
             console.error('[ZapNest] Validation error:', error);
@@ -525,6 +538,36 @@
             if (m) m.hidden = true;
         });
         document.body.style.overflow = '';
+    }
+
+    /**
+     * Show onboarding prompt for new founders from welcome email
+     */
+    function showOnboardingPrompt() {
+        // Check if user already has address filled
+        if (waitlistData && waitlistData.address_json && waitlistData.address_json.name) {
+            // Already has address, just show a welcome toast
+            showToast('Welcome Back! 🎉', 'Great to see you again, Founder!');
+            return;
+        }
+
+        // Show welcome modal for new founders
+        const onboardingModal = document.getElementById('modal-onboarding');
+        if (onboardingModal) {
+            openModal(onboardingModal);
+        } else {
+            // Fallback: show toast and scroll to address form
+            showToast('Welcome, Founder! 🎉', 'Complete your profile below to secure your spot.');
+
+            // Scroll to settings section with address form
+            setTimeout(() => {
+                showSection('settings');
+                const addressForm = document.getElementById('address-form');
+                if (addressForm) {
+                    addressForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }, 1000);
+        }
     }
 
     // ============================================
@@ -855,6 +898,25 @@
 
         if (elements.confirmCancel) {
             elements.confirmCancel.addEventListener('click', handleCancelConfirm);
+        }
+
+        // Onboarding start button
+        const startOnboardingBtn = document.getElementById('start-onboarding');
+        if (startOnboardingBtn) {
+            startOnboardingBtn.addEventListener('click', () => {
+                const onboardingModal = document.getElementById('modal-onboarding');
+                if (onboardingModal) {
+                    closeModal(onboardingModal);
+                }
+                // Navigate to settings section with address form
+                showSection('settings');
+                setTimeout(() => {
+                    const addressForm = document.getElementById('address-form');
+                    if (addressForm) {
+                        addressForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }, 300);
+            });
         }
 
         // Modal close buttons

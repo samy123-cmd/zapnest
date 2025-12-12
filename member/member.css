@@ -1888,6 +1888,44 @@ textarea:focus-visible {
     justify-content: center;
 }
 
+/* Onboarding Welcome Modal */
+.member-modal__content--welcome {
+    text-align: center;
+    max-width: 480px;
+}
+
+.member-modal__content--welcome .member-modal__icon {
+    font-size: 3rem;
+    margin-bottom: var(--zn-space-4);
+}
+
+.member-modal__content--welcome .member-modal__title {
+    color: var(--zn-accent);
+}
+
+.member-modal__checklist {
+    display: flex;
+    flex-direction: column;
+    gap: var(--zn-space-3);
+    margin: var(--zn-space-6) 0;
+    text-align: left;
+}
+
+.member-modal__check-item {
+    display: flex;
+    align-items: center;
+    gap: var(--zn-space-3);
+    padding: var(--zn-space-3) var(--zn-space-4);
+    background: var(--zn-bg-tertiary);
+    border-radius: var(--zn-radius-md);
+    color: var(--zn-text-secondary);
+}
+
+.member-modal__check-icon {
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
 /* ============================================
    Toast Notification
    ============================================ */
