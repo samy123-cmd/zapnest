@@ -143,9 +143,18 @@
   /**
    * Show success state
    */
-  function showSuccess() {
+  function showSuccess(isExistingUser = false) {
     elements.modalFormState.hidden = true;
     elements.modalSuccessState.hidden = false;
+
+    // Update message for existing users
+    const successTitle = elements.modalSuccessState.querySelector('h2');
+    const successMsg = elements.modalSuccessState.querySelector('p');
+
+    if (isExistingUser && successTitle && successMsg) {
+      successTitle.textContent = "Welcome Back! 👋";
+      successMsg.textContent = "You're already on our founders list. We'll send you updates and payment info soon!";
+    }
   }
 
   // ============================================
@@ -221,25 +230,32 @@
       });
 
       if (response.success) {
-        // Track success
-        trackEvent('form_success', {
-          tier: tier,
-          email_hash: emailHash,
-          referral_code: referral || null
-        });
+        // Check if user was already on waitlist
+        if (response.alreadyOnWaitlist) {
+          // Show friendly message for existing users
+          trackEvent('form_existing_user', { email_hash: emailHash });
+          showSuccess(true); // Pass flag to show alternate message
+        } else {
+          // New signup
+          trackEvent('form_success', {
+            tier: tier,
+            email_hash: emailHash,
+            referral_code: referral || null
+          });
 
-        // Fire marketing pixels only if consent is true
-        if (consent) {
-          fireMarketingPixels(tier, emailHash);
+          // Fire marketing pixels only if consent is true
+          if (consent) {
+            fireMarketingPixels(tier, emailHash);
+          }
+
+          // Send welcome email via Edge Function (fire and forget)
+          sendWelcomeEmail(email, tier).catch(err => {
+            console.warn('[Email] Welcome email failed:', err);
+          });
+
+          // Show success state
+          showSuccess(false);
         }
-
-        // Send welcome email via Edge Function (fire and forget)
-        sendWelcomeEmail(email, tier).catch(err => {
-          console.warn('[Email] Welcome email failed:', err);
-        });
-
-        // Show success state
-        showSuccess();
       } else {
         throw new Error(response.message || 'Submission failed');
       }
@@ -304,9 +320,9 @@
         const error = await response.json();
         console.error('[API] Error:', error);
 
-        // Check for duplicate email
+        // Check for duplicate email - treat as success with special flag
         if (error.code === '23505') {
-          return { success: false, message: 'This email is already on the waitlist!' };
+          return { success: true, alreadyOnWaitlist: true };
         }
 
         return { success: false, message: error.message || 'Signup failed' };
