@@ -13,8 +13,13 @@
     scrollThreshold: 500,
     emailRegex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
     apiEndpoint: '/api/waitlist',
-    analyticsEnabled: true
+    analyticsEnabled: true,
+    maxRetries: 2,
+    retryDelay: 1500
   };
+
+  // Submission state to prevent double clicks
+  let isSubmitting = false;
 
   // ============================================
   // DOM Elements
@@ -193,6 +198,12 @@
   async function handleSubmit(e) {
     e.preventDefault();
 
+    // Prevent double submission
+    if (isSubmitting) {
+      console.log('[Form] Already submitting, ignoring click');
+      return;
+    }
+
     // Validate
     if (!validateForm()) {
       trackEvent('form_error', { error_type: 'validation' });
@@ -202,11 +213,14 @@
     // Get form data
     const email = elements.emailInput.value.trim();
     const tier = getSelectedTier();
-    const referral = elements.form.querySelector('#referral').value.trim();
+    const referralInput = elements.form.querySelector('#referral');
+    const referral = referralInput ? referralInput.value.trim() : '';
     const consent = elements.consentInput.checked;
 
-    // Show loading state
+    // Set submitting state
+    isSubmitting = true;
     elements.submitBtn.classList.add('loading');
+    elements.submitBtn.disabled = true;
     elements.formError.classList.remove('visible');
 
     // Track submit attempt
@@ -216,63 +230,78 @@
       consent: consent
     });
 
-    try {
-      // Hash email for privacy-first analytics
-      const emailHash = await hashEmail(email);
+    // Retry logic
+    let lastError = null;
+    for (let attempt = 0; attempt <= CONFIG.maxRetries; attempt++) {
+      try {
+        // Hash email for privacy-first analytics
+        const emailHash = await hashEmail(email);
 
-      // Simulate API call (replace with actual endpoint)
-      const response = await submitToAPI({
-        email: email,
-        tier: tier,
-        referral: referral,
-        consent: consent,
-        source: document.referrer || 'direct'
-      });
+        // Submit to API
+        const response = await submitToAPI({
+          email: email,
+          tier: tier,
+          referral: referral,
+          consent: consent,
+          source: document.referrer || 'direct'
+        });
 
-      if (response.success) {
-        // Check if user was already on waitlist
-        if (response.alreadyOnWaitlist) {
-          // Show friendly message for existing users
-          trackEvent('form_existing_user', { email_hash: emailHash });
-          showSuccess(true); // Pass flag to show alternate message
-        } else {
-          // New signup
-          trackEvent('form_success', {
-            tier: tier,
-            email_hash: emailHash,
-            referral_code: referral || null
-          });
+        if (response.success) {
+          // Check if user was already on waitlist
+          if (response.alreadyOnWaitlist) {
+            trackEvent('form_existing_user', { email_hash: emailHash });
+            showSuccess(true);
+          } else {
+            // New signup
+            trackEvent('form_success', {
+              tier: tier,
+              email_hash: emailHash,
+              referral_code: referral || null
+            });
 
-          // Fire marketing pixels only if consent is true
-          if (consent) {
-            fireMarketingPixels(tier, emailHash);
+            // Fire marketing pixels only if consent is true
+            if (consent) {
+              fireMarketingPixels(tier, emailHash);
+            }
+
+            // Send welcome email via Edge Function (fire and forget)
+            sendWelcomeEmail(email, tier).catch(err => {
+              console.warn('[Email] Welcome email failed:', err);
+            });
+
+            showSuccess(false);
           }
 
-          // Send welcome email via Edge Function (fire and forget)
-          sendWelcomeEmail(email, tier).catch(err => {
-            console.warn('[Email] Welcome email failed:', err);
-          });
-
-          // Show success state
-          showSuccess(false);
+          // Success - exit retry loop
+          isSubmitting = false;
+          elements.submitBtn.classList.remove('loading');
+          elements.submitBtn.disabled = false;
+          return;
+        } else {
+          throw new Error(response.message || 'Submission failed');
         }
-      } else {
-        throw new Error(response.message || 'Submission failed');
+      } catch (error) {
+        lastError = error;
+        console.warn(`[Form] Attempt ${attempt + 1} failed:`, error.message);
+
+        // If not last attempt, wait before retry
+        if (attempt < CONFIG.maxRetries) {
+          await new Promise(resolve => setTimeout(resolve, CONFIG.retryDelay * (attempt + 1)));
+        }
       }
-    } catch (error) {
-      console.error('Form submission error:', error);
-
-      // Track error
-      trackEvent('form_error', {
-        error_type: 'server',
-        tier: tier
-      });
-
-      // Show error message
-      elements.formError.classList.add('visible');
-    } finally {
-      elements.submitBtn.classList.remove('loading');
     }
+
+    // All retries failed
+    console.error('[Form] All attempts failed:', lastError);
+    trackEvent('form_error', {
+      error_type: 'server',
+      tier: tier,
+      attempts: CONFIG.maxRetries + 1
+    });
+    elements.formError.classList.add('visible');
+    isSubmitting = false;
+    elements.submitBtn.classList.remove('loading');
+    elements.submitBtn.disabled = false;
   }
 
   /**
