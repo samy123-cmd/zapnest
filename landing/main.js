@@ -233,6 +233,11 @@
           fireMarketingPixels(tier, emailHash);
         }
 
+        // Send welcome email via Edge Function (fire and forget)
+        sendWelcomeEmail(email, tier).catch(err => {
+          console.warn('[Email] Welcome email failed:', err);
+        });
+
         // Show success state
         showSuccess();
       } else {
@@ -326,6 +331,37 @@
     }
 
     console.log('[Pixels] Marketing pixels fired (consent: true)');
+  }
+
+  /**
+   * Send welcome email via Supabase Edge Function
+   */
+  async function sendWelcomeEmail(email, tier) {
+    const supabaseUrl = window.SUPABASE_URL;
+    if (!supabaseUrl) {
+      console.warn('[Email] Supabase URL not configured');
+      return;
+    }
+
+    try {
+      const response = await fetch(`${supabaseUrl}/functions/v1/send-welcome-email`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${window.SUPABASE_ANON_KEY}`
+        },
+        body: JSON.stringify({ email, tier })
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        console.log('[Email] Welcome email sent:', result.id);
+      } else {
+        console.warn('[Email] Failed to send:', result.error);
+      }
+    } catch (error) {
+      console.error('[Email] Error:', error);
+    }
   }
 
   // ============================================
